@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# -----------------------------------------
+# FORCE HTTPS AND WWW
+# Redirect non-www to www with HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.petroindustech.com%{REQUEST_URI} [L,R=301]
+
+# -----------------------------------------
+# CUSTOM 404 ERROR PAGE
+ErrorDocument 404 https://www.petroindustech.com/404.html

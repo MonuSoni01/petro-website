@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="../images/website/cropped-favicon.png" />
+  <title id="meta-title-display"></title>
+  <meta name="description" content="" id="meta-description-display" />
+  <meta name="keywords" content="" id="meta-keyword-display" />
+  <link rel="canonical" href="" />
+
+  <!-- Bootstrap CSS -->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Fontawesome CSS -->
+  <link href="/css/all.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link href="/css/style.css" rel="stylesheet" />
+  <!-- Thanku Pop css -->
+  <style>
+    .card-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2.5rem 3rem;
+      border-radius: 20px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .product-imgs {
+      position: relative;
+    }
+
+    .img-display {
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 12px 20px rgb(0 0 0 / 0.12);
+      height: 600px;
+      width: 600px;
+      max-width: 100%;
+      background: #fefefe;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .img-showcase {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .img-showcase img {
+      min-width: 600px;
+      height: 600px;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+      border-radius: 18px;
+    }
+
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 12px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    #prevBtn,
+    #nextBtn {
+      background-color: rgba(0, 0, 0, 0.45);
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 50%;
+      pointer-events: all;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.3);
+    }
+
+    @media (max-width: 426px) {
+
+      #prevBtn,
+      #nextBtn {
+        padding: 2px 9px;
+        font-size: 1.2rem !important;
+      }
+    }
+
+    #prevBtn:hover,
+    #nextBtn:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: scale(1.15);
+    }
+
+    .slider-indicators {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .dot {
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      background-color: #bbb;
+      border-radius: 50%;
+      margin: 0 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: #256eff;
+    }
+
+    .color-select {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .color-btn {
+      padding: 12px 24px;
+      border-radius: 28px;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .color-btn.red,
+    .color-btn.soapdish {
+      background: #e53935;
+    }
+
+    .color-btn.blue,
+    .color-btn.tumblerholder {
+      background: #1e88e5;
+    }
+
+    .color-btn.green,
+    .color-btn.towelring {
+      background: #43a047;
+    }
+
+    .color-btn.clear,
+    .color-btn.frontshelf {
+      background: #757575;
+    }
+
+    .color-btn.towelrod {
+      background: #020202;
+    }
+
+    .color-btn.woodenkit {
+      background: #332424;
+    }
+
+    .color-btn.active {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15),
+        inset 0 0 15px rgba(255, 255, 255, 0.4);
+      transform: scale(1.1);
+    }
+
+    .product-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .product-title {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+    }
+
+    .product-link {
+      background: #256eff;
+      color: #fff;
+      padding: 0.35rem 1rem;
+      margin: 0.6rem 0 1.4rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .product-rating {
+      color: #fbc02d;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .product-price {
+      margin: 1.3rem 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .last-price span {
+      text-decoration: line-through;
+      color: #f44336;
+    }
+
+    .new-price span {
+      color: #388e3c;
+      font-size: 1.6rem;
+    }
+
+    .product-detail h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .product-detail ul {
+      margin-left: 20px;
+    }
+
+    .purchase-controls {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn-buy {
+      background-color: #256eff;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: 700;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    @media (max-width: 1024px) {
+      .img-display {
+        height: 400px;
+        width: 100%;
+      }
+
+      .img-showcase img {
+        min-width: 100%;
+        height: 400px;
+      }
+
+      .product-title {
+        font-size: 2rem;
+      }
+
+      .product-price {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card-wrapper {
+        padding: 2rem 1rem;
+      }
+
+      .card {
+        grid-template-columns: 1fr;
+      }
+
+      .img-display {
+        height: 360px;
+      }
+
+      .img-showcase img {
+        height: 360px;
+      }
+
+      .product-title {
+        font-size: 1.8rem;
+      }
+
+      .product-price {
+        font-size: 1.1rem;
+      }
+
+      .btn-buy {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .img-display {
+        height: 300px;
+      }
+
+      .img-showcase img {
+        height: 300px;
+      }
+
+      .slider-controls button {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+      }
+
+      .product-title {
+        font-size: 1.6rem;
+      }
+
+      .product-price {
+        font-size: 1rem;
+      }
+
+      .color-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      transition: 0.3s;
+      border-radius: 8px;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .thank-you-popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .thank-you-popup-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .thank-you-popup-content i {
+      font-size: 40px;
+      color: rgb(65, 105, 6);
+      margin-bottom: 24px;
+    }
+
+    .thank-you-popup-content p b a {
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Guwahati Exhibition SideBar -->
+  <section>
+    <div id='social-sidebar'>
+      <ul>
+        <li>
+          <a class='entypo-Reg' href='/contact.html'> <i class="fa fa-registered"></i>
+            <p class="item">Registration</p>
+            <span class="first_model">Guwahati Exhibition</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- Whatsapp Section -->
+  <!-- Whatsapp Section -->
+  <div class="whats_link">
+    <a target="_blank" href="https://wa.me/918000007336?text=">
+      <img src="/images/whatsapp_logo.png" alt="" id="whatsapp-icon" /></a>
+  </div>
+
+  <!-- Phone Section -->
+  <div class="phone_link">
+    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.radiant.petro">
+      <img src="/images/app.webp" alt="" id="whatsapp-icon" /></a>
+  </div>
+  <!-- Top Navbar -->
+  <div class="top-bar">
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-4 col-md-6 d-flex justify-content-around p-0">
+          <div class="contact-details">
+            <ul class="d-flex">
+              <li>
+                <a href="tel:+91-8000007336"><i class="fa-solid fa-phone"></i> +91-8000007336</a>
+              </li>
+              <li>
+                <a href="mailto:contact@petroindustech.com"><i class="fa-solid fa-envelope"></i>
+                  contact@petroindustech.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 d-flex justify-content-center">
+          <div class="contact-details">
+            <ul class="d-lg-flex">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://g.co/kgs/FCqNarH" target="_blank">Find Us On Map</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+          <div class="news-box">
+            <ul class="footer-social topnav-social-icon">
+              <li>
+                <a href="https://www.facebook.com/www.petroindustries.in/" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/petroindustries/" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@petroindustechpvtltd" target="_blank"><i
+                    class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="https://x.com/Petroindustech" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://in.pinterest.com/petroindustech/" target="_blank"><i
+                    class="fa-brands fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light top-nav">
+    <div class="container" style="max-width: 1200px">
+      <a class="navbar-brand d-flex" href="https://www.petroindustech.com">
+        <img src="/images/logo.webp" alt="logo" class="img-fluid img-responsive" />
+        <a target="_blank" href="tel:+91-8000007336" class="d-md-none d-block">
+          <img src="images/calling_icon.png" alt="" class="img-fluid" width="45px" id="whatsapp-icon" /></a>
+      </a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive" style="width: 100%">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.petroindustech.com">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active" href="/our-products.html" id="servicesLink">products <i class="fas fa-sort-down"
+                id="dropdownIcon"></i></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesLink" id="servicesDropdown">
+              <a class="dropdown-item" href="/bath-accessories.html">Bath Accessories</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/press-media.html">Press & Media</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/catalogue.html">Catalogue</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://onlinepetro.com/" target="_blank">BUY ONLINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/our-blogs.html">Our Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+          <button class="btn btn-primary">
+            <a href="/app-petro.html" style="color: #fff">Redeem Points</a>
+          </button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar Javacsript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const servicesLink = document.getElementById("servicesLink");
+      const dropdownIcon = document.getElementById("dropdownIcon");
+      const servicesDropdown = document.getElementById("servicesDropdown");
+
+      // Function to toggle dropdown
+      function toggleDropdown(event) {
+        event.stopPropagation();
+        servicesDropdown.classList.toggle("show");
+      }
+
+      // For desktop
+      if (window.innerWidth > 992) {
+        servicesLink.addEventListener("mouseover", function () {
+          servicesDropdown.classList.add("show");
+        });
+
+        servicesDropdown.addEventListener("mouseleave", function () {
+          servicesDropdown.classList.remove("show");
+        });
+      }
+
+      // For both desktop and mobile
+      dropdownIcon.addEventListener("click", function (event) {
+        event.preventDefault();
+        toggleDropdown(event);
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".dropdown")) {
+          servicesDropdown.classList.remove("show");
+        }
+      });
+
+      // Prevent dropdown from closing when clicking inside it
+      servicesDropdown.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+  </script>
+
+  <div class="wrapper-main">
+    <!-- BreadCrumb Section -->
+    <div class="full-title">
+      <div class="container">
+        <h1 id="newheading"></h1> 
+        <div class="breadcrumb-main">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="https://www.petroindustech.com/">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Bath Accessories Products</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- <div class="card-wrapper">
+    <div class="card">
+      <div class="product-imgs">
+        <div class="img-display">
+          <div class="img-showcase" id="img-showcase"></div>
+          <div class="slider-controls">
+            <button id="prevBtn">&#10094;</button>
+            <button id="nextBtn">&#10095;</button>
+          </div>
+        </div>
+        <div class="slider-indicators" id="slider-indicators"></div>
+        <div class="color-select">
+          <button class="color-btn red active" data-color="red">Red</button>
+          <button class="color-btn blue" data-color="blue">Blue</button>
+          <button class="color-btn green" data-color="green">Green</button>
+          <button class="color-btn clear" data-color="clear">Clear</button>
+        </div>
+      </div>
+
+      <div class="product-content">
+        <h2 class="product-title">Soap Dish</h2>
+        <a href="https://example.com/store" class="product-link" target="_blank">Visit Store</a>
+        <div class="product-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.3 (520 reviews)</span>
+        </div>
+        <div class="product-price">
+          <div class="last-price"><span>$399.99</span></div>
+          <div class="new-price"><span>$299.99</span></div>
+        </div>
+        <div class="product-detail">
+          <h2>Description</h2>
+          <p>This elegant soap dish brings functionality and aesthetic to your bathroom space.</p>
+          <h2>Features</h2>
+          <ul>
+            <li>Durable ABS plastic material</li>
+            <li>Available in multiple colors</li>
+            <li>Wall-mounted or counter-friendly</li>
+            <li>Easy to clean and maintain</li>
+          </ul>
+        </div>
+        <div class="purchase-controls">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" />
+          <button class="btn-buy" type="button">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+    <!-- Product Dynamic Card -->
+    <div class="card-wrapper">
+      <div class="card" style="border: none">
+        <div class="product-imgs">
+          <div class="img-display">
+            <div class="img-showcase" id="img-showcase"></div>
+            <div class="slider-controls">
+              <button id="prevBtn">&#10094;</button>
+              <button id="nextBtn">&#10095;</button>
+            </div>
+          </div>
+          <div class="slider-indicators" id="slider-indicators"></div>
+          <div class="color-select" id="color-select"></div>
+        </div>
+
+        <div class="product-content">
+          <h2 class="product-title" id="product-title"></h2>
+          <div class="product-rating" id="product-rating"></div>
+          <div class="product-price" id="product-price"></div>
+          <div class="product-table" id="product-table"></div>
+          <div>
+            <button class="btn btn-primary mt-3">
+              <a href="https://wa.me/918000007336" target="_blank" style="color: #fff; text-decoration: none">
+                Enquire Now <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="product-detail" id="product-detail"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="productdetailsec">
+
+  </div> -->
+
+  <!-- ✅ Firebase SDKs (add this in <body> or footer) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+
+  <!--FOOTER SECTION-->
+  <!--FOOTER SECTION-->
+  <footer class="footer mt-5">
+    <div class="container bottom_border mt-3">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="/images/petro-circle-logo.webp" alt="" class="img-fluid" />
+          </div>
+
+          <ul class="mt-3 social-link-foot">
+            <li>
+              <i class="fa-solid fa-briefcase"></i><span style="font-weight: bold; color: yellow">
+                Corporate Office:-
+              </span>
+              <br />
+              <b> Petro Industech Private Limited</b> <br />
+              A-47B, Naresh Park Extension, Nangloi, New Delhi - 110041
+            </li>
+            <li>
+              <a href="https://g.co/kgs/KhszSVx">
+                <i class="fa-solid fa-location-dot"></i><span style="font-weight: bold; color: yellow">
+                  Manufacturing (Unit - I) :-
+                </span>
+                A-48D, Naresh Park Extension, Nangloi, New Delhi - 110041</a>
+            </li>
+            <li>
+              <a href="https://g.co/kgs/Vv9FQjM"><i class="fa-solid fa-location-dot"></i><span
+                  style="font-weight: bold; color: yellow">
+                  Manufacturing (Unit - II):-
+                </span>
+                Plot No. 812/F-45, Samtal Zone, RIICO Industrial Area, BHIWADI
+                (Distt:- Khairthal-Tijara), Rajasthan - 301019, India</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+          <ul class="footer_ul_amrc">
+            <li>
+              <a href="/about.html"><i class="fas fa-long-arrow-alt-right"></i>About Us</a>
+            </li>
+            <li>
+              <a href="/our-products.html"><i class="fas fa-long-arrow-alt-right"></i>Our Products</a>
+            </li>
+            <li>
+              <a href="/bath-accessories.html"><i class="fas fa-long-arrow-alt-right"></i>Our Products</a>
+            </li>
+            <li>
+              <a href="/press-media.html"><i class="fas fa-long-arrow-alt-right"></i>Press & Media</a>
+            </li>
+            <li>
+              <a href="/catalogue.html"><i class="fas fa-long-arrow-alt-right"></i>Catalogue
+              </a>
+            </li>
+
+            <li>
+              <a href="/our-blogs.html"><i class="fas fa-long-arrow-alt-right"></i>Our Blogs</a>
+            </li>
+            <li>
+              <a href="/petro-guwahati-exhibation.html"><i class="fas fa-long-arrow-alt-right"></i>Guwahati
+                Exhibition</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <h5 class="headin5_amrc col_white_amrc pt2">Help Desk</h5>
+          <ul class="footer_ul_amrc">
+            <li>
+              <a href="/annual-report.html"><i class="fas fa-long-arrow-alt-right"></i>Annual Report
+              </a>
+            </li>
+            <li>
+              <a href="/privacypolicy.html"><i class="fas fa-long-arrow-alt-right"></i>Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/terms&Conditions.html"><i class="fas fa-long-arrow-alt-right"></i>Terms &
+                Conditions</a>
+            </li>
+            <li>
+              <a href="/refund-canellation.html"><i class="fas fa-long-arrow-alt-right"></i>Refund &
+                Cancellation</a>
+            </li>
+            <li>
+              <a href="/contact.html"><i class="fas fa-long-arrow-alt-right"></i>Contact Us</a>
+            </li>
+            <li>
+              <a href="tel:+91-8000007336"><i class="fas fa-long-arrow-alt-right"></i>Sales Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="news-box">
+            <h5 class="headin5_amrc col_white_amrc pt2">
+              Connect With Social Media
+            </h5>
+
+            <ul class="footer-social">
+              <li>
+                <a class="facebook hb-xs-margin" target="_blank"
+                  href="https://www.facebook.com/www.petroindustries.in/"><span class="hb hb-xs spin hb-facebook"><i
+                      class="fab fa-facebook-f"></i></span></a>
+              </li>
+              <li>
+                <a class="instagram hb-xs-margin" target="_blank"
+                  href="https://www.instagram.com/petroindustries/"><span class="hb hb-xs spin hb-instagram"><i
+                      class="fab fa-instagram"></i></span></a>
+              </li>
+              <li>
+                <a class="googleplus hb-xs-margin" target="_blank" href="https://x.com/Petroindustech"
+                  target="_blank"><span class="hb hb-xs spin hb-x-twitter"><i class="fab fa-x-twitter"></i></span></a>
+              </li>
+              <li>
+                <a class="googleplus hb-xs-margin" target="_blank" href="https://www.youtube.com/@petroindustechpvtltd"
+                  target="_blank"><span class="hb hb-xs spin hb-google-plus"><i class="fab fa-youtube"></i></span></a>
+              </li>
+              <li>
+                <a class="googleplus hb-xs-margin" target="_blank" href="https://in.pinterest.com/petroindustech/"
+                  target="_blank"><span class="hb hb-xs spin hb-google-plus"><i class="fab fa-pinterest"></i></span></a>
+              </li>
+              <li>
+                <a class="googleplus hb-xs-margin" target="_blank" href="https://wa.me/918000007336"><span
+                    class="hb hb-xs spin hb-whatsapp"><i class="fab fa-whatsapp"></i></span></a>
+              </li>
+              <br />
+              <li>
+                <i class="fa-solid fa-phone"></i><a href="tel:+91-8000007336"> +91-8000007336</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto: contact@petroindustech.com">
+                  contact@petroindustech.com</a>
+              </li>
+              <li> <i class="fa-solid fa-users"></i> Visitor Count: <span id="visitor-count">Loading...</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p class="copyright text-center">
+        Copyright Petro Industech Pvt Ltd © 2025. All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+  <script id="product-schema" type="application/ld+json"></script>
+  <!-- SMTP Javascript CDN & Script -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <!-- Javascript CDN & Script -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/jqBootstrapValidation.js"></script>
+  <script src="/js/jquery.appear.js"></script>
+  <script src="/js/script.js"></script>
+  <script type="module" src="/js/product-api-list.js"></script>
+  <script type="module" src="/js/product-details-page.js"></script>
+  <!-- <script type="module" src="/js/bath_accessories_pro.js"></script> -->
+</body>
+
+</html>

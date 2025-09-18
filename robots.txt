@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Disallow: /wp-login.php
+Disallow: /wp-register.php 
+Disallow: /tag/
+Disallow: /author/
+Disallow: /category/
+Disallow: /date/
+Disallow: /thank-you/
+Disallow: /order-received/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://www.petroindustech.com/sitemap.xml
