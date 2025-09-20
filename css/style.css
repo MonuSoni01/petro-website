@@ -1249,7 +1249,13 @@ footer p {
   text-align: center;
 }
 
-.full-title h1 small {
+.full-title p { 
+  color: var(--light);
+  font-size: 22px;
+  text-align: center;
+}
+
+.full-title small {
   float: right;
   padding: 15px 0px;
   font-size: 14px;
