@@ -2075,7 +2075,7 @@ footer p {
 }
 
 .navbar-brand img {
-  height: 75px;
+  height: 65px;
   width: 100%;
 }
 
@@ -3858,4 +3858,10 @@ a .product-card:hover img {
 @media (max-width:768px){
   .label-strip{width:min(92%,560px)}
   .label-strip span{font-size:15px}
+}
+
+.faq-heading{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
