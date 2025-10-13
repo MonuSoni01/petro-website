@@ -3865,3 +3865,50 @@ a .product-card:hover img {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
+
+.petro-marketing { padding: 56px 16px; background:#f7faf9; color:#192024; }
+  .pm-container { max-width: 1100px; margin: 0 auto; }
+  .petro-marketing h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin: 0 0 10px; }
+  .pm-intro { margin: 0 0 28px; line-height: 1.7; }
+  .pm-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 840px) {
+    .pm-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .pm-card {
+    background:#fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    padding: 20px 22px;
+    border: 1px solid #e6ecea;
+  }
+  .pm-card-head {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom: 10px;
+  }
+  .pm-card h3 {
+    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+    margin: 0;
+  }
+  .pm-icon {
+    display:inline-flex;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background:#e8f3f1;
+    align-items:center; justify-content:center;
+    color:#108082; /* Petro teal */
+    flex: 0 0 40px;
+  }
+  .pm-list { margin: 8px 0 0 0; padding: 0 0 0 20px; line-height: 1.8;list-style-type: disc; }
+  .pm-list li { margin: 4px 0; }
+  .pm-note {
+    margin-top: 22px;
+    font-weight: 600;
+  }
+
+  
