@@ -203,8 +203,18 @@
 </head>
 
 <body>
+<!-- Lights -->
+<div class="petro-top-lights" id="petroLights">
+  <svg class="petro-wire-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+    <path d="M0,10 Q25,25 50,10 T100,10" />
+  </svg>
+  <div class="petro-light-string" id="petroLightStrip"></div>
+</div>
 
- 
+<!-- Firework Canvases -->
+<canvas id="petroSparkCanvas"></canvas>
+<canvas id="petroRocketCanvas"></canvas>
+
   <!-- <div class="modal-backdrop" id="imageModal">
     <div class="modal-box">
       <button class="close-btn" onclick="closeModal()">&times;</button>
@@ -243,7 +253,7 @@
   </div>
 
   <!-- Top Navbar -->
-  <div class="top-bar">
+  <div class="top-bar" style="margin-top: 50px;">
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-4 col-md-6 d-flex justify-content-around p-0">
@@ -1911,7 +1921,8 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
-<script src="js/jquery.appear.js"></script>
+<script src="js/jquery.appear.js"></script> 
+<script src="js/petro-diwali.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/script.js"></script>
