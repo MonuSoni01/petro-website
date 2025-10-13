@@ -1,4 +1,137 @@
 var products = [
+    {
+    id: 48,
+    slug: "soap-dispenser-sq",
+    title: "Liquid Soap Dispenser (Square)",
+    mtitle: "Setup Box Stand | Buy TV Set Top Box Stand – Petro Industech",
+    mdescription:
+      "Petro Industech offers durable Small set top box stands – wall mount, glass top, TV setup box stands, and more. Perfect fit for any TV unit. Buy online now!",
+    keyword: [
+      "Buy Set Top Box Stand,Setup Box Stand | Buy TV Set Top Box Stand,Wall Mount & Glass Set Top Box Stand  ",
+    ],
+    ratingStars: 4.7,
+    ratingReviews: "112",
+    // oldPrice: "$299.99",
+    newPrice: "₹599.00",
+    description:
+      "Optimize your entertainment setup with our textured matte-finish set-top box stand. Designed for compact spaces, this small-sized stand keeps your device secure while ensuring proper airflow to prevent overheating. The modern matte finish adds a touch of elegance, making it a seamless addition to your home décor. Whether wall-mounted or placed on a surface, this stand is a perfect blend of style and functionality.",
+    features: [
+      "✅ Premium Textured Finish – Adds a stylish and refined look",
+      "✅ Compact & Space-Saving – Ideal for small entertainment units",
+      "✅ Durable & Sturdy – Made with high-quality materials for long-lasting use",
+      "✅ Easy Installation – Hassle-free setup with strong wall-mounting options",
+      "✅ Better Ventilation – Prevents overheating for improved device performance",
+      "✅ Sleek & Modern Design – Enhances the look of your home entertainment setup",
+    ],
+    main_image:
+      "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-sq.png",
+    colors: ["Transparent"],
+    images: {
+      Transparent: [
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-sq.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-sq.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-sq.png",
+      ],
+    },
+    table: [
+      { label: "Item Code ", value: "1071" },
+      { label: "Size	", value: "300 ML" },
+      { label: "Per", value: "1 Pcs" },
+      { label: "Qty Per Parcel", value: "150 Pcs" },
+      { label: "Qty Per Box", value: "1 Pcs" },
+      { label: "Color", value: "Clear" },
+      { label: "Finish", value: "Transparent" },
+      { label: "Usage Type", value: "Wall Mount & Countertop" },
+    ],
+  },
+    {
+    id: 47,
+    slug: "soap-dispenser-square-wooden",
+    title: "Wooden Finish Liquid Soap Dispenser (Square)",
+    mtitle: "Setup Box Stand | Buy TV Set Top Box Stand – Petro Industech",
+    mdescription:
+      "Petro Industech offers durable Small set top box stands – wall mount, glass top, TV setup box stands, and more. Perfect fit for any TV unit. Buy online now!",
+    keyword: [
+      "Buy Set Top Box Stand,Setup Box Stand | Buy TV Set Top Box Stand,Wall Mount & Glass Set Top Box Stand  ",
+    ],
+    ratingStars: 4.1,
+    ratingReviews: "682",
+    // oldPrice: "$299.99",
+    newPrice: "₹1,299.00",
+    description:
+      "Optimize your entertainment setup with our textured matte-finish set-top box stand. Designed for compact spaces, this small-sized stand keeps your device secure while ensuring proper airflow to prevent overheating. The modern matte finish adds a touch of elegance, making it a seamless addition to your home décor. Whether wall-mounted or placed on a surface, this stand is a perfect blend of style and functionality.",
+    features: [
+      "✅ Premium Textured Finish – Adds a stylish and refined look",
+      "✅ Compact & Space-Saving – Ideal for small entertainment units",
+      "✅ Durable & Sturdy – Made with high-quality materials for long-lasting use",
+      "✅ Easy Installation – Hassle-free setup with strong wall-mounting options",
+      "✅ Better Ventilation – Prevents overheating for improved device performance",
+      "✅ Sleek & Modern Design – Enhances the look of your home entertainment setup",
+    ],
+    main_image:
+      "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-square-wooden.png",
+    colors: ["WoodenFinish"],
+    images: {
+      WoodenFinish: [
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-square-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-square-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-square-wooden.png",
+      ],
+    },
+    table: [
+      { label: "Item Code ", value: "1103" },
+      { label: "Size	", value: "300 ML" },
+      { label: "Per", value: "1 Pcs" },
+      { label: "Qty Per Parcel", value: "150 Pcs" },
+      { label: "Qty Per Box", value: "1 Pcs" },
+      { label: "Finish", value: "Wooden" },
+      { label: "Usage Type", value: "Wall Mount & Countertop" },
+    ],
+  },
+  {
+    id: 46,
+    slug: "wooden-soap-dispenser",
+    title: "Wooden Finish Liquid Soap Dispenser (Hexagon)",
+    mtitle: "Setup Box Stand | Buy TV Set Top Box Stand – Petro Industech",
+    mdescription:
+      "Petro Industech offers durable Small set top box stands – wall mount, glass top, TV setup box stands, and more. Perfect fit for any TV unit. Buy online now!",
+    keyword: [
+      "Buy Set Top Box Stand,Setup Box Stand | Buy TV Set Top Box Stand,Wall Mount & Glass Set Top Box Stand  ",
+    ],
+    ratingStars: 4.6,
+    ratingReviews: "1.2K",
+    // oldPrice: "$299.99",
+    newPrice: "₹1,299.00",
+    description:
+      "Optimize your entertainment setup with our textured matte-finish set-top box stand. Designed for compact spaces, this small-sized stand keeps your device secure while ensuring proper airflow to prevent overheating. The modern matte finish adds a touch of elegance, making it a seamless addition to your home décor. Whether wall-mounted or placed on a surface, this stand is a perfect blend of style and functionality.",
+    features: [
+      "✅ Premium Textured Finish – Adds a stylish and refined look",
+      "✅ Compact & Space-Saving – Ideal for small entertainment units",
+      "✅ Durable & Sturdy – Made with high-quality materials for long-lasting use",
+      "✅ Easy Installation – Hassle-free setup with strong wall-mounting options",
+      "✅ Better Ventilation – Prevents overheating for improved device performance",
+      "✅ Sleek & Modern Design – Enhances the look of your home entertainment setup",
+    ],
+    main_image:
+      "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+    colors: ["WoodenFinish"],
+    images: {
+      WoodenFinish: [
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+      ],
+    },
+    table: [
+      { label: "Item Code ", value: "1102" },
+      { label: "Size	", value: "300 ML" },
+      { label: "Per", value: "1 Pcs" },
+      { label: "Qty Per Parcel", value: "150 Pcs" },
+      { label: "Qty Per Box", value: "1 Pcs" },
+      { label: "Finish", value: "Wooden" },
+      { label: "Usage Type", value: "Wall Mount & Countertop" },
+    ],
+  },
   {
     id: 45,
     slug: "wooden-finish-bathroom-accessories-set",
@@ -97,11 +230,12 @@ var products = [
       { label: "<b>Finish</b>", value: "	Wooden " },
     ],
   },
+
   {
     id: 1,
     slug: "soap-dish-single-oval",
     title: "Soap Dish Single Oval",
-    pageH1:"Health Faucet Round",
+    pageH1: "Health Faucet Round",
     mtitle: "Buy Soap Stand, Holder & Dish for Bathroom | Petro Industech",
     mdescription:
       "Shop soap stand, soap holder, soap case, single oval soap dish for bathroom at Petro Industech. Premium bathroom accessories available now.",
