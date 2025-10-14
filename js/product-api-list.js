@@ -1,28 +1,28 @@
 var products = [
     {
     id: 48,
-    slug: "soap-dispenser-sq",
+    slug: "liquid-soap-dispenser-square",
     title: "Liquid Soap Dispenser (Square)",
-    mtitle: "Setup Box Stand | Buy TV Set Top Box Stand – Petro Industech",
+    mtitle: "Best Bathroom Soap Dispenser Square | Petro industech",
     mdescription:
-      "Petro Industech offers durable Small set top box stands – wall mount, glass top, TV setup box stands, and more. Perfect fit for any TV unit. Buy online now!",
+      " Liquid | Soap Dispenser | from Petro Industech – durable, refillable plastic design for modern bathrooms. Perfect for home or office use",
     keyword: [
-      "Buy Set Top Box Stand,Setup Box Stand | Buy TV Set Top Box Stand,Wall Mount & Glass Set Top Box Stand  ",
+      "",
     ],
     ratingStars: 4.7,
     ratingReviews: "112",
     // oldPrice: "$299.99",
     newPrice: "₹599.00",
     description:
-      "Optimize your entertainment setup with our textured matte-finish set-top box stand. Designed for compact spaces, this small-sized stand keeps your device secure while ensuring proper airflow to prevent overheating. The modern matte finish adds a touch of elegance, making it a seamless addition to your home décor. Whether wall-mounted or placed on a surface, this stand is a perfect blend of style and functionality.",
-    features: [
-      "✅ Premium Textured Finish – Adds a stylish and refined look",
-      "✅ Compact & Space-Saving – Ideal for small entertainment units",
-      "✅ Durable & Sturdy – Made with high-quality materials for long-lasting use",
-      "✅ Easy Installation – Hassle-free setup with strong wall-mounting options",
-      "✅ Better Ventilation – Prevents overheating for improved device performance",
-      "✅ Sleek & Modern Design – Enhances the look of your home entertainment setup",
-    ],
+      "Add a modern touch of elegance to your washroom with the Petro Liquid Soap Dispenser (Square) — where style meets hygiene,Crafted from premium-quality plastic, this refillable soap dispenser is lightweight, durable, and easy to clean — making it perfect for everyday use. Its sleek square design and smooth dispensing pump make it ideal for modern bathrooms, offices, hotels, and premium washrooms,Whether you’re organising your sink space or upgrading your bathroom décor, Petro’s best-quality soap dispenser ensures a clean, hygienic, and classy look every time. ",
+   features: [
+  "✅ Premium plastic construction — strong, rust-proof, and long-lasting",
+  "✅ Smooth pump design for effortless liquid flow",
+  "✅ Compact square shape fits perfectly on any wash basin or countertop",
+  "✅ Ideal for liquid hand wash, sanitiser, or lotion",
+  "✅ Refillable and reusable – sustainable and easy to maintain",
+  "✅ Perfect for homes, hotels, offices, and commercial bathrooms",
+], 
     main_image:
       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-sq.png",
     colors: ["Transparent"],
@@ -46,27 +46,26 @@ var products = [
   },
     {
     id: 47,
-    slug: "soap-dispenser-square-wooden",
+    slug: "liquid-soap-dispenser-wooden-finish-soap-pump",
     title: "Wooden Finish Liquid Soap Dispenser (Square)",
-    mtitle: "Setup Box Stand | Buy TV Set Top Box Stand – Petro Industech",
+    mtitle: "Liquid Soap Dispenser | Wooden Finish Refillable Soap Pump",
     mdescription:
-      "Petro Industech offers durable Small set top box stands – wall mount, glass top, TV setup box stands, and more. Perfect fit for any TV unit. Buy online now!",
+      "Buy a premium Liquid Soap Dispenser with a wooden finish and gold nozzle: refillable soap dispenser and soap pump by Petro Industech for modern bathrooms.",
     keyword: [
-      "Buy Set Top Box Stand,Setup Box Stand | Buy TV Set Top Box Stand,Wall Mount & Glass Set Top Box Stand  ",
+      "",
     ],
     ratingStars: 4.1,
     ratingReviews: "682",
     // oldPrice: "$299.99",
     newPrice: "₹1,299.00",
     description:
-      "Optimize your entertainment setup with our textured matte-finish set-top box stand. Designed for compact spaces, this small-sized stand keeps your device secure while ensuring proper airflow to prevent overheating. The modern matte finish adds a touch of elegance, making it a seamless addition to your home décor. Whether wall-mounted or placed on a surface, this stand is a perfect blend of style and functionality.",
+      "Petro Industech Liquid Soap Dispenser (Square) is made from high-quality plastic with a wooden finish body and a gold-plated nozzle,This refillable soap dispenser is designed for everyday use and provides smooth, consistent flow through its premium soap pump,Its square design suits both modern and classic interiors, making it ideal for bathrooms, kitchens, hotels, and offices.",
     features: [
-      "✅ Premium Textured Finish – Adds a stylish and refined look",
-      "✅ Compact & Space-Saving – Ideal for small entertainment units",
-      "✅ Durable & Sturdy – Made with high-quality materials for long-lasting use",
-      "✅ Easy Installation – Hassle-free setup with strong wall-mounting options",
-      "✅ Better Ventilation – Prevents overheating for improved device performance",
-      "✅ Sleek & Modern Design – Enhances the look of your home entertainment setup",
+       "✅ Durable plastic soap dispenser with elegant wooden texture",
+  "✅ Gold-plated nozzle for smooth pumping",
+  "✅ Square design ensures stability and a premium appearance",
+  "✅ Refillable soap dispenser for eco-friendly use",
+  "✅ Suitable for liquid soap, hand wash, or sanitizer",
     ],
     main_image:
       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-square-wooden.png",
@@ -103,14 +102,14 @@ var products = [
     // oldPrice: "$299.99",
     newPrice: "₹1,299.00",
     description:
-      "Optimize your entertainment setup with our textured matte-finish set-top box stand. Designed for compact spaces, this small-sized stand keeps your device secure while ensuring proper airflow to prevent overheating. The modern matte finish adds a touch of elegance, making it a seamless addition to your home décor. Whether wall-mounted or placed on a surface, this stand is a perfect blend of style and functionality.",
+      "Bring a touch of sophistication to your wash space with the Petro Wooden Finish Liquid Soap Dispenser (Hexagon – 300 ml),Crafted from premium-grade plastic with a luxurious wooden texture and a gold-plated soap pump, this elegant soap dispenser blends modern design with everyday convenience,The hexagon-shaped body offers a bold, geometric look and superior balance, while the refillable 300 ml capacity makes it both practical and eco-friendly,Ideally suited for bathrooms, kitchens, hotels, and offices, it turns an everyday essential into a statement piece.",
     features: [
-      "✅ Premium Textured Finish – Adds a stylish and refined look",
-      "✅ Compact & Space-Saving – Ideal for small entertainment units",
-      "✅ Durable & Sturdy – Made with high-quality materials for long-lasting use",
-      "✅ Easy Installation – Hassle-free setup with strong wall-mounting options",
-      "✅ Better Ventilation – Prevents overheating for improved device performance",
-      "✅ Sleek & Modern Design – Enhances the look of your home entertainment setup",
+      "✅ Premium plastic body with a smooth, natural wooden finish",
+  "✅ Gold-plated soap pump delivers a seamless and controlled flow",
+  "✅ Hexagonal design for modern elegance and stability",
+  "✅ Refillable soap dispenser – sustainable and reusable",
+  "✅ Ideal for liquid soap, hand wash, or sanitizer",
+  "✅ Adds a refined, high-end aesthetic to any interior",
     ],
     main_image:
       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
