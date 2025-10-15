@@ -88,34 +88,8 @@ $(document).ready(function () {
     });
   });
 });
-
-const firebaseConfig = {
-    apiKey: "AIzaSyBl-W2OfEqfCuB1UiUE6BChzZ9cgG0xrQY",
-    authDomain: "petrocounter.firebaseapp.com",
-    databaseURL: "https://petrocounter-default-rtdb.firebaseio.com",
-    projectId: "petrocounter",
-    storageBucket: "petrocounter.appspot.com",
-    messagingSenderId: "1067968150164",
-    appId: "1:1067968150164:web:62c142f5d613ef7a519281"
-  };
-
-  // ✅ Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-  const counterRef = db.ref("visitorCount");
-
-  // ✅ Add +1 on every visit
-  counterRef.transaction(current => {
-    return (current || 0) + 1;
-  });
-
-  // ✅ Show visitor count + offset
-  const offset = 10000; // Prefix start number
-  counterRef.on("value", snapshot => {
-    const actual = snapshot.val() || 0;
-    document.getElementById("visitor-count").innerText = offset + actual;
-  });
-
+ 
+ 
 var counters = document.querySelectorAll('.counter-number');
 
 const options = {
