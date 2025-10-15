@@ -302,12 +302,10 @@
 
                     <table id="dataTable" style="display:none;">
                         <thead>
-                            <tr>
-                                <th>Post Office</th>
+                            <tr> 
                                 <th>Block</th>
                                 <th>District</th>
                                 <th>State</th>
-                                <th>Branch Type</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody"></tbody>
@@ -481,80 +479,68 @@
     </footer>
     <!-- FAQ JS -->
 
-    <script>
-        // 🗺️ Sales team mapping as per your image
-        const salesMapping = {
-            "Rajasthan": ["Amit Soni (South Rajasthan)", "Gaurav Khandelwal (North Rajasthan)"],
-            "Jharkhand": ["Amit Soni"],
-            "Tamilnadu": ["Amit Soni"],
-            "Madhya Pradesh": ["Amit Soni"],
-            "Bihar": ["Ankit Kalra"],
-            "Odisha": ["Ankit Kalra"],
-            "West Bengal": ["Ankit Kalra"],
-            "Haryana": ["Ankit Kalra"],
-            "Maharastra": ["Gaurav Khandelwal"],
-            "Karnataka": ["Gaurav Khandelwal"],
-            "Telangana": ["Gaurav Khandelwal"],
-            "Uttar Pradesh": ["Arun Yadav"],
-            "Uttarakhand": ["Arun Yadav"],
-            "Assam": ["Arun Yadav"],
-            "Punjab": ["Arun Yadav"],
-            "Chhattisgarh": ["Vivek Srivastava"]
-        };
+     <script>
+    const salesMapping = {
+      "Rajasthan": ["Amit Soni (South Rajasthan)", "Gaurav Khandelwal (North Rajasthan)"],
+      "Jharkhand": ["Amit Soni"],
+      "Tamilnadu": ["Amit Soni"],
+      "Madhya Pradesh": ["Amit Soni"],
+      "Bihar": ["Ankit Kalra"],
+      "Odisha": ["Ankit Kalra"],
+      "West Bengal": ["Ankit Kalra"],
+      "Haryana": ["Ankit Kalra"],
+      "Maharastra": ["Gaurav Khandelwal"],
+      "Karnataka": ["Gaurav Khandelwal"],
+      "Telangana": ["Gaurav Khandelwal"],
+      "Uttar Pradesh": ["Arun Yadav"],
+      "Uttarakhand": ["Arun Yadav"],
+      "Assam": ["Arun Yadav"],
+      "Punjab": ["Arun Yadav"],
+      "Chhattisgarh": ["Vivek Srivastava"]
+    };
 
-        async function getDetails() {
-            const pin = document.getElementById("pincode").value.trim();
-            const msg = document.getElementById("msg");
-            const table = document.getElementById("dataTable");
-            const tbody = document.getElementById("tableBody");
-            const salesPersonDiv = document.getElementById("salesPerson");
+    async function getDetails() {
+      const pin = document.getElementById("pincode").value.trim();
+      const msg = document.getElementById("msg");
+      const table = document.getElementById("dataTable");
+      const tbody = document.getElementById("tableBody");
+      const salesPersonDiv = document.getElementById("salesPerson");
 
-            msg.textContent = "";
-            tbody.innerHTML = "";
-            table.style.display = "none";
-            salesPersonDiv.textContent = "";
+      msg.textContent = "";
+      tbody.innerHTML = "";
+      table.style.display = "none";
+      salesPersonDiv.textContent = "";
 
-            if (pin.length !== 6 || isNaN(pin)) {
-                msg.textContent = "⚠️ Please enter a valid 6-digit pincode.";
-                return;
-            }
+      if (pin.length !== 6 || isNaN(pin)) {
+        msg.textContent = "⚠️ Please enter a valid 6-digit pincode.";
+        return;
+      }
 
-            msg.textContent = "⏳ Fetching data...";
-            try {
-                const response = await fetch(`https://api.postalpincode.in/pincode/${pin}`);
-                const data = await response.json();
+      msg.textContent = "⏳ Fetching data...";
+      try {
+        const response = await fetch(`https://api.postalpincode.in/pincode/${pin}`);
+        const data = await response.json();
 
-                if (data[0].Status === "Success") {
-                    const offices = data[0].PostOffice;
-                    msg.textContent = `✅ Found ${offices.length} Post Office${offices.length > 1 ? "s" : ""}.`;
-                    const state = offices[0].State;
-                    const assigned = salesMapping[state] || ["Not Assigned"];
-
-                    // Show sales person info
-                    salesPersonDiv.innerHTML = `<strong>💼 Sales Contact for ${state}:</strong><br>${assigned.join("<br>")}`;
-
-                    offices.forEach(office => {
-                        const row = `
-          <tr>
-            <td>${office.Name || "-"}</td>
-            <td>${office.Block || "-"}</td>
-            <td>${office.District || "-"}</td>
-            <td>${office.State || "-"}</td>
-            <td>${office.BranchType || "-"}</td> 
-          </tr>`;
-                        tbody.insertAdjacentHTML("beforeend", row);
-                    });
-
-                    table.style.display = "table";
-                } else {
-                    msg.textContent = "❌ No details found for this pincode.";
-                }
-            } catch (err) {
-                console.error(err);
-                msg.textContent = "⚠️ Something went wrong. Please try again.";
-            }
+        if (data[0].Status === "Success") {
+          const offices = data[0].PostOffice;
+          msg.textContent = `✅ Found ${offices.length} Post Office${offices.length > 1 ? "s" : ""}.`;
+          const state = offices[0].State;
+          const assigned = salesMapping[state] || ["Not Assigned"];
+          salesPersonDiv.innerHTML = `<strong>💼 Sales Contact for ${state}:</strong><br>${assigned.join("<br>")}`;
+          offices.forEach(office => {
+            const row = `<tr><td>${office.Block || "-"}</td><td>${office.District || "-"}</td><td>${office.State || "-"}</td></tr>`;
+            tbody.insertAdjacentHTML("beforeend", row);
+          });
+          table.style.display = "table";
+        } else {
+          msg.textContent = "❌ No details found for this pincode.";
         }
-    </script>
+      } catch (err) {
+        console.error(err);
+        msg.textContent = "⚠️ Something went wrong. Please try again.";
+      }
+    }
+  </script>
 
     <!-- Javascript & CDN -->
     <script src="vendor/jquery/jquery.min.js"></script>
