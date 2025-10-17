@@ -2075,8 +2075,10 @@ footer p {
 }
 
 .navbar-brand img {
-  height: 65px;
-  width: 100%;
+  height: auto !important;
+  width: auto !important;
+  max-height: 60px; /* adjust to your design */
+  object-fit: contain;
 }
 
 .navbar-brand span {
@@ -2088,6 +2090,8 @@ footer p {
     font-size: 12px;
     margin: 0;
   }
+ 
+
 }
 
 #firstslide {
