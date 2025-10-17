@@ -3825,7 +3825,7 @@ a .product-card:hover img {
   .gallery img:hover{transform:scale(1.02);box-shadow:0 4px 12px rgba(0,0,0,.2)}
 
   .preview{position:relative;text-align:center}
-  #previewImg{width:62%;max-height:70vh;object-fit:contain}
+  #previewImg{width:92%;max-height:70vh;object-fit:contain}
 
   .top-btn{position:absolute;top:15px;right:15px;display:flex;gap:12px}
   .icon-btn{background:transparent;border:0;cursor:pointer}
