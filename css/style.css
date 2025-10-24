@@ -2380,16 +2380,17 @@ select {
 
 @media (max-width: 400px) {
   .whats_link {
-    left: 20px;
+    right: 20px;
     right: 30px;
   }
   .whats_link img {
-    width: 50px;
+    width: 60px;
+    right: 12px !important;
     border-radius: 20%;
   }
   .phone_link {
     left: 20px;
-    bottom: 11%;
+    bottom: 4%;
   }
   .phone_link img {
     width: 50px;
@@ -3913,7 +3914,9 @@ a .product-card:hover img {
   .pm-note {
     margin-top: 22px;
     font-weight: 600;
-  } /* ===== Curved Light Strip ===== */
+  } 
+/*   
+  
   .petro-top-lights {
     position: fixed;
     top: 0;
@@ -3979,9 +3982,7 @@ a .product-card:hover img {
   @keyframes petro-blink {
     0%,100% {opacity:1; transform:translateY(0); filter:brightness(1);}
     50% {opacity:.85; transform:translateY(-1px); filter:brightness(1.2);}
-  }
-
-  /* Curved wire */
+  } 
   .petro-wire-svg {
     position: absolute;
     top: 0;
@@ -3995,9 +3996,7 @@ a .product-card:hover img {
     stroke: #111;
     stroke-width: 2;
     fill: none;
-  }
-
-  /* ===== Firework Canvases ===== */
+  } 
   #petroSparkCanvas, #petroRocketCanvas {
     position: fixed;
     inset: 0;
@@ -4008,4 +4007,4 @@ a .product-card:hover img {
   @media(max-width:768px){
     .petro-top-lights{height:60px;}
     .petro-light-string{gap:26px;}
-  }
+  } */
