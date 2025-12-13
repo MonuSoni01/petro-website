@@ -1,7 +1,85 @@
 var products = [
-    {
+  {
+    id: 201,
+    category: "hardware",
+    slug: "stainless-steel-door-stopper",
+    title: "Stainless Steel Door Stopper",
+    mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
+    mdescription:
+      "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
+    keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
+    ratingStars: 4.8,
+    ratingReviews: "486",
+    newPrice: "₹149.00",
+    description:
+      "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
+    features: [
+      "✅ High-strength SS body for long-term durability",
+      "✅ Anti-rust and corrosion-resistant finish",
+      "✅ Soft rubber tip prevents wall damage",
+      "✅ Easy installation with screws included",
+      "✅ Ideal for homes, offices, and commercial spaces"
+    ],
+    main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+    colors: ["Steel"],
+    images: {
+      Steel: [
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
+      ]
+    },
+    table: [
+      { label: "Item Code", value: "HD-001" },
+      { label: "Material", value: "Stainless Steel" },
+      { label: "Per", value: "1 Pcs" },
+      { label: "Finish", value: "Steel" },
+      { label: "Usage Type", value: "Wall & Floor Mount" }
+    ]
+  },
+   {
+    id: 201,
+    category: "hardware",
+    slug: "stainless-steel-door-stopper",
+    title: "Stainless Steel Door Stopper",
+    mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
+    mdescription:
+      "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
+    keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
+    ratingStars: 4.8,
+    ratingReviews: "486",
+    newPrice: "₹149.00",
+    description:
+      "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
+    features: [
+      "✅ High-strength SS body for long-term durability",
+      "✅ Anti-rust and corrosion-resistant finish",
+      "✅ Soft rubber tip prevents wall damage",
+      "✅ Easy installation with screws included",
+      "✅ Ideal for homes, offices, and commercial spaces"
+    ],
+    main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+    colors: ["Steel"],
+    images: {
+      Steel: [
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
+      ]
+    },
+    table: [
+      { label: "Item Code", value: "HD-001" },
+      { label: "Material", value: "Stainless Steel" },
+      { label: "Per", value: "1 Pcs" },
+      { label: "Finish", value: "Steel" },
+      { label: "Usage Type", value: "Wall & Floor Mount" }
+    ]
+  },
+
+  {
     id: 48,
     slug: "liquid-soap-dispenser-square",
+    category: "bath-accessories",
     title: "Liquid Soap Dispenser (Square)",
     mtitle: "Best Bathroom Soap Dispenser Square | Petro industech",
     mdescription:
@@ -15,14 +93,14 @@ var products = [
     newPrice: "₹599.00",
     description:
       "Add a modern touch of elegance to your washroom with the Petro Liquid Soap Dispenser (Square) — where style meets hygiene,Crafted from premium-quality plastic, this refillable soap dispenser is lightweight, durable, and easy to clean — making it perfect for everyday use. Its sleek square design and smooth dispensing pump make it ideal for modern bathrooms, offices, hotels, and premium washrooms,Whether you’re organising your sink space or upgrading your bathroom décor, Petro’s best-quality soap dispenser ensures a clean, hygienic, and classy look every time. ",
-   features: [
-  "✅ Premium plastic construction — strong, rust-proof, and long-lasting",
-  "✅ Smooth pump design for effortless liquid flow",
-  "✅ Compact square shape fits perfectly on any wash basin or countertop",
-  "✅ Ideal for liquid hand wash, sanitiser, or lotion",
-  "✅ Refillable and reusable – sustainable and easy to maintain",
-  "✅ Perfect for homes, hotels, offices, and commercial bathrooms",
-], 
+    features: [
+      "✅ Premium plastic construction — strong, rust-proof, and long-lasting",
+      "✅ Smooth pump design for effortless liquid flow",
+      "✅ Compact square shape fits perfectly on any wash basin or countertop",
+      "✅ Ideal for liquid hand wash, sanitiser, or lotion",
+      "✅ Refillable and reusable – sustainable and easy to maintain",
+      "✅ Perfect for homes, hotels, offices, and commercial bathrooms",
+    ],
     main_image:
       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-sq.png",
     colors: ["Transparent"],
@@ -44,9 +122,10 @@ var products = [
       { label: "Usage Type", value: "Wall Mount & Countertop" },
     ],
   },
-    {
+  {
     id: 47,
     slug: "liquid-soap-dispenser-wooden-finish-soap-pump",
+    category: "bath-accessories",
     title: "Wooden Finish Liquid Soap Dispenser (Square)",
     mtitle: "Liquid Soap Dispenser | Wooden Finish Refillable Soap Pump",
     mdescription:
@@ -61,11 +140,11 @@ var products = [
     description:
       "Petro Industech Liquid Soap Dispenser (Square) is made from high-quality plastic with a wooden finish body and a gold-plated nozzle,This refillable soap dispenser is designed for everyday use and provides smooth, consistent flow through its premium soap pump,Its square design suits both modern and classic interiors, making it ideal for bathrooms, kitchens, hotels, and offices.",
     features: [
-       "✅ Durable plastic soap dispenser with elegant wooden texture",
-  "✅ Gold-plated nozzle for smooth pumping",
-  "✅ Square design ensures stability and a premium appearance",
-  "✅ Refillable soap dispenser for eco-friendly use",
-  "✅ Suitable for liquid soap, hand wash, or sanitizer",
+      "✅ Durable plastic soap dispenser with elegant wooden texture",
+      "✅ Gold-plated nozzle for smooth pumping",
+      "✅ Square design ensures stability and a premium appearance",
+      "✅ Refillable soap dispenser for eco-friendly use",
+      "✅ Suitable for liquid soap, hand wash, or sanitizer",
     ],
     main_image:
       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-square-wooden.png",
@@ -90,6 +169,7 @@ var products = [
   {
     id: 46,
     slug: "wooden-soap-dispenser",
+    category: "bath-accessories",
     title: "Wooden Finish Liquid Soap Dispenser (Hexagon)",
     mtitle: "Setup Box Stand | Buy TV Set Top Box Stand – Petro Industech",
     mdescription:
@@ -105,11 +185,11 @@ var products = [
       "Bring a touch of sophistication to your wash space with the Petro Wooden Finish Liquid Soap Dispenser (Hexagon – 300 ml),Crafted from premium-grade plastic with a luxurious wooden texture and a gold-plated soap pump, this elegant soap dispenser blends modern design with everyday convenience,The hexagon-shaped body offers a bold, geometric look and superior balance, while the refillable 300 ml capacity makes it both practical and eco-friendly,Ideally suited for bathrooms, kitchens, hotels, and offices, it turns an everyday essential into a statement piece.",
     features: [
       "✅ Premium plastic body with a smooth, natural wooden finish",
-  "✅ Gold-plated soap pump delivers a seamless and controlled flow",
-  "✅ Hexagonal design for modern elegance and stability",
-  "✅ Refillable soap dispenser – sustainable and reusable",
-  "✅ Ideal for liquid soap, hand wash, or sanitizer",
-  "✅ Adds a refined, high-end aesthetic to any interior",
+      "✅ Gold-plated soap pump delivers a seamless and controlled flow",
+      "✅ Hexagonal design for modern elegance and stability",
+      "✅ Refillable soap dispenser – sustainable and reusable",
+      "✅ Ideal for liquid soap, hand wash, or sanitizer",
+      "✅ Adds a refined, high-end aesthetic to any interior",
     ],
     main_image:
       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
@@ -134,7 +214,7 @@ var products = [
   {
     id: 45,
     slug: "wooden-finish-bathroom-accessories-set",
-    title: " Bathroom Acccessories Kit",
+    title: " Bathroom Acccessories Kit", category: "bath-accessories",
     mtitle: "Buy Wooden Finish Bathroom Set Online | Petro Industech",
     mdescription:
       "Shop Petro’s premium wooden finish bath accessories in bulk. Perfect for Wooden Bathroom accessories dealers, hotels & showrooms. Fast delivery & GST billing.",
@@ -229,12 +309,11 @@ var products = [
       { label: "<b>Finish</b>", value: "	Wooden " },
     ],
   },
-
   {
     id: 1,
     slug: "soap-dish-single-oval",
     title: "Soap Dish Single Oval",
-    pageH1: "Health Faucet Round",
+    pageH1: "Health Faucet Round", category: "bath-accessories",
     mtitle: "Buy Soap Stand, Holder & Dish for Bathroom | Petro Industech",
     mdescription:
       "Shop soap stand, soap holder, soap case, single oval soap dish for bathroom at Petro Industech. Premium bathroom accessories available now.",
@@ -305,11 +384,10 @@ var products = [
       { label: "Finish", value: "	Textured" },
     ],
   },
-
   {
     id: 2,
     slug: "Soap-Dish-Single-Square",
-    title: "Soap Dish Single Square",
+    title: "Soap Dish Single Square", category: "bath-accessories",
     mtitle: "Soap Holder Bathroom - Buy from Petro Industech",
     mdescription:
       "Buy a durable bathroom soap stand from Petro Industech. Stylish single square soap holder for the bathroom to keep your space clean and organized.",
@@ -380,9 +458,8 @@ var products = [
       { label: "Finish", value: "	Textured" },
     ],
   },
-
   {
-    id: 3,
+    id: 3, category: "bath-accessories",
     slug: "Soap-Dish-Double-Oval",
     title: "Soap Dish Double Oval",
     mtitle: "Petro Industech Soap Stand | Buy Soap Holder Bathroom",
@@ -457,7 +534,7 @@ var products = [
     ],
   },
   {
-    id: 4,
+    id: 4, category: "bath-accessories",
     slug: "Soap-Dish-Double-Square",
     title: "Soap Dish Double Square",
     mtitle: "Soap Dish Case Double Oval | Buy Bathroom Soap Stand",
@@ -529,9 +606,9 @@ var products = [
     ],
   },
   {
-    id: 5,
+    id: 5, category: "bath-accessories",
     slug: "Tumbler-Holder-2-In-1",
-    title: "Tumbler Holder 2 In 1",
+    title: "Tumbler Holder 2 In 1", category: "bath-accessories",
     mtitle: "Buy Bathroom Hardware & Toothbrush Holders, wall & tabletop",
     mdescription:
       "Buy toothbrush holders, plastic stands for toothpaste, cream, and 2-in-1 tumbler holders from Petro Industech. Best bathroom hardware at great prices.",
@@ -603,9 +680,9 @@ var products = [
     ],
   },
   {
-    id: 6,
+    id: 6, category: "bath-accessories",
     slug: "Tumbler-Holder-3-In-1",
-    title: "Tumbler Holder 3 In 1",
+    title: "Tumbler Holder 3 In 1", category: "bath-accessories",
     mtitle: "Buy Tumbler & Toothbrush Holders Plastic stand for Toothpaste",
     mdescription:
       "Buy wall & tabletop toothbrush holders, plastic stands for toothpaste, comb, lotion, and premium bathroom hardware from Petro Industech. Shop now.",
@@ -676,7 +753,7 @@ var products = [
     ],
   },
   {
-    id: 7,
+    id: 7, category: "bath-accessories",
     slug: "Tumbler-Holder-4-In-1",
     title: "Tumbler Holder 4 In 1",
     mtitle: "Shop Now 4-in-1 Toothbrush Holder | Bathroom Accessories",
@@ -749,7 +826,7 @@ var products = [
   },
   {
     id: 8,
-    slug: "Tumbler-Holder-5-In-1",
+    slug: "Tumbler-Holder-5-In-1", category: "bath-accessories",
     title: "Tumbler Holder 5 In 1",
     mtitle: "Buy Wall & Tabletop Toothbrush Holders | Bathroom Stand",
     mdescription:
@@ -817,9 +894,8 @@ var products = [
       { label: "Finish", value: "	Textured" },
     ],
   },
-
   {
-    id: 9,
+    id: 9, category: "bath-accessories",
     slug: "Jumbo-Corner-Set",
     title: "Jumbo Corner Set (Set Of 3 Pcs)",
     mtitle: "Buy Corner Shelf Units | Corner Wall Shelf & Stands Online",
@@ -867,7 +943,7 @@ var products = [
   },
   {
     id: 10,
-    slug: "Shakti-Corner-Set",
+    slug: "Shakti-Corner-Set", category: "bath-accessories",
     title: "Shakti Corner Set (Set Of 3 Pcs)",
     mtitle: "Buy Corner Stand | Shakti Corner Shelf Units Set of 3 Get Now",
     mdescription:
@@ -915,7 +991,7 @@ var products = [
   },
   {
     id: 11,
-    slug: "Mirchi-Corner-Set-8-10-12-inch",
+    slug: "Mirchi-Corner-Set-8-10-12-inch", category: "bath-accessories",
     title: "Mirchi Corner Set (Set of 3)",
     mtitle: "Buy Corner Shelf Units | Wall Shelves & Corner Stands",
     mdescription:
@@ -961,7 +1037,7 @@ var products = [
   {
     id: 12,
     slug: "Mirchi-Corner-Set-6-8-10-inch",
-    title: "Mirchi Corner Set (Set of 3) ",
+    title: "Mirchi Corner Set (Set of 3) ", category: "bath-accessories",
     mtitle: "Buy Corner Shelf Units | Wall Shelf & Corner Stands",
     mdescription:
       "Buy corner shelves, corner shelf units, corner stands, wall shelves, triangle unbreakable, and Mirchi Corner Set from Petro Industech online now.",
@@ -1008,7 +1084,7 @@ var products = [
   },
   {
     id: 13,
-    slug: "Single-Corner-Shelf-Mirchi-6-inch",
+    slug: "Single-Corner-Shelf-Mirchi-6-inch", category: "bath-accessories",
     title: "Single Corner Shelf Mirchi 6 inch",
     mtitle: "Buy Durable Corner Wall Shelf | Unbreakable Wall Units",
     mdescription:
@@ -1054,7 +1130,7 @@ var products = [
   {
     id: 14,
     slug: "Single-Corner-Shelf-Mirchi-8-inch",
-    title: "Single Corner Shelf Mirchi 8 inch",
+    title: "Single Corner Shelf Mirchi 8 inch", category: "bath-accessories",
     mtitle: "Shop Corner Shelf 8 inchOnline | Wall Shelf Units & Corner Stands",
     mdescription:
       "Buy corner shelf  wall shelf units  and space-saving corner stands for your home  office  or kitchen. Stylish shelves for decor & storage at Petro Industech.",
@@ -1096,7 +1172,7 @@ var products = [
   },
   {
     id: 15,
-    slug: "Single-Corner-Shelf-Mirchi-10-inch",
+    slug: "Single-Corner-Shelf-Mirchi-10-inch", category: "bath-accessories",
     title: "Single Corner Shelf Mirchi 10 inch",
     mtitle: "Buy Corner Shelf Units | Wall Shelves & Triangle Stand",
     mdescription:
@@ -1139,7 +1215,7 @@ var products = [
   },
   {
     id: 16,
-    slug: "Single-Corner-Shelf-Mirchi-12-inch",
+    slug: "Single-Corner-Shelf-Mirchi-12-inch", category: "bath-accessories",
     title: "Single Corner Shelf Mirchi 12 inch",
     mtitle: "Buy Wall Shelf  Corner Wall Shelf  Mirchi 12 inch Shelf",
     mdescription:
@@ -1182,7 +1258,7 @@ var products = [
   },
   {
     id: 17,
-    slug: "Single-Corner-Shelf-Deluxe-6-inch",
+    slug: "Single-Corner-Shelf-Deluxe-6-inch", category: "bath-accessories",
     title: "Single Corner Shelf Deluxe 6 inch",
     mtitle:
       "Petro Industech 6 Inch Corner Shelf Deluxe – Buy Premium Organizer",
@@ -1225,7 +1301,7 @@ var products = [
   },
   {
     id: 18,
-    slug: "Single-Corner-Shelf-Deluxe-8-inch",
+    slug: "Single-Corner-Shelf-Deluxe-8-inch", category: "bath-accessories",
     title: "Single Corner Shelf Deluxe 8 inch",
     mtitle:
       "Petro Industech 8 Inch Corner Shelf | Buy Deluxe Wall Shelf Online",
@@ -1269,7 +1345,7 @@ var products = [
   },
   {
     id: 19,
-    slug: "Single-Corner-Shelf-Deluxe-10-inch",
+    slug: "Single-Corner-Shelf-Deluxe-10-inch", category: "bath-accessories",
     title: "Single Corner Shelf Deluxe 10 inch",
     mtitle:
       "Petro Industech 10 Inch Deluxe Corner Shelf | Bathroom Stand & Shelf Combo",
@@ -1316,7 +1392,7 @@ var products = [
   {
     id: 20,
     slug: "Single-Corner-Shelf-Deluxe-12-inch",
-    title: "Single Corner Shelf Deluxe 12 inch",
+    title: "Single Corner Shelf Deluxe 12 inch", category: "bath-accessories",
     mtitle: "Bathroom Shelves Single Corner Shelf Deluxe 12 inch Petro",
     mdescription:
       "Buy Single Corner Shelf Deluxe 12 inch online at Petro Industech. Perfect for modern bathrooms, our shelves offer style, durability & space-saving storage.",
@@ -1359,7 +1435,7 @@ var products = [
   {
     id: 21,
     slug: "Deluxe-Shelf-16-inch",
-    title: "Deluxe Shelf (16-inch)",
+    title: "Deluxe Shelf (16-inch)", category: "bath-accessories",
     mtitle: " Deluxe 16 Inch Corner Shelf for Bathroom & Kitchen | Buy Now",
     mdescription:
       "Shop Petro Industech’s premium Single Corner Shelf Deluxe 16 inch – a space-saving stainless steel solution for modern bathrooms. Matches Deluxe Shelf (16-inch) range.",
@@ -1403,7 +1479,7 @@ var products = [
   },
   {
     id: 22,
-    slug: "Front-Shelf-Oval-14-inch",
+    slug: "Front-Shelf-Oval-14-inch", category: "bath-accessories",
     title: "Front Shelf Oval (14 inch)",
     mtitle: " 14 Inch Single Corner Shelf – Front Shelf Oval (14 Inch) Design",
     mdescription:
@@ -1449,7 +1525,7 @@ var products = [
   },
   {
     id: 23,
-    slug: "Front-Shelf-Oval-16-inch",
+    slug: "Front-Shelf-Oval-16-inch", category: "bath-accessories",
     title: "Front Shelf Oval (16 inch)",
     mtitle: "16 Inch Corner Shelf | Buy Wall-Mounted Alternative to Oval Shelf",
     mdescription:
@@ -1494,7 +1570,7 @@ var products = [
   },
   {
     id: 24,
-    slug: "Front-Shelf-Oval-18-inch",
+    slug: "Front-Shelf-Oval-18-inch", category: "bath-accessories",
     title: "Front Shelf Oval (18 inch)",
     mtitle: "Buy 18 Inch Deluxe Corner Shelf for Bathroom – Petro Industech",
     mdescription:
@@ -1542,7 +1618,7 @@ var products = [
   {
     id: 25,
     slug: "Front-Shelf-square-14-inch",
-    title: "Front Shelf square (14 inch)",
+    title: "Front Shelf square (14 inch)", category: "bath-accessories",
     mtitle: "Front Shelf 14 inch Stand & Corner Stand | Petro Industech",
     mdescription:
       "Shop luxury 14 inch Front Shelf Square, bathroom corner stand & more. Petro Industech – trusted supplier of modern bathroom accessories.",
@@ -1588,7 +1664,7 @@ var products = [
   {
     id: 26,
     slug: "Front-Shelf-square-16-inch",
-    title: "Front Shelf square (16 inch)",
+    title: "Front Shelf square (16 inch)", category: "bath-accessories",
     mtitle: "Bathroom Front Wall Shelf 16 inch Towel Rack Petro Industech",
     mdescription:
       "Buy premium towel holders, plastic shelves, wall stands & 16 inch Front Shelf Square. Shop now at Petro Industech – quality bathroom accessories online.",
@@ -1634,7 +1710,7 @@ var products = [
   {
     id: 27,
     slug: "Front-Shelf-square-18-inch",
-    title: "Front Shelf square (18 inch)",
+    title: "Front Shelf square (18 inch)", category: "bath-accessories",
     mtitle:
       "Kitchen & Bathroom Shelf | Front 18 Inch Wall Shelf – Petro industech",
     mdescription:
@@ -1680,7 +1756,7 @@ var products = [
   },
   {
     id: 28,
-    slug: "Set-Top-box-Stand-Big",
+    slug: "Set-Top-box-Stand-Big", category: "bath-accessories",
     title: "Set Top Box Stand Big",
     mtitle: "Buy Big Wall Mount Set Top Box Stand – Petro Industech",
     mdescription:
@@ -1726,11 +1802,10 @@ var products = [
       { label: "Finish", value: "	Textured" },
     ],
   },
-
   {
     id: 29,
     slug: "Set-Top-box-Stand-Small",
-    title: "Set Top Box Stand Small",
+    title: "Set Top Box Stand Small", category: "bath-accessories",
     mtitle: "Setup Box Stand | Buy TV Set Top Box Stand – Petro Industech",
     mdescription:
       "Petro Industech offers durable Small set top box stands – wall mount, glass top, TV setup box stands, and more. Perfect fit for any TV unit. Buy online now!",
@@ -1774,10 +1849,9 @@ var products = [
       { label: "Finish", value: "Matt" },
     ],
   },
-
   {
     id: 30,
-    slug: "Towel-Ring-Oval",
+    slug: "Towel-Ring-Oval", category: "bath-accessories",
     title: "Towel Ring Oval",
     mtitle: "Shop Towel Ring Oval & bathroom towel Holders | Petro Industech",
     mdescription:
@@ -1822,7 +1896,7 @@ var products = [
   },
   {
     id: 31,
-    slug: "Towel-Ring-Rectangular",
+    slug: "Towel-Ring-Rectangular", category: "bath-accessories",
     title: "Towel Ring Rectangular",
     mtitle: "Shop Towel Rods & Rings for Bathroom | Petro Industech",
     mdescription:
@@ -1868,7 +1942,7 @@ var products = [
   },
   {
     id: 32,
-    slug: "Towel-Ring-twisted",
+    slug: "Towel-Ring-twisted", category: "bath-accessories",
     title: "Towel Ring twisted",
     mtitle: "Buy Ring Twisted Towel Ring Online | Petro Industech",
     mdescription:
@@ -1912,7 +1986,7 @@ var products = [
     ],
   },
   {
-    id: 33,
+    id: 33, category: "bath-accessories",
     slug: "Towel-Ring-triangle",
     title: "Towel Ring Triangle",
     mtitle: "Buy Triangle Towel Holders & Rings Online | Petro Industech",
@@ -1957,7 +2031,7 @@ var products = [
     ],
   },
   {
-    id: 34,
+    id: 34, category: "bath-accessories",
     slug: "Towel-Rod-18-inch",
     title: "Towel Rod 18 inch",
     mtitle: "Shop Bathroom Towel Rods 18 inch & Holders | Petro Industech",
@@ -2003,7 +2077,7 @@ var products = [
   },
   {
     id: 35,
-    slug: "Mobile-Stand",
+    slug: "Mobile-Stand", category: "bath-accessories",
     title: "Mobile Stand",
     mtitle: "Shop Mobile Stands & Holders Online | Petro Industech",
     mdescription:
@@ -2075,7 +2149,7 @@ var products = [
   },
   {
     id: 36,
-    slug: "MultiUser-Holder",
+    slug: "MultiUser-Holder", category: "bath-accessories",
     title: "MultiUser Holder",
     mtitle: "Buy Multi Device Stand & Slot Holder | Petro Industech",
     mdescription:
@@ -2138,7 +2212,7 @@ var products = [
     ],
   },
   {
-    id: 37,
+    id: 37, category: "bath-accessories",
     slug: "Waste-Pipe",
     title: "Waste Pipe",
     mtitle: "Buy Sink & Wash Basin Waste Pipe Online | Petro Industech",
@@ -2181,7 +2255,7 @@ var products = [
     ],
   },
   {
-    id: 38,
+    id: 38, category: "bath-accessories",
     slug: "Liquid-Soap-Dispenser",
     title: "Liquid Soap Dispenser-Square",
     mtitle: "Luxury Soap Dispenser – Square Design | Petro Industech",
@@ -2217,7 +2291,7 @@ var products = [
     ],
   },
   {
-    id: 39,
+    id: 39, category: "bath-accessories",
     slug: "Liquid-Soap-Dispenser-2",
     title: "Liquid Soap Dispenser-Hexagon",
     mtitle:
@@ -2280,7 +2354,7 @@ var products = [
     ],
   },
   {
-    id: 40,
+    id: 40, category: "bath-accessories",
     slug: "Health-Faucet",
     title: "Health Faucet Round",
     mtitle: "Buy Modern Bathroom Faucets & Jet Spray | Petro Industech",
@@ -2325,7 +2399,7 @@ var products = [
     ],
   },
   {
-    id: 41,
+    id: 41, category: "bath-accessories",
     slug: "Health-Faucet-square",
     title: "Health Faucet Square",
     mtitle: "Shop Square Faucets, Jet Spray & More | Petro Industech",
@@ -2367,7 +2441,7 @@ var products = [
     ],
   },
   {
-    id: 42,
+    id: 42, category: "bath-accessories",
     slug: "Health-Faucet-white-Round",
     title: "Health Faucet white Round",
     mtitle: "Shop Square Faucets, Jet Spray & More | Petro Industech",
@@ -2409,7 +2483,7 @@ var products = [
     ],
   },
   {
-    id: 43,
+    id: 43, category: "bath-accessories",
     slug: "Round health faucet",
     mtitle: "Shop Round Health Faucet Affordable Toilet Jet Spray | Petro",
     mdescription:
@@ -2444,7 +2518,7 @@ var products = [
   },
   {
     id: 44,
-    slug: "Square health faucet",
+    slug: "Square health faucet", category: "bath-accessories",
     title: "Square Health Faucet",
     mtitle: "Shop Bathtub & Bathroom Square Faucets | Petro Industech",
     mdescription:

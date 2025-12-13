@@ -165,14 +165,4 @@ window.addEventListener("DOMContentLoaded", function () {
   }, 1000);
 });
 
-//  function openModal() {
-//     document.getElementById("imageModal").style.display = "flex";
-//   }
-//   function closeModal() {
-//     document.getElementById("imageModal").style.display = "none";
-//   }
 
-//   // Auto open after 3 seconds
-//   window.addEventListener('load', function() {
-//     setTimeout(openModal, 1000);
-//   });

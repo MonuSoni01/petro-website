@@ -3,15 +3,9 @@ import products from './product-api-list.js';
 const container = document.getElementById("product-sections");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-// === FILTER CATEGORY HERE ===
-// Bath Accessories Page
-const productList = products.filter(p => p.category === "bath-accessories");
-
-// If this is Hardware Page use:
-// const productList = products.filter(p => p.category === "hardware");
-
-// If this is All Products Page use:
-// const productList = products;
+// === NO FILTER HERE ===
+// All products will show
+const productList = products;
 
 let currentIndex = 0;
 const productsPerLoad = 20;
@@ -57,7 +51,6 @@ function renderProducts(start, end) {
   </div>
 </a>
 `;
-
     row.appendChild(col);
   });
 
@@ -74,6 +67,6 @@ loadMoreBtn.addEventListener("click", () => {
   currentIndex += productsPerLoad;
 
   if (currentIndex >= productList.length) {
-    loadMoreBtn.style.display = "none"; 
+    loadMoreBtn.style.display = "none";
   }
 });

@@ -4,11 +4,11 @@ const container = document.getElementById("product-sections");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
 // === FILTER CATEGORY HERE ===
-// Bath Accessories Page
-const productList = products.filter(p => p.category === "bath-accessories");
+// Hardware Page
+const productList = products.filter(p => p.category === "hardware");
 
-// If this is Hardware Page use:
-// const productList = products.filter(p => p.category === "hardware");
+// If this is Bath Accessories Page use:
+// const productList = products.filter(p => p.category === "bath-accessories");
 
 // If this is All Products Page use:
 // const productList = products;
@@ -74,6 +74,6 @@ loadMoreBtn.addEventListener("click", () => {
   currentIndex += productsPerLoad;
 
   if (currentIndex >= productList.length) {
-    loadMoreBtn.style.display = "none"; 
+    loadMoreBtn.style.display = "none";
   }
 });
