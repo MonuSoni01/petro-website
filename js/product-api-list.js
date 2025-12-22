@@ -1,80 +1,80 @@
 var products = [
-  {
-    id: 201,
-    category: "hardware",
-    slug: "stainless-steel-door-stopper",
-    title: "Stainless Steel Door Stopper",
-    mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
-    mdescription:
-      "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
-    keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
-    ratingStars: 4.8,
-    ratingReviews: "486",
-    newPrice: "₹149.00",
-    description:
-      "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
-    features: [
-      "✅ High-strength SS body for long-term durability",
-      "✅ Anti-rust and corrosion-resistant finish",
-      "✅ Soft rubber tip prevents wall damage",
-      "✅ Easy installation with screws included",
-      "✅ Ideal for homes, offices, and commercial spaces"
-    ],
-    main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-    colors: ["Steel"],
-    images: {
-      Steel: [
-        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
-      ]
-    },
-    table: [
-      { label: "Item Code", value: "HD-001" },
-      { label: "Material", value: "Stainless Steel" },
-      { label: "Per", value: "1 Pcs" },
-      { label: "Finish", value: "Steel" },
-      { label: "Usage Type", value: "Wall & Floor Mount" }
-    ]
-  },
-   {
-    id: 201,
-    category: "hardware",
-    slug: "stainless-steel-door-stopper",
-    title: "Stainless Steel Door Stopper",
-    mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
-    mdescription:
-      "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
-    keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
-    ratingStars: 4.8,
-    ratingReviews: "486",
-    newPrice: "₹149.00",
-    description:
-      "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
-    features: [
-      "✅ High-strength SS body for long-term durability",
-      "✅ Anti-rust and corrosion-resistant finish",
-      "✅ Soft rubber tip prevents wall damage",
-      "✅ Easy installation with screws included",
-      "✅ Ideal for homes, offices, and commercial spaces"
-    ],
-    main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-    colors: ["Steel"],
-    images: {
-      Steel: [
-        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-        "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
-      ]
-    },
-    table: [
-      { label: "Item Code", value: "HD-001" },
-      { label: "Material", value: "Stainless Steel" },
-      { label: "Per", value: "1 Pcs" },
-      { label: "Finish", value: "Steel" },
-      { label: "Usage Type", value: "Wall & Floor Mount" }
-    ]
-  },
+  // {
+  //   id: 201,
+  //   category: "hardware",
+  //   slug: "stainless-steel-door-stopper",
+  //   title: "Stainless Steel Door Stopper",
+  //   mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
+  //   mdescription:
+  //     "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
+  //   keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
+  //   ratingStars: 4.8,
+  //   ratingReviews: "486",
+  //   newPrice: "₹149.00",
+  //   description:
+  //     "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
+  //   features: [
+  //     "✅ High-strength SS body for long-term durability",
+  //     "✅ Anti-rust and corrosion-resistant finish",
+  //     "✅ Soft rubber tip prevents wall damage",
+  //     "✅ Easy installation with screws included",
+  //     "✅ Ideal for homes, offices, and commercial spaces"
+  //   ],
+  //   main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+  //   colors: ["Steel"],
+  //   images: {
+  //     Steel: [
+  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
+  //     ]
+  //   },
+  //   table: [
+  //     { label: "Item Code", value: "HD-001" },
+  //     { label: "Material", value: "Stainless Steel" },
+  //     { label: "Per", value: "1 Pcs" },
+  //     { label: "Finish", value: "Steel" },
+  //     { label: "Usage Type", value: "Wall & Floor Mount" }
+  //   ]
+  // },
+  //  {
+  //   id: 201,
+  //   category: "hardware",
+  //   slug: "stainless-steel-door-stopper",
+  //   title: "Stainless Steel Door Stopper",
+  //   mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
+  //   mdescription:
+  //     "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
+  //   keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
+  //   ratingStars: 4.8,
+  //   ratingReviews: "486",
+  //   newPrice: "₹149.00",
+  //   description:
+  //     "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
+  //   features: [
+  //     "✅ High-strength SS body for long-term durability",
+  //     "✅ Anti-rust and corrosion-resistant finish",
+  //     "✅ Soft rubber tip prevents wall damage",
+  //     "✅ Easy installation with screws included",
+  //     "✅ Ideal for homes, offices, and commercial spaces"
+  //   ],
+  //   main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+  //   colors: ["Steel"],
+  //   images: {
+  //     Steel: [
+  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
+  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
+  //     ]
+  //   },
+  //   table: [
+  //     { label: "Item Code", value: "HD-001" },
+  //     { label: "Material", value: "Stainless Steel" },
+  //     { label: "Per", value: "1 Pcs" },
+  //     { label: "Finish", value: "Steel" },
+  //     { label: "Usage Type", value: "Wall & Floor Mount" }
+  //   ]
+  // },
 
   {
     id: 48,

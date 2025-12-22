@@ -8,8 +8,8 @@ const loadMoreBtn = document.getElementById("loadMoreBtn");
 const productList = products;
 
 let currentIndex = 0;
-const productsPerLoad = 20;
-const initialLoad = 20;
+const productsPerLoad = 12;
+const initialLoad = 12;
 
 // Slugify function for SEO-friendly slug generation
 function generateSlug(text) {
