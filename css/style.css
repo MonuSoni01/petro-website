@@ -4736,3 +4736,24 @@ OUTER
   .cpp-scroll{overflow:visible}
   .swipe-controls{display:none}
 }
+
+.pain-points{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.pain-points li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:16px;
+  margin-bottom:12px;
+}
+.pain-points i{
+  color:var(--light);
+  padding:2px 7px;
+  border-radius: 50%;
+  font-size:18px;
+  background-color: red;
+  margin-top:2px;
+}
