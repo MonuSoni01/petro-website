@@ -466,8 +466,7 @@ h1 {
 }
 
 .about-main p {
-  font-size: 15px;
-  text-transform: capitalize;
+  font-size: 15px; 
 }
 
 .about-main ul {
