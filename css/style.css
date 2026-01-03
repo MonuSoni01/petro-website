@@ -30,6 +30,11 @@
 
 html {
   scroll-behavior: smooth;
+  
+}
+
+p{
+  text-transform: capitalize;
 }
 
 h2 {
@@ -438,15 +443,7 @@ h1 {
   }
 }
 
-.about-main h2:after {
-  content: "";
-  position: absolute;
-  border-bottom: 2px dotted #000000;
-  bottom: 0px;
-  height: 2px;
-  width: 100px;
-  left: 0px;
-}
+ 
 
 .about-main h5 {
   font-size: 18px;
@@ -454,16 +451,7 @@ h1 {
   position: relative;
 }
 
-.about-main h5::before {
-  content: "";
-  top: 7px;
-  left: -15px;
-  position: absolute;
-  background: var(--primary);
-  border-radius: 10px 12px 45px 2px;
-  width: 10px;
-  height: 10px;
-}
+ 
 
 .about-main p {
   font-size: 15px; 
@@ -4330,8 +4318,7 @@ a .product-card:hover img {
 
   /* Enhanced Header */
     header {
-      text-align: center;
-      margin-bottom: 30px;
+      text-align: center; 
     }
 
     header h1 {
@@ -4411,6 +4398,7 @@ a .product-card:hover img {
       list-style-type: none;
       margin-bottom: 18px;
       padding-left: 20px;
+      text-transform: capitalize;
     }
 
     .plan ul li {
@@ -4677,9 +4665,9 @@ OUTER
 }
 
 /* PLANS */
-.basic{background:#fff6ee;text-align:center}
-.advanced{background:#f2f7ff;text-align:center}
-.diamond{background:#f1fbf5;text-align:center;position:relative}
+.basic{background:#fff6ee;}
+.advanced{background:#f2f7ff;}
+.diamond{background:#f1fbf5;position:relative}
 
 /* HEADER */
 .plan-head{
@@ -4755,4 +4743,11 @@ OUTER
   font-size:18px;
   background-color: red;
   margin-top:2px;
+}
+
+.cpp{
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 2px 5px; 
+  color: yellow;
 }
