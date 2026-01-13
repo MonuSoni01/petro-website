@@ -10,3 +10,9 @@ RewriteRule ^ https://www.petroindustech.com%{REQUEST_URI} [L,R=301]
 # -----------------------------------------
 # CUSTOM 404 ERROR PAGE
 ErrorDocument 404 https://www.petroindustech.com/404.html
+
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires "0"
+</IfModule>

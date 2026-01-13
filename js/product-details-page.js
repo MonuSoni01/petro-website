@@ -207,3 +207,14 @@ const schemaScript = document.createElement('script');
 schemaScript.type = 'application/ld+json';
 schemaScript.text = JSON.stringify(productSchema);
 document.head.appendChild(schemaScript);
+
+// ✅ Canonical URL (same as browser URL)
+if (slug) {
+  const canonicalUrl =
+    `https://www.petroindustech.com/bath-products/product.html?${slug}`;
+
+  const canonicalTag = document.getElementById("canonicalTag");
+  if (canonicalTag) {
+    canonicalTag.setAttribute("href", canonicalUrl);
+  }
+}

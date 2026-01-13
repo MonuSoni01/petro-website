@@ -39,24 +39,24 @@ function renderProducts(start, end) {
     col.className = "col-lg-3 col-md-6 mt-4";
 
     const cleanSlug = product.slug
-      ? generateSlug(product.slug)
-      : generateSlug(product.title);
+  ? generateSlug(product.slug)
+  : generateSlug(product.title);
 
-    col.innerHTML = `
-<a href="/bath-products/product.html?${cleanSlug}">
+col.innerHTML = `
+<a href="/bath-products/product.html?slug=${cleanSlug}">
   <div class="product-card text-center">
-    ${
-      product.main_video
-        ? `<video width="100%" autoplay muted loop>
-             <source src="${product.main_video}" type="video/mp4" />
-           </video>`
-        : `<img src="${product.main_image}" alt="${product.title}" class="img-fluid" />`
+    ${product.main_video
+      ? `<video width="100%" autoplay muted loop>
+           <source src="${product.main_video}" type="video/mp4" />
+         </video>`
+      : `<img src="${product.main_image}" alt="${product.title}" class="img-fluid" />`
     }
     <h5 class="mt-3">${product.title}</h5>
     <p>MRP :- ${product.newPrice}</p>
   </div>
 </a>
 `;
+
 
     row.appendChild(col);
   });
@@ -74,6 +74,6 @@ loadMoreBtn.addEventListener("click", () => {
   currentIndex += productsPerLoad;
 
   if (currentIndex >= productList.length) {
-    loadMoreBtn.style.display = "none"; 
+    loadMoreBtn.style.display = "none";
   }
 });

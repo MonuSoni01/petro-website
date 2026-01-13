@@ -2255,42 +2255,6 @@ var products = [
     ],
   },
   {
-    id: 38, category: "bath-accessories",
-    slug: "Liquid-Soap-Dispenser",
-    title: "Liquid Soap Dispenser-Square",
-    mtitle: "Luxury Soap Dispenser – Square Design | Petro Industech",
-    mdescription:
-      "Buy luxury Liquid Soap Dispenser-Square and hand soap dispenser now. Shop Petro Industech for elegant, high-end bathroom accessories that impress.",
-    keyword: [
-      "Square Design,Simple Square Soap Dispenser,Bathroom Soap Dispenser",
-    ],
-    ratingStars: 5.0,
-    ratingReviews: 52,
-    // oldPrice: "$299.99",
-    newPrice: "₹ Coming Soon",
-    description: "COMING SOON",
-    features: ["COMING SOON"],
-    main_video: "/images/bath-accessories-products/coming-soon.mp4",
-    main_image: "/images/bath-accessories-products/coming-soon.png",
-    colors: ["Clear"],
-    images: {
-      Clear: [
-        "/images/bath-accessories-products/coming-soon.png",
-        "/images/bath-accessories-products/coming-soon.png",
-        "/images/bath-accessories-products/coming-soon.png",
-      ],
-    },
-    table: [
-      { label: "Color", value: "Clear" },
-      { label: "Item Code ", value: "1071" },
-      { label: "Size	", value: "300 ML" },
-      { label: "Per", value: "1 Pcs" },
-      { label: "Qty Per Parcel", value: "	- " },
-      { label: "Qty Per Box", value: "1 Pcs" },
-      { label: "Finish", value: "Transparent" },
-    ],
-  },
-  {
     id: 39, category: "bath-accessories",
     slug: "Liquid-Soap-Dispenser-2",
     title: "Liquid Soap Dispenser-Hexagon",
