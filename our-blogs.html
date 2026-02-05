@@ -107,6 +107,7 @@
     </div>
   </div>
 
+  <!-- Navbar Section -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-light top-nav">
     <div class="container" style="max-width: 1280px">
       <a class="navbar-brand d-flex" href="https://www.petroindustech.com">
@@ -124,41 +125,56 @@
       <div class="collapse navbar-collapse" id="navbarResponsive" style="width: 100%">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link " href="https://www.petroindustech.com">Home</a>
+            <a class="nav-link active" href="https://www.petroindustech.com">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="petro-channel-partner-program.html">Unlock 10X Profits </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="our-products.html" id="servicesLink">products <i class="fas fa-sort-down"
-                id="dropdownIcon"></i></a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesLink" id="servicesDropdown">
-              <a class="dropdown-item" href="bath-accessories.html">Bath Accessories</a>
 
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link" href="about.html" data-menu="about">
+              ABOUT <i class="fas fa-sort-down dropdown-icon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="from-small-shop-to-trusted-brand.html">Founder Journey</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link" href="our-products.html" data-menu="products">
+              PRODUCTS <i class="fas fa-sort-down dropdown-icon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="bath-accessories.html">Bath Accessories</a>
               <a class="dropdown-item" href="nylon-sleeve-rawal-plug-pvc-gitti.html">Nylon Sleeves & PVC Gitti</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="press-media.html">Press & Media</a>
+            <a class="nav-link" href="https://onlinepetro.com/" target="_blank">BUY ONLINE</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="catalogue.html">Catalogue</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="https://onlinepetro.com/" target="_blank">BUY ONLINE</a>
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link" href="our-blogs.html" data-menu="blogs">
+              OUR BLOGS <i class="fas fa-sort-down dropdown-icon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="press-media.html">Press & Media</a>
+            </div>
           </li>
+
+
+
+
+
+
           <li class="nav-item">
-            <a class="nav-link active" href="our-blogs.html">Our Blogs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="find-a-distributor.html">Find A Dealer</a>
           </li>
           <button class="btn btn-primary">
-            <a href="app-petro.html" style="color: #fff">Redeem Points</a>
+            <a href="contact.html" style="color: #fff">Contact us</a>
           </button>
         </ul>
       </div>
@@ -168,44 +184,49 @@
   <!-- Navbar Javacsript -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const servicesLink = document.getElementById("servicesLink");
-      const dropdownIcon = document.getElementById("dropdownIcon");
-      const servicesDropdown = document.getElementById("servicesDropdown");
 
-      // Function to toggle dropdown
-      function toggleDropdown(event) {
-        event.stopPropagation();
-        servicesDropdown.classList.toggle("show");
-      }
+      const dropdowns = document.querySelectorAll(".custom-dropdown");
 
-      // For desktop
-      if (window.innerWidth > 992) {
-        servicesLink.addEventListener("mouseover", function () {
-          servicesDropdown.classList.add("show");
-        });
+      dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector(".nav-link");
+        const menu = dropdown.querySelector(".dropdown-menu");
 
-        servicesDropdown.addEventListener("mouseleave", function () {
-          servicesDropdown.classList.remove("show");
-        });
-      }
-
-      // For both desktop and mobile
-      dropdownIcon.addEventListener("click", function (event) {
-        event.preventDefault();
-        toggleDropdown(event);
-      });
-
-      // Close dropdown when clicking outside
-      document.addEventListener("click", function (event) {
-        if (!event.target.closest(".dropdown")) {
-          servicesDropdown.classList.remove("show");
+        // DESKTOP HOVER
+        if (window.innerWidth > 992) {
+          dropdown.addEventListener("mouseenter", () => {
+            menu.classList.add("show");
+          });
+          dropdown.addEventListener("mouseleave", () => {
+            menu.classList.remove("show");
+          });
         }
+
+        // MOBILE CLICK
+        link.addEventListener("click", function (e) {
+          if (window.innerWidth <= 992) {
+            e.preventDefault();
+
+            // close others
+            dropdowns.forEach(d => {
+              if (d !== dropdown) {
+                d.querySelector(".dropdown-menu").classList.remove("show");
+              }
+            });
+
+            menu.classList.toggle("show");
+          }
+        });
       });
 
-      // Prevent dropdown from closing when clicking inside it
-      servicesDropdown.addEventListener("click", function (event) {
-        event.stopPropagation();
+      // OUTSIDE CLICK CLOSE
+      document.addEventListener("click", function (e) {
+        dropdowns.forEach(dropdown => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.querySelector(".dropdown-menu").classList.remove("show");
+          }
+        });
       });
+
     });
   </script>
 

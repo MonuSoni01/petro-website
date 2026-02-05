@@ -191,34 +191,34 @@
 
     .product-box:hover i {
       color: #ffd166;
-    }.simple-image-banner{
-  width:100%;
-  overflow:hidden;
+    }
+    
+    .simple-image-banner {
+  width: 100%;
 }
 
-/* Common image style */
-.banner-img{
-  width:100%;
-  height:auto;
-  display:block;
+.simple-image-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Desktop only */
-.desktop-only{
-  display:block;
+/* Desktop by default */
+.desktop-banner {
+  display: block;
 }
 
-/* Mobile only */
-.mobile-only{
-  display:none;
+.mobile-banner {
+  display: none;
 }
 
-/* Mobile breakpoint */
-@media (max-width: 767px){
-  .desktop-only{
-    display:none;
+/* Mobile screen */
+@media (max-width: 768px) {
+  .desktop-banner {
+    display: none;
   }
-  .mobile-only{
-    display:block;
+
+  .mobile-banner {
+    display: block;
   }
 }
