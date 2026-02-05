@@ -1,0 +1,224 @@
+.dealer-about {
+      background: #f6f8f9;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #0f7a7a, #108082);
+      color: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.25);
+    }
+
+    /* TITLE */
+    .contact-card .card-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      letter-spacing: 0.4px;
+    }
+
+    /* INFO */
+    .contact-card .card-info p {
+      font-size: 15.5px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .contact-card .card-info i {
+      color: #ffd166;
+      font-size: 16px;
+      margin-top: 3px;
+    }
+
+    .contact-card .address {
+      margin-top: 18px;
+      line-height: 1.6;
+    }
+
+    /* BUTTONS */
+    .card-actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .btn-call {
+      background: #ffd166;
+      color: #000;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-call:hover {
+      background: #ffbf00;
+      color: #000;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+      color: #fff;
+    }
+
+
+    .connect-social-section {
+      padding: 30px 0 80px;   
+    }
+
+    .social-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+    .social-subtitle {
+      font-size: 16px;
+
+      text-align: center;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
+
+    /* ICONS */
+    .social-icons-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon.facebook {
+      background: #3b5998;
+    }
+
+    .social-icon.instagram {
+      background: linear-gradient(45deg,
+          #f58529,
+          #dd2a7b,
+          #8134af,
+          #515bd4);
+    }
+
+    .social-icon:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    /* MOBILE */
+    @media(max-width: 576px) {
+      .social-title {
+        font-size: 24px;
+      }
+    }
+
+    .products-supplied-section {
+      background: #fff;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .product-box {
+      background: #f6f8f9;
+      padding: 30px 20px;
+      border-radius: 14px;
+      transition: 0.3s ease;
+      height: 100%;
+    }
+
+    .product-box i {
+      font-size: 36px;
+      color: #108082;
+      margin-bottom: 15px;
+    }
+
+    .product-box h5 {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .product-box:hover {
+      background: #108082;
+      color: #fff;
+      transform: translateY(-6px);
+    }
+
+    .product-box:hover i {
+      color: #ffd166;
+    }.simple-image-banner{
+  width:100%;
+  overflow:hidden;
+}
+
+/* Common image style */
+.banner-img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Desktop only */
+.desktop-only{
+  display:block;
+}
+
+/* Mobile only */
+.mobile-only{
+  display:none;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 767px){
+  .desktop-only{
+    display:none;
+  }
+  .mobile-only{
+    display:block;
+  }
+}

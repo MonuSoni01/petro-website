@@ -33,27 +33,10 @@
     }
   });
 
-  // blog-slider
-  $("#blog-slider").owlCarousel({
-    items: 3,
-    responsive: {
-      1000: { items: 3 },
-      650: { items: 1 },
-    },
-    autoplay: true,
-    nav: false,
-  });
+ 
 
   // customers-slider
-  $("#customers-slider").owlCarousel({
-    items: 5,
-    responsive: {
-      1000: { items: 3 },
-      650: { items: 2 },
-    },
-    autoplay: true,
-    nav: false,
-  });
+  
 })(jQuery);
 
 // Show modal on page load
