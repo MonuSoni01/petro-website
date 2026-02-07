@@ -6,6 +6,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Rajasthan",
     "city": "Sikar",
+    "area": "Sikar\nChuru",
     "url": "hardware-bathroom-accessories-distributor-sikar.html"
   },
   {
@@ -15,6 +16,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Rajasthan",
     "city": "Jaipur",
+    "area": "Jaipur",
     "url": ""
   },
   {
@@ -24,6 +26,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Rajasthan",
     "city": "Kota",
+    "area": "Kota\nJhalawar\nBundi",
     "url": ""
   },
   {
@@ -33,6 +36,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Odisha",
     "city": "Berhampur",
+    "area": "Distt. Ganjam",
     "url": ""
   },
   {
@@ -42,6 +46,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Rajasthan",
     "city": "Udaipur",
+    "area": "Udaipur\nSalumbar\nRajsamand\nDungarpur\nChittorgarh",
     "url": ""
   },
   {
@@ -51,6 +56,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Punjab",
     "city": "Jalandhar",
+    "area": "Kapurthala\nNawanshahr\nPathankot\nGurdaspur\nJalandhar",
     "url": ""
   },
   {
@@ -60,6 +66,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "West Bengal",
     "city": "Asansol",
+    "area": "Asansol\nDurgapur\nBardhman\nBankura\nPurulia",
     "url": ""
   },
   {
@@ -69,6 +76,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Uttarakhand",
     "city": "Haridwar",
+    "area": "Rishikesh\nDehradun\nHaridwar\nRoorkee",
     "url": ""
   },
   {
@@ -78,6 +86,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Odisha",
     "city": "Jeypore",
+    "area": "Nabarangpur\nKoraput\nMalkangiri\nKalahandi\nRayagada",
     "url": ""
   },
   {
@@ -87,6 +96,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Rajasthan",
     "city": "Sriganganagar",
+    "area": "Sriganganagar\nHanumangarh",
     "url": ""
   },
   {
@@ -96,6 +106,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Haryana",
     "city": "Karnal",
+    "area": "Karnal\nJind\nKaithal",
     "url": ""
   },
   {
@@ -105,6 +116,7 @@
     "category": "Hardware & Bathroom Accessories",
     "state": "Rajasthan",
     "city": "Kuchaman",
+    "area": "Didwana\nKuchaman Distt",
     "url": ""
   }
 ]
