@@ -1,7 +1,7 @@
 [
   {
-    "name": "M/S Shree Shyam Enterprises",
-    "address": "Dhod Road, Pragti School Water Tank, Plot No. 13, Sikar, Rajasthan – 332001",
+    "name": "Shri Shyam Enterprises",
+    "address": "Dhod Road Pragti School Water Tank Sikar, Rajasthan 332001",
     "phone": "8073273792",
     "category": "Hardware & Bathroom Accessories",
     "state": "Rajasthan",
@@ -9,12 +9,102 @@
     "url": "hardware-bathroom-accessories-distributor-sikar.html"
   },
   {
-    "name": "Balaji Expo India Pvt. Ltd.",
-    "address": "70/11 Marble Market, Mangolpuri Kalan, Delhi",
-    "phone": "9810334020",
-    "category": "Bathroom",
-    "state": "Delhi",
-    "city": "Mangolpuri",
+    "name": "S.K. Enterprises",
+    "address": "",
+    "phone": "9414442208",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Rajasthan",
+    "city": "Jaipur",
+    "url": ""
+  },
+  {
+    "name": "Kamal Sanitation",
+    "address": "",
+    "phone": "9261057216",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Rajasthan",
+    "city": "Kota",
+    "url": ""
+  },
+  {
+    "name": "Vaishnavi Hardware",
+    "address": "",
+    "phone": "9776307705",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Odisha",
+    "city": "Berhampur",
+    "url": ""
+  },
+  {
+    "name": "Vardhman Traders",
+    "address": "",
+    "phone": "6377060965",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Rajasthan",
+    "city": "Udaipur",
+    "url": ""
+  },
+  {
+    "name": "Santosh Kumar Sudershan Kumar",
+    "address": "",
+    "phone": "9855610977",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Punjab",
+    "city": "Jalandhar",
+    "url": ""
+  },
+  {
+    "name": "Amit Hardware",
+    "address": "",
+    "phone": "9933097480",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "West Bengal",
+    "city": "Asansol",
+    "url": ""
+  },
+  {
+    "name": "Shree Ram Traders",
+    "address": "",
+    "phone": "9917180700",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Uttarakhand",
+    "city": "Haridwar",
+    "url": ""
+  },
+  {
+    "name": "Nayak Enterprises",
+    "address": "",
+    "phone": "9040332232",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Odisha",
+    "city": "Jeypore",
+    "url": ""
+  },
+  {
+    "name": "Swastik Gallery",
+    "address": "",
+    "phone": "9785001100",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Rajasthan",
+    "city": "Sriganganagar",
+    "url": ""
+  },
+  {
+    "name": "Shri Kishan Trading Co.",
+    "address": "",
+    "phone": "9996111540",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Haryana",
+    "city": "Karnal",
+    "url": ""
+  },
+  {
+    "name": "Shri Shyam Hardware",
+    "address": "",
+    "phone": "9166266930",
+    "category": "Hardware & Bathroom Accessories",
+    "state": "Rajasthan",
+    "city": "Kuchaman",
     "url": ""
   }
 ]
