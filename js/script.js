@@ -148,4 +148,78 @@ window.addEventListener("DOMContentLoaded", function () {
   }, 1000);
 });
 
+ $(document).ready(function(){
 
+let currentImages = [];
+let currentIndex = 0;
+
+/* FILTER */
+$(".petro-filter-btn").click(function(e){
+    e.preventDefault();
+
+    $(".petro-filter-btn").removeClass("active");
+    $(this).addClass("active");
+
+    let filter = $(this).data("filter");
+
+    if(filter === "all"){
+        $(".petro-gallery-item").removeClass("petro-hide");
+    } else {
+        $(".petro-gallery-item").addClass("petro-hide");
+        $("." + filter).removeClass("petro-hide");
+    }
+});
+
+/* OPEN LIGHTBOX */
+$(document).on("click",".petro-popup-img",function(){
+
+    let visibleImages = $(".petro-gallery-item:not(.petro-hide) .petro-popup-img");
+
+    currentImages = [];
+    visibleImages.each(function(){
+        currentImages.push($(this).attr("src"));
+    });
+
+    currentIndex = currentImages.indexOf($(this).attr("src"));
+
+    $("#petroLightboxImg").attr("src", currentImages[currentIndex]);
+    $("#petroLightbox").addClass("active");
+});
+
+/* CLOSE */
+$(".petro-close").click(function(){
+    $("#petroLightbox").removeClass("active");
+});
+
+/* NEXT */
+$(".petro-arrow-right").click(function(){
+    currentIndex++;
+    if(currentIndex >= currentImages.length){
+        currentIndex = 0;
+    }
+    $("#petroLightboxImg").attr("src", currentImages[currentIndex]);
+});
+
+/* PREVIOUS */
+$(".petro-arrow-left").click(function(){
+    currentIndex--;
+    if(currentIndex < 0){
+        currentIndex = currentImages.length - 1;
+    }
+    $("#petroLightboxImg").attr("src", currentImages[currentIndex]);
+});
+
+/* KEYBOARD */
+$(document).keydown(function(e){
+    if(e.keyCode == 27){
+        $("#petroLightbox").removeClass("active");
+    }
+    if(e.keyCode == 37){
+        $(".petro-arrow-left").click();
+    }
+    if(e.keyCode == 39){
+        $(".petro-arrow-right").click();
+    }
+});
+
+});
