@@ -43,7 +43,7 @@ function renderProducts(start, end) {
   : generateSlug(product.title);
 
 col.innerHTML = `
-<a href="/bath-products/product.html?slug=${cleanSlug}">
+<a href="/bath-products/product.html?${cleanSlug}">
   <div class="product-card text-center">
     ${product.main_video
       ? `<video width="100%" autoplay muted loop>
