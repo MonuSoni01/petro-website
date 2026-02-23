@@ -38,10 +38,10 @@ var products = [
   //   ]
   // },
   //  {
-  //   id: 201,
+  //   id: 111,
   //   category: "hardware",
   //   slug: "stainless-steel-door-stopper",
-  //   title: "Stainless Steel Door Stopper",
+  //   title: "Nylon Sleeve White – 25 mm",
   //   mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
   //   mdescription:
   //     "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
