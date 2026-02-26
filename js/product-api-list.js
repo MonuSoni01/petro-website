@@ -1,81 +1,225 @@
 var products = [
-  // {
-  //   id: 201,
-  //   category: "hardware",
-  //   slug: "stainless-steel-door-stopper",
-  //   title: "Stainless Steel Door Stopper",
-  //   mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
-  //   mdescription:
-  //     "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
-  //   keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
-  //   ratingStars: 4.8,
-  //   ratingReviews: "486",
-  //   newPrice: "₹149.00",
-  //   description:
-  //     "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
-  //   features: [
-  //     "✅ High-strength SS body for long-term durability",
-  //     "✅ Anti-rust and corrosion-resistant finish",
-  //     "✅ Soft rubber tip prevents wall damage",
-  //     "✅ Easy installation with screws included",
-  //     "✅ Ideal for homes, offices, and commercial spaces"
-  //   ],
-  //   main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-  //   colors: ["Steel"],
-  //   images: {
-  //     Steel: [
-  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
-  //     ]
-  //   },
-  //   table: [
-  //     { label: "Item Code", value: "HD-001" },
-  //     { label: "Material", value: "Stainless Steel" },
-  //     { label: "Per", value: "1 Pcs" },
-  //     { label: "Finish", value: "Steel" },
-  //     { label: "Usage Type", value: "Wall & Floor Mount" }
-  //   ]
-  // },
-  //  {
-  //   id: 111,
-  //   category: "hardware",
-  //   slug: "stainless-steel-door-stopper",
-  //   title: "Nylon Sleeve White – 25 mm",
-  //   mtitle: "Best Stainless Steel Door Stopper | Petro Industech",
-  //   mdescription:
-  //     "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
-  //   keyword: ["door stopper", "stainless steel hardware", "petro hardware"],
-  //   ratingStars: 4.8,
-  //   ratingReviews: "486",
-  //   newPrice: "₹149.00",
-  //   description:
-  //     "A premium-quality stainless steel door stopper designed to protect walls and provide smooth door operation. Rust-proof, durable, and suitable for all types of doors.",
-  //   features: [
-  //     "✅ High-strength SS body for long-term durability",
-  //     "✅ Anti-rust and corrosion-resistant finish",
-  //     "✅ Soft rubber tip prevents wall damage",
-  //     "✅ Easy installation with screws included",
-  //     "✅ Ideal for homes, offices, and commercial spaces"
-  //   ],
-  //   main_image: "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-  //   colors: ["Steel"],
-  //   images: {
-  //     Steel: [
-  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png",
-  //       "/images/bath-accessories-products/wooden-soap-dispeser/soap-dispenser-hexa-wooden.png"
-  //     ]
-  //   },
-  //   table: [
-  //     { label: "Item Code", value: "HD-001" },
-  //     { label: "Material", value: "Stainless Steel" },
-  //     { label: "Per", value: "1 Pcs" },
-  //     { label: "Finish", value: "Steel" },
-  //     { label: "Usage Type", value: "Wall & Floor Mount" }
-  //   ]
-  // },
-
+  {
+  id: 53,
+  category: "hardware",
+  slug: "38mm-square-nylon-wall-anchor-anti-rotation",
+  title: "38 mm Square Anti-Slip Nylon Sleeve for Walls",
+  mtitle: "38mm Square Nylon Wall Anchor with Anti-Rotation Grip",
+  mdescription:
+    "38mm square coloured nylon sleeve designed for stable wall fixing in brick and concrete. Anti-slip profile prevents rotation and ensures strong screw anchoring for contractors.",
+  keyword: [
+    "38mm square nylon sleeve",
+    "square wall anchor 38mm",
+    "anti rotation nylon plug",
+    "nylon wall fixing sleeve square",
+    "hardware nylon anchor"
+  ],
+  ratingStars: 4.9,
+  ratingReviews: "164",
+  newPrice: "₹51.70/-",
+  description:
+    "The 38 mm Square Coloured Nylon Sleeve is designed for wall fixing applications where improved grip, alignment, and stability are required. Its square profile helps prevent rotation while tightening the screw, supporting controlled and stable installation work. The 38 mm length allows deeper anchoring inside brick and concrete walls, helping fittings stay properly fixed. Compared to standard round sleeves, the square body design provides better wall grip and is suitable for regular as well as slightly heavy mounting applications. Made from quality nylon material, the sleeve resists cracking, bending, and deformation during installation. When the screw is tightened, the sleeve expands evenly inside the wall and creates a secure fixing point without damaging the surrounding surface. Each packet contains 100 pieces, making it convenient for site use and stock handling. The 12 CTN outer packing (50 packets per carton) is suitable for wholesalers, distributors, contractors, and hardware suppliers managing bulk supply requirements.",
+  features: [
+    "Square design helps prevent sleeve rotation",
+    "38 mm length for deeper wall fixing",
+    "Made from quality nylon material",
+    "Even expansion for a stable screw grip",
+    "Resistant to cracking and deformation",
+    "Coloured finish for easy identification",
+    "Suitable for brick and concrete walls",
+    "Bulk-friendly trade packaging"
+  ],
+  main_image: "/images/hardware-products/104A/3.webp",
+  colors: ["color"],
+  images: {
+    color: [
+      "/images/hardware-products/104A/1.webp",
+      "/images/hardware-products/104A/2.webp",
+      "/images/hardware-products/104A/3.webp"
+    ]
+  },
+  table: [
+    { label: "Product Code", value: "104-A" },
+    { label: "Size", value: "38 mm Square" },
+    { label: "Rate", value: "₹51.70 per pkt" },
+    { label: "Packing", value: "100 pcs per packet" },
+    { label: "Outer Packing", value: "12 CTN (50 packets per carton)" }
+  ]
+},
+  {
+    id: 52,
+    category: "hardware",
+    slug: "38mm-coloured-nylon-wall-fixing-sleeve",
+    title: "38 mm Nylon Wall Sleeve",
+    mtitle: "38mm Coloured Nylon Wall Fixing Sleeve",
+    mdescription:
+      "38mm coloured nylon wall sleeve for secure screw fixing in brick and solid walls. Strong expansion grip, durable material, ideal for hardware and bulk supply.",
+    keyword: [
+      "38mm nylon wall sleeve",
+      "nylon wall fixing sleeve",
+      "coloured nylon anchor 38mm",
+      "brick wall screw fixing sleeve",
+      "hardware nylon sleeve"
+    ],
+    ratingStars: 4.8,
+    ratingReviews: "198",
+    newPrice: "₹46.10/-",
+    description:
+      "The 38 mm Coloured Nylon Wall Sleeve is used for secure screw fixing in brick, concrete, and solid walls. It is inserted into a drilled hole before tightening the screw. When the screw is tightened, the sleeve expands inside the wall and creates a firm internal grip. This controlled expansion helps fittings remain stable and reduces the chances of loosening over time, ensuring dependable installation performance.",
+    features: [
+      "Bathroom accessories (towel rods, hooks, shelves)",
+      "Electrical switchboards and fittings",
+      "Interior hardware installations",
+      "Construction and renovation work, carpenter work",
+      "It is suitable for brick, concrete, and solid walls."
+    ],
+    main_image: "/images/hardware-products/104/3.webp",
+    colors: ["color"],
+    images: {
+      color: [
+        "/images/hardware-products/104/1.webp",
+        "/images/hardware-products/104/2.webp",
+        "/images/hardware-products/104/3.webp"
+      ]
+    },
+    table: [
+      { label: "Product Code", value: "104" },
+      { label: "Size", value: "38 mm" },
+      { label: "Rate", value: "₹46.10 per pkt" },
+      { label: "Packing", value: "100 Pcs per pkt" },
+      { label: "Outer Packing", value: "12 CTN (50 Pkt per carton)" }
+    ]
+  },
+  {
+    id: 51,
+    category: "hardware",
+    slug: "35mm-nylon-fixing-sleeve-wall-mount",
+    title: "35 mm Coloured Nylon Plug for Hardware Fittings",
+    mtitle: "35mm Nylon Fixing Sleeve for Brick & Wall Mounting",
+    mdescription:
+      "35mm coloured nylon fixing sleeve designed for secure screw anchoring in brick and concrete walls. Strong expansion grip, durable build, ideal for hardware trade supply.",
+    keyword: [
+      "35mm nylon plug",
+      "nylon fixing sleeve",
+      "nylon wall plug 35mm",
+      "brick wall fixing sleeve",
+      "hardware nylon anchor"
+    ],
+    ratingStars: 4.7,
+    ratingReviews: "286",
+    newPrice: "₹21.50/-",
+    description:
+      "The 35 mm Coloured Nylon Plug is a reliable fastening accessory suitable for regular use in construction, electrical, carpenter and interior installation work. It is designed for secure screw fixing in brick, concrete, and solid wall surfaces, helping fittings remain stable over time. Manufactured from premium-grade nylon, the sleeve expands evenly after screw insertion, creating a firm grip without damaging the surrounding surface. Its balanced strength and flexibility support smooth installation and help reduce the chances of cracking or breakage during use. This makes it suitable for professionals handling daily installation work. Each packet contains 100 pieces, making it convenient for project handling and stock management. With 12 cartons per parcel, it is suitable for wholesalers, distributors, contractors, and hardware suppliers managing bulk supply requirements. The coloured finish improves visibility during installation and helps in organised material usage at work sites.",
+    features: [
+      "✅ Made from quality nylon material",
+      "✅ Provides stable screw fixing support",
+      "✅ Even expansion for a better grip",
+      "✅ Smooth and easy installation",
+      "✅ Coloured design for easy identification",
+      "✅ Suitable for brick, concrete, and solid walls",
+      "✅ Bulk-friendly packaging for trade supply"
+    ],
+    main_image: "/images/hardware-products/103/3.webp",
+    colors: ["color"],
+    images: {
+      color: [
+        "/images/hardware-products/103/1.webp",
+        "/images/hardware-products/103/2.webp",
+        "/images/hardware-products/103/3.webp"
+      ]
+    },
+    table: [
+      { label: "Product Code", value: "103" },
+      { label: "Price", value: "₹21.50 per pkt" },
+      { label: "Quantity per Packet", value: "100 pcs" },
+      { label: "Quantity per Parcel", value: "12 cartons" }
+    ]
+  },
+  {
+    id: 50,
+    category: "hardware",
+    slug: "30mm-coloured-nylon-wall-plug",
+    title: " 30 mm Coloured Nylon Wall Plug for Wall Fixing",
+    mtitle: "30mm Coloured Nylon Wall Plug for Brick & Concrete Fixing | Petro Industech",
+    mdescription:
+      "30mm coloured nylon anchor sleeve for strong wall mounting in brick and concrete surfaces. Durable build, firm screw grip, ideal for hardware and trade supply.",
+    keyword: [
+      "30mm nylon wall plug",
+      "coloured nylon anchor",
+      "plastic wall plug 30mm",
+      "nylon sleeve for brick wall",
+      "petro hardware"
+    ],
+    ratingStars: 4.7,
+    ratingReviews: "312",
+    newPrice: "₹42.80/-",
+    description:
+      "The 30 mm Coloured Nylon Wall Plug (also known as a Nylon Sleeve or Plastic Anchor) is designed for secure wall fixing in brick, concrete, and solid masonry surfaces. It is commonly used for installing bathroom accessories, hardware fittings, electrical fixtures, and general interior mounting applications. The nylon sleeve expands when the screw is tightened, ensuring firm grip and reliable holding support. Manufactured from premium-grade nylon, it offers durability, flexibility, and resistance to cracking during installation. Ideal for wholesalers, distributors, contractors, and hardware suppliers.",
+    features: [
+      "✅ Standard 30 mm size for wall fixing",
+      "✅ Made from premium quality nylon material",
+      "✅ Even expansion for stronger screw grip",
+      "✅ Durable and resistant to cracking",
+      "✅ Suitable for brick, concrete, and solid walls",
+      "✅ Coloured design for easy identification",
+      "✅ Bulk packing suitable for trade supply"
+    ],
+    main_image: "/images/hardware-products/102/3.webp",
+    colors: ["color"],
+    images: {
+      color: [
+        "/images/hardware-products/102/3.webp",
+        "/images/hardware-products/102/1.webp",
+        "/images/hardware-products/102/2.webp"
+      ]
+    },
+    table: [
+      { label: "Product Code", value: "102" },
+      { label: "Size", value: "30 mm" },
+      { label: "Price", value: "₹42.80 per pkt" },
+      { label: "Quantity per Packet", value: "100 Pcs" },
+      { label: "Packets per Carton (CTN)", value: "60 Packets" },
+      { label: "Cartons per Parcel", value: "12 Cartons" },
+    ]
+  },
+  {
+    id: 49,
+    category: "hardware",
+    slug: "25mm-nylon-sleeve-wall-anchoring",
+    title: "25 mm Coloured Nylon Sleeve for Wall Fixing",
+    mtitle: "25mm Coloured Nylon Sleeve for Wall Fixing | Heavy Duty",
+    mdescription:
+      "Buy premium-quality stainless steel door stopper from Petro Industech. Durable, rust-proof hardware for home and commercial use.",
+    keyword: ["petro hardware"],
+    ratingStars: 4.8,
+    ratingReviews: "120",
+    newPrice: "₹81.80/-",
+    description:
+      "The 25 MM Coloured Nylon Sleeve is a high-quality wall fixing insert designed for secure screw anchoring in brick, concrete, and solid masonry walls. It is widely used for installing bathroom accessories, hardware fittings, electrical fixtures, and interior mounting applications.This nylon sleeve is inserted into a drilled hole before the screw is tightened. When the screw is tightened, the sleeve expands evenly inside the wall, creating a firm grip and preventing loosening over time.It is suitable for light to medium-duty wall mounting applications in both residential and commercial projects. Manufactured from durable, premium-grade nylon, the sleeve offers strong load-holding capacity, crack resistance, and a long service life. The coloured design allows quick identification and organized usage during installation work.With 200 pieces per packet and 12 cartons per parcel, this product is ideal for wholesalers, dealers, distributors, and contractors handling bulk supply requirements.",
+    features: [
+      "25 mm standard size for secure wall anchoring ",
+      "Made from high-strength nylon material ",
+      "Even expansion for a strong screw grip",
+      "Crack-resistant and durable construction",
+      "Suitable for brick, concrete, and solid walls",
+      "Colour-coded for easy identification"
+    ],
+    main_image: "/images/hardware-products/101/3.webp",
+    colors: ["color"],
+    images: {
+      color: [
+        "/images/hardware-products/101/1.webp",
+        "/images/hardware-products/101/2.webp",
+        "/images/hardware-products/101/3.webp"
+      ]
+    },
+    table: [
+      { label: "Item Code", value: "101" },
+      { label: "Price", value: " ₹81.80 Per PKT" },
+      { label: "Quantity Per Packet", value: "200 PCS " },
+      { label: "Quantity Per Parcel", value: " 12 CTN" }
+    ]
+  },
   {
     id: 48,
     slug: "liquid-soap-dispenser-square",
