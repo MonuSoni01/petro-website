@@ -222,3 +222,83 @@
     display: block;
   }
 }
+ .simple-image-banner {
+  position: relative;
+}
+
+/* Vertical Social Icons - Centered & Colorful */
+.banner-social-vertical {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 20;
+}
+
+/* Base Style */
+.banner-social-vertical a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Individual Brand Colors */
+.banner-social-vertical a:nth-child(1) {
+  background: #1877f2; /* Facebook */
+}
+
+.banner-social-vertical a:nth-child(2) {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.banner-social-vertical a:nth-child(3) {
+  background: #25D366; /* WhatsApp */
+}
+
+/* Hover Effect */
+.banner-social-vertical a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .banner-social-vertical {
+    left: 15px;
+    gap: 14px;
+  }
+
+  .banner-social-vertical a {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+
+  .banner-social-vertical {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+
+  .banner-social-vertical a {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+}
