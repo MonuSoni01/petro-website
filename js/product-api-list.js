@@ -38,7 +38,7 @@ var products = [
     White: [
       "/images/hardware-products/120/1.webp",
       "/images/hardware-products/120/2.webp",
-      "/images/hardware-products/120/3.webp"
+      // "/images/hardware-products/120/3.webp"
     ]
   },
   table: [
@@ -85,7 +85,7 @@ var products = [
     White: [
       "/images/hardware-products/119/1.webp",
       "/images/hardware-products/119/2.webp",
-      "/images/hardware-products/119/3.webp"
+      // "/images/hardware-products/119/3.webp"
     ]
   },
   table: [
@@ -132,7 +132,7 @@ var products = [
     White: [
       "/images/hardware-products/118/1.webp",
       "/images/hardware-products/118/2.webp",
-      "/images/hardware-products/118/3.webp"
+      // "/images/hardware-products/118/3.webp"
     ]
   },
   table: [
@@ -180,7 +180,7 @@ var products = [
       White: [
         "/images/hardware-products/116A/1.webp",
         "/images/hardware-products/116A/2.webp",
-        "/images/hardware-products/116A/3.webp"
+        // "/images/hardware-products/116A/3.webp"
       ]
     },
     table: [
@@ -228,7 +228,7 @@ var products = [
       White: [
         "/images/hardware-products/115/1.webp",
         "/images/hardware-products/115/2.webp",
-        "/images/hardware-products/115/3.webp"
+        // "/images/hardware-products/115/3.webp"
       ]
     },
     table: [
