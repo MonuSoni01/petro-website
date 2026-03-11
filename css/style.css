@@ -18,6 +18,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 :root {
   --primary: #108082;
@@ -28,6 +29,7 @@
   --main-petro-font: "Roboto", sans-serif;
   --founder-petro-font: "Open Sans", sans-serif;
   --line: #e6e6e6;
+  --styles-font-family: "EB Garamond", serif;
 }
 
 html {
@@ -438,8 +440,7 @@ button.btn-secondary:hover {
 h1 {
   font-family: var(--main-petro-font);
   font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-weight: 600; 
   text-align: left;
   padding-bottom: 10px;
   position: relative;
@@ -462,8 +463,12 @@ h1 {
 
 .about-main h5 {
   font-size: 18px;
-  font-family: var(--main-font-family);
+  font-family:var(--styles-font-family);
   position: relative;
+}
+.about-main h3{
+  font-family: var(--styles-font-family);
+  font-weight: bold;
 }
 
 
@@ -497,10 +502,7 @@ h1 {
 .card-img img {
   width: 100%;
 }
-
-.portfolio-main {
-  padding: 30px 0px;
-}
+ 
 
 .portfolio-main h2 {
   font-weight: 600;
@@ -2618,7 +2620,7 @@ select {
   color: var(--primary);
   font-family: var(--main-petro-font);
   text-align: center;
-  margin: 35px;
+  margin: 20px 0px 10px;
 }
 
 .map-sec ul {
@@ -2757,9 +2759,13 @@ select {
 
 .product-card h5 {
   color: var(--secondary);
+  font-family: var(--styles-font-family);
   font-size: 20px;
   text-align: center;
   margin-top: 20px;
+}
+.product-card h5:hover{
+ text-decoration: none !important;
 }
 
 .product-card p {
@@ -4145,8 +4151,7 @@ a .product-card:hover img {
 
 .faq-section {
   width: 80%;
-  margin: 50px auto;
-  padding: 20px;
+  margin: 10px auto; 
   border-radius: 10px;
 }
 
