@@ -144,6 +144,101 @@
         ]
       }
     </script>
+    <style>
+      .awards-section {
+        background: linear-gradient(to bottom, #F8F9FA, #ffffff); /* Add a subtle gradient background */
+        padding: 60px 20px;
+        text-align: center;
+        color: #333;
+    } 
+ 
+
+    .section-description {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .awards-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .award-card {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        width: 300px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        text-align: center;
+        border: 2px solid #e0e0e0;
+        position: relative;
+        border-top: 4px solid #108082; /* Add a distinct top border for more focus */
+    }
+
+    .award-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-color: #108082; /* Primary color on hover */
+    }
+
+    .award-icon {
+        background-color: #ffffff; /* Change icon background to white */
+        padding: 20px;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        border: 2px solid #108082; /* Add a border to make the icon pop */
+    }
+
+    .award-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .award-title {
+        font-size: 1.4em;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .award-card p {
+        font-size: 1.1em;
+        text-align: center;
+        color: #777;
+        margin-bottom: 15px;
+    }
+
+    /* Add small decorative border or divider */
+    .award-card:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 5px;
+        background-color: #ffd700; /* Golden divider */
+        border-radius: 2px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .awards-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    </style>
   <!-- Meta Pixel Code -->
   <script>
     !(function (f, b, e, v, n, t, s) {
@@ -997,37 +1092,44 @@
     </div>
 
   </div>
+ 
 
-  <!-- Certified Section -->
-  <div class="container mb-1">
-    <div class="row">
-      <div class="col-lg-12 normal-text">
-        <h2>Awards & Achievement</h2>
-        <p>
-          Petro Industech Pvt. Ltd. offers high-quality bathroom accessories and hardware products made to global
-          standards.
-          Our range includes everything from daily-use accessories to premium solutions, built with quality and
-          reliability in mind.
-        </p>
-        <ul class="mb-2">
-          <li><b> : ISO 9001:2015 Certified Quality you can trust.</b></li>
-          <li><b> : IAF Member Recognized for global standards.</b></li>
-          <li>
-            <b> : MOST TRUSTED BRAND OF INDIA A mark of excellence.</b>
-          </li>
-        </ul>
-        <p>
-          With 33+ years of expertise, Petro Industech ensures innovation,
+  <section id="awards-section" class="awards-section mt-2 mb-2" style="background-color: #fff;">
+    <div class="container">
+        <h2 class="section-title">Awards & Achievement</h2>
+        <p style="text-align: center;">Petro Industech Pvt. Ltd. offers high-quality bathroom accessories and hardware products made to global standards. Our range includes everything from daily-use accessories to premium solutions, built with quality and reliability in mind.</p>
+        <div class="awards-container mb-5 mt-5">
+            <div class="award-card">
+                <div class="award-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/trophy.png" alt="ISO Certified" class="icon">
+                </div>
+                <h3 class="award-title">ISO 9001:2015 Certified Quality</h3>
+                <p>Quality you can trust</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/certificate.png" alt="IAF Member" class="icon">
+                </div>
+                <h3 class="award-title">IAF Member</h3>
+                <p>Recognized for global standards</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/trophy.png" alt="Most Trusted Brand" class="icon">
+                </div>
+                <h3 class="award-title">Most Trusted Brand of India</h3>
+                <p>A mark of excellence</p>
+            </div>
+        </div>
+        <p style="text-align: center;">With 33+ years of expertise, Petro Industech ensures innovation,
           durability, and perfection in every product. Choose Petro Company
-          for certified quality and excellence in bathroom fittings.
-        </p>
-      </div>
+          for certified quality and excellence in bathroom fittings.</p>
     </div>
-  </div>
+</section>
 
 
   <!-- Awards Image Section-->
-  <div class="container img-sec">
+  <div class="container img-sec" style="background-color: #fff;">
     <div class="row p-1">
       <div class="col-lg-6">
         <img src="images/awards-1.png" alt="" class="img-fluid responsive" />

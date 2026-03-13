@@ -431,10 +431,7 @@ button.btn-secondary:hover {
 .services-bar .card .card-footer {
   background-color: var(--secondary);
 }
-
-.about-main {
-  padding: 30px 0px;
-}
+ 
 
 .about-main h2,
 h1 {
