@@ -3071,6 +3071,13 @@ a .product-card:hover img {
   min-height: 220px;
 }
 
+@media (max-width:426px) {
+  .blogbox-image { 
+  background-size: contain; 
+  min-height: 250px;
+}
+  
+}
 .blogbox-content {
   padding: 1.5rem;
   width: 60%;
