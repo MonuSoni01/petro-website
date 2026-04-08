@@ -3022,7 +3022,9 @@ a .product-card:hover img {
   font-size: 25px;
   color: var(--secondary);
 }
-
+.blog-page p{
+  text-transform:none;
+}
 .blog-page ul li {
   list-style: disc;
 }
@@ -5341,4 +5343,40 @@ OUTER .cpp-wrap {
   .petro-title {
     font-size: 26px;
   }
+}
+
+.shine-effect-container {
+    position: relative;
+    display: inline-block;
+}
+
+.shiny-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;  /* Optional: for rounded corners */
+    overflow: hidden;
+    position: relative;
+}
+
+.shiny-image::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.4) 75%);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+        top: -100%;
+    }
+    100% {
+        left: 100%;
+        top: 100%;
+    }
 }
