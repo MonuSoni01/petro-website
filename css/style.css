@@ -3122,7 +3122,7 @@ a .product-card:hover img {
 }
 
 .blog-img img {
-  width: 1200px;
+  width: 1106px;
 }
 
 @media (max-width: 426px) {
@@ -3140,8 +3140,7 @@ a .product-card:hover img {
 .accordion__wrapper {
   background-color: #eff2f5ce;
   padding: 20px;
-  border-radius: 10px;
-  max-width: 700px;
+  border-radius: 10px; 
   margin: auto;
 }
 

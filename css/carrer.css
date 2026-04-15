@@ -118,7 +118,7 @@
       align-items: center;
       background:
         linear-gradient(135deg, rgba(15,23,42,0.92), rgba(15,118,110,0.82)),
-        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        url('/images/main.carree.jpg') center/cover no-repeat;
       overflow: hidden;
       isolation: isolate;
     }
@@ -474,7 +474,7 @@
       box-shadow: var(--pcareer-shadow);
       background:
         linear-gradient(180deg, rgba(15,23,42,0.1), rgba(15,23,42,0.25)),
-        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+        url('/images/diwai.jpg') center/cover no-repeat;
     }
 
     .pcareer-page .pcareer-overlay-card {
@@ -805,3 +805,4 @@
         width: 100%;
       }
     }
+ 
