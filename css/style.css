@@ -5379,3 +5379,48 @@ OUTER .cpp-wrap {
         top: 100%;
     }
 }
+
+.b2b-locations-section {
+    background: #f8fafc;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.location-card {
+    background: #ffffff;
+    padding: 22px 24px;
+    border-radius: 10px;
+    border: 1px solid #e6e9ef;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.location-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.location-card li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.location-card li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #0aa89e;
+    font-weight: bold;
+}
