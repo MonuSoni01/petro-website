@@ -5418,7 +5418,7 @@ OUTER .cpp-wrap {
 }
 
 .location-card li::before {
-    content: "✔";
+    content: "*";
     position: absolute;
     left: 0;
     color: #0aa89e;
