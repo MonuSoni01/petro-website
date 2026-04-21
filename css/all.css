@@ -3807,3 +3807,129 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
+
+
+  /* Background Overlay */
+#leadPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Popup Box */
+#leadPopup .popup-box {
+    background: #ffffff;
+    width: 380px;
+    max-width: 90%;
+    padding: 30px 25px;
+    margin: 90px auto;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    animation: slideDown 0.4s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading */
+#leadPopup h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0a2540;
+    margin-bottom: 18px;
+}
+
+/* Inputs */
+#leadPopup input {
+    width: 100%;
+    padding: 13px 14px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+#leadPopup input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+    outline: none;
+}
+
+/* Submit Button */
+#leadPopup button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #007bff, #0056d2);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+#leadPopup button:hover {
+    background: linear-gradient(135deg, #0056d2, #003ea8);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 91, 255, 0.35);
+}
+
+/* Close Button */
+#leadPopup .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+#leadPopup .close-btn:hover {
+    color: #000;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+
+    #leadPopup .popup-box {
+        margin: 60px auto;
+        padding: 25px 18px;
+    }
+
+    #leadPopup h3 {
+        font-size: 20px;
+    }
+
+}
