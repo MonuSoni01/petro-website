@@ -3668,12 +3668,12 @@ a .product-card:hover img {
 
 .newbannerbtn .banner-btn {
   position: absolute;
-  bottom: 9%;
-  left: 30%;
+  bottom: 30%;
+  left: 2%;
   padding: 12px 25px;
   border-radius: 10px;
-  background: var(--primary);
-  color: var(--light);
+  background: var(--light);
+  color: var(--primary);
   font-family: var(--main-petro-font);
   font-weight: bold;
   font-size: 20px;
@@ -3694,7 +3694,7 @@ a .product-card:hover img {
   height: 100%;
   background: linear-gradient(120deg,
       transparent 0%,
-      rgba(255, 255, 255, 0.6) 50%,
+      lab(65.76% 19.81 70 / 0.6) 50%,
       transparent 100%);
   transform: skewX(-25deg);
   animation: shine 2.5s infinite;
@@ -3758,12 +3758,12 @@ a .product-card:hover img {
 @media (max-width: 426px) {
   .newbannerbtn .banner-btn {
     position: absolute;
-    bottom: 19%;
+    bottom: 6%;
     left: 20%;
     padding: 5px 12px;
     border-radius: 28px;
-    background: var(--primary);
-    color: var(--light);
+    background: var(--light);
+    color: var(--primary);
     font-family: var(--main-font-family);
     font-weight: bold;
     font-size: 15px;
