@@ -814,13 +814,13 @@ var products = [
     description:
       "The 30 mm Coloured Nylon Wall Plug (also known as a Nylon Sleeve or Plastic Anchor) is designed for secure wall fixing in brick, concrete, and solid masonry surfaces. It is commonly used for installing bathroom accessories, hardware fittings, electrical fixtures, and general interior mounting applications. The nylon sleeve expands when the screw is tightened, ensuring firm grip and reliable holding support. Manufactured from premium-grade nylon, it offers durability, flexibility, and resistance to cracking during installation. Ideal for wholesalers, distributors, contractors, and hardware suppliers.",
     features: [
-      "✅ Standard 30 mm size for wall fixing",
-      "✅ Made from premium quality nylon material",
-      "✅ Even expansion for stronger screw grip",
-      "✅ Durable and resistant to cracking",
-      "✅ Suitable for brick, concrete, and solid walls",
-      "✅ Coloured design for easy identification",
-      "✅ Bulk packing suitable for trade supply"
+      "Standard 30 mm size for wall fixing",
+      "Made from premium quality nylon material",
+      "Even expansion for stronger screw grip",
+      "Durable and resistant to cracking",
+      "Suitable for brick, concrete, and solid walls",
+      "Coloured design for easy identification",
+      "Bulk packing suitable for trade supply"
     ],
     main_image: "/images/hardware-products/102/3.webp",
     colors: ["color"],
