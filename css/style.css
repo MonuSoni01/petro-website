@@ -5425,7 +5425,7 @@ OUTER .cpp-wrap {
   .slider-main .carousel-item {
     height: 72vh;
     min-height: 420px;
-    max-height: 760px;
+    max-height:630px;
   }
 }
 
@@ -5469,7 +5469,7 @@ OUTER .cpp-wrap {
   .slider-main .carousel,
   .slider-main .carousel-inner,
   .slider-main .carousel-item {
-    height: 31vh;
+    height: 59vh;
     min-height: 220px;
   }
 }
@@ -5494,8 +5494,8 @@ OUTER .cpp-wrap {
 
 .newbannerbtn .banner-btn {
   position: absolute;
-  left: 2%;
-  bottom: 30%;
+  left: 25%;
+  bottom: 15%;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -5552,8 +5552,8 @@ OUTER .cpp-wrap {
 /* BUTTON MOBILE */
 @media (max-width: 767.98px) {
   .newbannerbtn .banner-btn {
-    left: 50%;
-    bottom: 8%;
+    left: 31%;
+    bottom:29%;
     transform: translateX(-50%);
     padding: 7px 15px;
     border-radius: 25px;
