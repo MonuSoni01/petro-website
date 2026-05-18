@@ -12,6 +12,7 @@ Disallow: /category/
 Disallow: /date/
 Disallow: /thank-you/
 Disallow: /order-received/
-Allow: /wp-admin/admin-ajax.php
+Allow: /wp-admin/admin-ajax.php 
+Disallow: /tracker-dashboard.html
 
 Sitemap: https://www.petroindustech.com/sitemap.xml

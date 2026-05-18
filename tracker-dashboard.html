@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petro Tracker Dashboard</title>
+
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f7f7;
+  color: #222;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+
+.topbar {
+  background: #108082;
+  color: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.topbar h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.topbar p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.danger-btn {
+  background: #ff3333;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card span {
+  color: #666;
+  font-size: 14px;
+}
+
+.card h2 {
+  margin: 10px 0 0;
+  color: #108082;
+  font-size: 32px;
+}
+
+.section {
+  background: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  overflow-x: auto;
+}
+
+.section h3 {
+  margin-top: 0;
+  color: #108082;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+th {
+  background: #108082;
+  color: white;
+  text-align: left;
+  padding: 14px;
+}
+
+td {
+  padding: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background: #f7fbfb;
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar h1 {
+    font-size: 22px;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <div class="topbar">
+    <div>
+      <h1>Petro Tracker Dashboard</h1>
+      <p>Website button clicks, page views and scroll tracking report</p>
+    </div>
+
+    <button class="danger-btn" onclick="resetTracker()">Reset Data</button>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <span>Total Events</span>
+      <h2 id="totalEvents">0</h2>
+    </div>
+
+    <div class="card">
+      <span>Total Clicks</span>
+      <h2 id="totalClicks">0</h2>
+    </div>
+
+    <div class="card">
+      <span>Page Views</span>
+      <h2 id="pageViews">0</h2>
+    </div>
+
+    <div class="card">
+      <span>Unique Sessions</span>
+      <h2 id="uniqueSessions">0</h2>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Event Summary</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Label</th>
+          <th>Total Count</th>
+        </tr>
+      </thead>
+      <tbody id="summaryTable"></tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Recent Activity</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Event</th>
+          <th>Page</th>
+          <th>Device</th>
+          <th>Browser</th>
+        </tr>
+      </thead>
+      <tbody id="recentTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+    const STORAGE_KEY = "petro_tracker_events";
+
+function getEvents() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+}
+
+function loadDashboard() {
+  const events = getEvents();
+
+  const totalEvents = events.length;
+  const totalClicks = events.filter(e => !e.eventName.includes("page_view") && !e.eventName.includes("scroll")).length;
+  const pageViews = events.filter(e => e.eventName === "page_view").length;
+  const uniqueSessions = new Set(events.map(e => e.sessionId)).size;
+
+  document.getElementById("totalEvents").innerText = totalEvents;
+  document.getElementById("totalClicks").innerText = totalClicks;
+  document.getElementById("pageViews").innerText = pageViews;
+  document.getElementById("uniqueSessions").innerText = uniqueSessions;
+
+  loadSummary(events);
+  loadRecent(events);
+}
+
+function loadSummary(events) {
+  const summaryTable = document.getElementById("summaryTable");
+  summaryTable.innerHTML = "";
+
+  if (events.length === 0) {
+    summaryTable.innerHTML = `<tr><td colspan="3">No tracking data found.</td></tr>`;
+    return;
+  }
+
+  const summary = {};
+
+  events.forEach(event => {
+    if (!summary[event.eventName]) {
+      summary[event.eventName] = {
+        label: event.label,
+        count: 0
+      };
+    }
+
+    summary[event.eventName].count++;
+  });
+
+  Object.entries(summary)
+    .sort((a, b) => b[1].count - a[1].count)
+    .forEach(([eventName, data]) => {
+      summaryTable.innerHTML += `
+        <tr>
+          <td>${eventName}</td>
+          <td>${data.label}</td>
+          <td><strong>${data.count}</strong></td>
+        </tr>
+      `;
+    });
+}
+
+function loadRecent(events) {
+  const recentTable = document.getElementById("recentTable");
+  recentTable.innerHTML = "";
+
+  if (events.length === 0) {
+    recentTable.innerHTML = `<tr><td colspan="6">No recent activity found.</td></tr>`;
+    return;
+  }
+
+  events
+    .slice()
+    .reverse()
+    .slice(0, 50)
+    .forEach(event => {
+      recentTable.innerHTML += `
+        <tr>
+          <td>${event.date}</td>
+          <td>${event.time}</td>
+          <td>${event.label}</td>
+          <td>${event.pagePath}</td>
+          <td>${event.device}</td>
+          <td>${event.browser}</td>
+        </tr>
+      `;
+    });
+}
+
+function resetTracker() {
+  const confirmReset = confirm("Are you sure you want to reset all tracker data?");
+
+  if (!confirmReset) return;
+
+  localStorage.removeItem(STORAGE_KEY);
+  loadDashboard();
+}
+
+loadDashboard();
+</script>
+</body>
+</html>
