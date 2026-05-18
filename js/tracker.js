@@ -1,12 +1,17 @@
 (function () {
-  const STORAGE_KEY = "petro_tracker_events";
+  const API_URL = "/tracker-api.php";
   const SESSION_KEY = "petro_tracker_session_id";
 
   function getSessionId() {
     let sessionId = sessionStorage.getItem(SESSION_KEY);
 
     if (!sessionId) {
-      sessionId = "session_" + Date.now() + "_" + Math.random().toString(36).substring(2, 10);
+      sessionId =
+        "session_" +
+        Date.now() +
+        "_" +
+        Math.random().toString(36).substring(2, 10);
+
       sessionStorage.setItem(SESSION_KEY, sessionId);
     }
 
@@ -24,43 +29,38 @@
   function getBrowserName() {
     const ua = navigator.userAgent;
 
+    if (ua.includes("Edg")) return "Edge";
     if (ua.includes("Chrome")) return "Chrome";
     if (ua.includes("Firefox")) return "Firefox";
     if (ua.includes("Safari") && !ua.includes("Chrome")) return "Safari";
-    if (ua.includes("Edge")) return "Edge";
 
     return "Other";
   }
 
-  function getEvents() {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-  }
+  async function saveTrackEvent(eventData) {
+    try {
+      await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          event_name: eventData.eventName || "unknown_event",
+          label_name: eventData.label || "Unknown",
+          page_url: window.location.href,
+          page_path: window.location.pathname,
+          page_title: document.title,
+          device: getDeviceType(),
+          browser: getBrowserName(),
+          session_id: getSessionId(),
+          referrer: document.referrer || ""
+        })
+      });
 
-  function saveEvents(events) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(events));
-  }
-
-  function saveTrackEvent(eventData) {
-    const events = getEvents();
-
-    events.push({
-      id: Date.now() + "_" + Math.random().toString(36).substring(2, 8),
-      eventName: eventData.eventName || "unknown_event",
-      label: eventData.label || eventData.eventName || "Unknown",
-      pageUrl: window.location.href,
-      pagePath: window.location.pathname,
-      pageTitle: document.title,
-      device: getDeviceType(),
-      browser: getBrowserName(),
-      sessionId: getSessionId(),
-      date: new Date().toLocaleDateString("en-IN"),
-      time: new Date().toLocaleTimeString("en-IN"),
-      timestamp: new Date().toISOString()
-    });
-
-    saveEvents(events);
-
-    console.log("Tracked:", eventData.eventName);
+      console.log("Tracked:", eventData.eventName);
+    } catch (error) {
+      console.error("Tracking failed:", error);
+    }
   }
 
   document.addEventListener("click", function (e) {
@@ -69,7 +69,9 @@
 
     saveTrackEvent({
       eventName: trackedElement.getAttribute("data-track"),
-      label: trackedElement.getAttribute("data-label") || trackedElement.innerText.trim()
+      label:
+        trackedElement.getAttribute("data-label") ||
+        trackedElement.innerText.trim()
     });
   });
 
@@ -80,7 +82,8 @@
 
   window.addEventListener("scroll", function () {
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
 
     if (docHeight <= 0) return;
 
@@ -88,22 +91,34 @@
 
     if (scrollPercent >= 25 && !scroll25) {
       scroll25 = true;
-      saveTrackEvent({ eventName: "scroll_25", label: "Scroll 25%" });
+      saveTrackEvent({
+        eventName: "scroll_25",
+        label: "Scroll 25%"
+      });
     }
 
     if (scrollPercent >= 50 && !scroll50) {
       scroll50 = true;
-      saveTrackEvent({ eventName: "scroll_50", label: "Scroll 50%" });
+      saveTrackEvent({
+        eventName: "scroll_50",
+        label: "Scroll 50%"
+      });
     }
 
     if (scrollPercent >= 75 && !scroll75) {
       scroll75 = true;
-      saveTrackEvent({ eventName: "scroll_75", label: "Scroll 75%" });
+      saveTrackEvent({
+        eventName: "scroll_75",
+        label: "Scroll 75%"
+      });
     }
 
     if (scrollPercent >= 95 && !scroll100) {
       scroll100 = true;
-      saveTrackEvent({ eventName: "scroll_100", label: "Scroll 100%" });
+      saveTrackEvent({
+        eventName: "scroll_100",
+        label: "Scroll 100%"
+      });
     }
   });
 
