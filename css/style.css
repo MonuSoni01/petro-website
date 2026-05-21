@@ -5469,7 +5469,7 @@ OUTER .cpp-wrap {
   .slider-main .carousel,
   .slider-main .carousel-inner,
   .slider-main .carousel-item {
-    height: 59vh;
+    height: 48vh;
     min-height: 220px;
   }
 }
