@@ -389,10 +389,12 @@
 
 
           <div class="main-btn" style="margin-top: 35px">
-            <a href="contact.html">
-              Hurry Up Join Now
-
-              <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="contact.html"
+   data-track-event="cta_click"
+   data-track-label="Find_Page_Hurry_Up_Join_Now_CPP">
+  Hurry Up Join Now
+  <i class="fa-solid fa-arrow-right"></i>
+</a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -605,6 +607,104 @@
         </div>
     </footer>
 
+ <script>
+(function () {
+  function getSession() {
+    let s = sessionStorage.getItem("petro_sid");
+    if (!s) {
+      s = "sid_" + Math.random().toString(36).substring(2, 12) + "_" + Date.now();
+      sessionStorage.setItem("petro_sid", s);
+    }
+    return s;
+  }
+
+  function getDevice() {
+    const ua = navigator.userAgent.toLowerCase();
+    if (/tablet|ipad|playbook|silk/.test(ua)) return "Tablet";
+    if (/mobile|iphone|ipod|android|blackberry|windows phone/.test(ua)) return "Mobile";
+    return "Desktop";
+  }
+
+  function getBrowser() {
+    const ua = navigator.userAgent;
+    if (ua.includes("Edg")) return "Edge";
+    if (ua.includes("OPR") || ua.includes("Opera")) return "Opera";
+    if (ua.includes("Chrome")) return "Chrome";
+    if (ua.includes("Firefox")) return "Firefox";
+    if (ua.includes("Safari")) return "Safari";
+    return "Other";
+  }
+
+  function trackEvent(eventName, labelName) {
+    const payload = {
+      event_name: eventName,
+      label_name: labelName || "Unknown_Label",
+      page_url: window.location.href,
+      page_path: window.location.pathname,
+      page_title: document.title,
+      device: getDevice(),
+      browser: getBrowser(),
+      session_id: getSession(),
+      referrer: document.referrer || "direct"
+    };
+
+    const body = JSON.stringify(payload);
+
+    if (navigator.sendBeacon) {
+      const blob = new Blob([body], { type: "application/json" });
+      const sent = navigator.sendBeacon("/tracker.php", blob);
+      if (sent) return;
+    }
+
+    fetch("/tracker.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: body,
+      keepalive: true
+    }).catch(function () {});
+  }
+
+  window.petroTrackEvent = trackEvent;
+
+  // Page view
+  trackEvent("page_view", "Find_Distributor_Page");
+
+  // Data attribute based tracking
+  document.querySelectorAll("[data-track-event]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      const eventName = this.getAttribute("data-track-event");
+      const labelName = this.getAttribute("data-track-label") || "Unknown_Label";
+      trackEvent(eventName, labelName);
+    });
+  });
+
+  // Dynamic dealer card click tracking
+  const productSections = document.getElementById("product-sections");
+
+  if (productSections) {
+    productSections.addEventListener("click", function (e) {
+      const card = e.target.closest(".dealer-card");
+
+      if (!card) return;
+
+      let dealerName = "Unknown_Dealer";
+
+      const title = card.querySelector("h6");
+      if (title && title.innerText.trim() !== "") {
+        dealerName = title.innerText.trim();
+      }
+
+      dealerName = dealerName
+        .replace(/\s+/g, "_")
+        .replace(/[^a-zA-Z0-9_]/g, "");
+
+      trackEvent("dealer_card_click", "Find_Page_Dealer_" + dealerName);
+    });
+  }
+})();
+</script>
 
     <!-- Javascript CDN & Script -->
     <script src="vendor/jquery/jquery.min.js"></script>
