@@ -1455,14 +1455,14 @@ tbody tr:hover td { background: var(--surface-2); }
                 <?= htmlspecialchars($r['ip_address'] ?: '—') ?>
               </td>
               <td>
-  <?= htmlspecialchars($r['city_name'] ?: '—') ?>,
-  <?= htmlspecialchars($r['state_name'] ?: '—') ?>
-  <br>
-  <span class="mono" style="color:var(--text-3);font-size:11px">
-    <?= htmlspecialchars($r['country'] ?: '—') ?>
-    <?= !empty($r['pincode']) ? ' - ' . htmlspecialchars($r['pincode']) : '' ?>
-  </span>
-</td>
+              <?= htmlspecialchars($r['city_name'] ?: '—') ?>,
+              <?= htmlspecialchars($r['state_name'] ?: '—') ?>
+              <br>
+              <span class="mono" style="color:var(--text-3);font-size:11px">
+                <?= htmlspecialchars($r['country'] ?: '—') ?>
+                <?= !empty($r['pincode']) ? ' - ' . htmlspecialchars($r['pincode']) : '' ?>
+              </span>
+            </td>
             </tr>
             <?php endforeach; ?>
           <?php endif; ?>
