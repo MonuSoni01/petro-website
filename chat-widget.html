@@ -1,0 +1,99 @@
+<!-- =========================
+     PETRO AI CHATBOT
+========================= -->
+
+<link rel="stylesheet" href="chat.css">
+
+<!-- Floating Button -->
+<button id="chatToggle">
+    💬
+</button>
+
+<!-- Chat Window -->
+<div id="chatContainer">
+
+    <!-- Header -->
+    <div class="chat-header">
+
+        <h3>
+            Petro AI Assistant
+        </h3>
+
+        <span
+            class="chat-close"
+            onclick="closeChat()"
+        >
+            ×
+        </span>
+
+    </div>
+
+    <!-- Messages -->
+    <div id="messages"></div>
+
+    <!-- Footer -->
+    <div class="chat-footer">
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Ask Petro AI..."
+            autocomplete="off"
+        >
+
+        <button id="sendBtn">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+<script src="chat.js"></script>
+
+<script>
+
+/* ===========================
+   OPEN CHAT
+=========================== */
+
+const chatToggle =
+document.getElementById("chatToggle");
+
+const chatContainer =
+document.getElementById("chatContainer");
+
+chatToggle.addEventListener(
+    "click",
+    () => {
+
+        if(
+            chatContainer.style.display
+            === "flex"
+        ){
+
+            chatContainer.style.display =
+            "none";
+
+        }else{
+
+            chatContainer.style.display =
+            "flex";
+
+        }
+
+    }
+);
+
+/* ===========================
+   CLOSE CHAT
+=========================== */
+
+function closeChat(){
+
+    chatContainer.style.display =
+    "none";
+
+}
+
+</script>

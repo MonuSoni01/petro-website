@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta -->
+    <title>Petro AI Assistant | Petro Industech</title>
+    <meta name="description" content="Chat with Petro AI Assistant for product information, bathroom accessories, hardware products, CPP program, dealer inquiry, distributor support, catalogue and pricing help.">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#108082">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="chat.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Main Chat App -->
+    <main class="chat-page">
+
+        <!-- ================= HEADER START ================= -->
+        <header class="assistant-header-v2">
+
+            <div class="header-left-v2">
+
+                <div class="ai-logo-v2">
+                    <span class="logo-glow"></span>
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <div class="ai-title-box">
+
+                    <div class="title-row">
+                        <h1>Petro AI Assistant</h1>
+
+                        <span class="live-badge">
+                            <span></span>
+                            AI Online
+                        </span>
+                    </div>
+
+                    <p>
+                        <i class="fas fa-bolt"></i>
+                        Powered By MONU
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-btn-v2" aria-label="Back to Home">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+        </header>
+        <!-- ================= HEADER END ================= -->
+
+
+        <!-- ================= CHAT BODY START ================= -->
+        <section id="messages" class="chat-messages">
+
+            <!-- Welcome Hero Card -->
+            <div class="welcome-ai-card">
+
+                <div class="welcome-top">
+
+                    <div class="welcome-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+
+                    <div>
+                        <h2>Welcome to Petro AI</h2>
+                        <p>Your smart assistant for Petro Industech product and business support.</p>
+                    </div>
+
+                </div>
+
+                <div class="support-tags">
+
+                    <span>
+                        <i class="fas fa-box-open"></i>
+                        Product Info
+                    </span>
+
+                    <span>
+                        <i class="fas fa-bath"></i>
+                        Bathroom Accessories
+                    </span>
+
+                    <span>
+                        <i class="fas fa-screwdriver-wrench"></i>
+                        Hardware Products
+                    </span>
+
+                    <span>
+                        <i class="fas fa-handshake"></i>
+                        CPP Program
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bot First Message -->
+            <div class="message bot">
+
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <div class="message-bubble">
+
+                    <div class="message-meta">
+                        <strong>Petro AI</strong>
+                        <span>Just now</span>
+                    </div>
+
+                    <div class="message-content">
+
+                        <p>👋 Welcome to <strong>Petro AI Assistant</strong></p>
+
+                        <p>I can help you with:</p>
+
+                        <ul>
+                            <li>Product Information</li>
+                            <li>Bathroom Accessories</li>
+                            <li>Hardware Products</li>
+                            <li>CPP Program</li>
+                            <li>Dealer Inquiry</li>
+                            <li>Distributor Inquiry</li>
+                            <li>Catalogue Support</li>
+                            <li>Pricing Support</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Help Cards -->
+            <div class="ai-help-grid">
+
+                <button type="button" class="help-card" onclick="quickAsk('Tell me about Petro bathroom accessories')">
+                    <div class="help-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <div>
+                        <h3>Bathroom Accessories</h3>
+                        <p>Explore premium stainless steel bathroom products.</p>
+                    </div>
+                </button>
+
+                <button type="button" class="help-card" onclick="quickAsk('Tell me about Petro hardware products')">
+                    <div class="help-icon">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <div>
+                        <h3>Hardware Products</h3>
+                        <p>Get details about nylon sleeves, wall plugs and fittings.</p>
+                    </div>
+                </button>
+
+                <button type="button" class="help-card" onclick="quickAsk('Tell me about Petro CPP Program')">
+                    <div class="help-icon">
+                        <i class="fas fa-handshake-angle"></i>
+                    </div>
+                    <div>
+                        <h3>CPP Program</h3>
+                        <p>Know dealer and distributor partnership benefits.</p>
+                    </div>
+                </button>
+
+                <button type="button" class="help-card" onclick="quickAsk('How can I become a Petro dealer or distributor?')">
+                    <div class="help-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div>
+                        <h3>Dealer Inquiry</h3>
+                        <p>Get support for dealership and distributor inquiry.</p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+        <!-- ================= CHAT BODY END ================= -->
+
+
+        <!-- ================= QUICK BUTTONS START ================= -->
+        <section class="quick-buttons" aria-label="Quick actions">
+
+            <button type="button" onclick="quickAsk('Share Petro catalogue link')">
+                <i class="fas fa-book-open"></i>
+                Catalogue
+            </button>
+
+            <button type="button" onclick="quickAsk('Tell me about Petro CPP Program')">
+                <i class="fas fa-handshake"></i>
+                CPP Program
+            </button>
+
+            <button type="button" onclick="quickAsk('Share Petro WhatsApp link')">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </button>
+
+            <button type="button" onclick="quickAsk('Find Petro dealer near me')">
+                <i class="fas fa-location-dot"></i>
+                Find Dealer
+            </button>
+
+            <button type="button" onclick="quickAsk('Share Petro product pricing details')">
+                <i class="fas fa-tags"></i>
+                Pricing
+            </button>
+
+        </section>
+        <!-- ================= QUICK BUTTONS END ================= -->
+
+
+        <!-- ================= FOOTER START ================= -->
+        <footer class="chat-footer">
+
+            <div class="input-wrap">
+
+                <i class="fas fa-message"></i>
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Ask Petro AI anything..."
+                    autocomplete="off"
+                    aria-label="Ask Petro AI anything"
+                >
+
+            </div>
+
+            <button id="sendBtn" type="button" aria-label="Send Message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+
+        </footer>
+        <!-- ================= FOOTER END ================= -->
+
+    </main>
+
+
+    <!-- JS -->
+    <script src="chat.js"></script>
+
+</body>
+
+</html>
