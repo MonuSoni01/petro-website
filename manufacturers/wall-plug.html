@@ -37,6 +37,618 @@
     <!-- End Google Tag Manager -->
 
     <style>
+        /* =========================
+     COMMON SAFETY
+  ========================= */
+
+        .wpdealer91-section,
+        .wpdealer91-section *,
+        .wpwhy92-section,
+        .wpwhy92-section * {
+            box-sizing: border-box;
+        }
+ 
+        .wpfaq66-section,
+        .wpfaq66-section * {
+            box-sizing: border-box;
+        }
+
+        .wpfaq66-section {
+            padding: 75px 0;
+            background: #f8fcfc;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wpfaq66-container {
+            width: min(100% - 40px, 980px);
+            margin: 0 auto;
+        }
+
+        .wpfaq66-heading {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            text-align: center;
+        }
+
+        .wpfaq66-label {
+            display: inline-block;
+            color: #108082;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .wpfaq66-heading h2 {
+            margin: 13px 0 0;
+            color: #16282a;
+            font-size: 38px;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+        .wpfaq66-line {
+            display: block;
+            width: 70px;
+            height: 4px;
+            margin: 16px auto 18px;
+            border-radius: 20px;
+            background: #ffd900;
+        }
+
+        .wpfaq66-heading p {
+            margin: 0;
+            color: #5e7073;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .wpfaq66-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .wpfaq66-item {
+            overflow: hidden;
+            border: 1px solid #dce8e8;
+            border-radius: 17px;
+            background: #ffffff;
+            box-shadow: 0 9px 28px rgba(5, 95, 102, 0.06);
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .wpfaq66-item[open] {
+            border-color: rgba(16, 128, 130, 0.35);
+            box-shadow: 0 14px 34px rgba(5, 95, 102, 0.1);
+        }
+
+        .wpfaq66-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            width: 100%;
+            min-height: 68px;
+            padding: 19px 22px;
+            color: #17282b;
+            font-size: 16px;
+            line-height: 1.45;
+            font-weight: 800;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .wpfaq66-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .wpfaq66-question::after {
+            content: "+";
+            display: grid;
+            place-items: center;
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            border-radius: 50%;
+            color: #055f66;
+            background: #e8f7f7;
+            font-size: 21px;
+            line-height: 1;
+            font-weight: 700;
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .wpfaq66-item[open] .wpfaq66-question::after {
+            content: "−";
+            color: #17282b;
+            background: #ffd900;
+        }
+
+        .wpfaq66-answer {
+            padding: 0 22px 22px;
+            color: #5a6c6f;
+            font-size: 15px;
+            line-height: 1.72;
+        }
+
+        .wpfaq66-answer p {
+            margin: 0;
+        }
+
+        .wpfaq66-answer strong {
+            color: #055f66;
+        }
+
+        @media (max-width: 576px) {
+            .wpfaq66-section {
+                padding: 50px 0;
+            }
+
+            .wpfaq66-container {
+                width: min(100% - 26px, 980px);
+            }
+
+            .wpfaq66-heading h2 {
+                font-size: 29px;
+            }
+
+            .wpfaq66-heading p {
+                font-size: 14.5px;
+            }
+
+            .wpfaq66-question {
+                min-height: 62px;
+                padding: 17px 16px;
+                font-size: 14px;
+            }
+
+            .wpfaq66-answer {
+                padding: 0 16px 18px;
+                font-size: 13.5px;
+            }
+
+            .wpfaq66-question::after {
+                width: 29px;
+                height: 29px;
+                min-width: 29px;
+                font-size: 19px;
+            }
+        } 
+        /* =========================
+     DEALER SECTION
+  ========================= */
+
+        .wpdealer91-section {
+            padding: 75px 0;
+            overflow: hidden;
+            background: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wpdealer91-container {
+            width: min(100% - 40px, 1240px);
+            margin: 0 auto;
+        }
+
+        .wpdealer91-card {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: stretch;
+            overflow: hidden;
+            border: 1px solid #dce8e8;
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 14px 40px rgba(5, 95, 102, 0.09);
+        }
+
+        .wpdealer91-image {
+            position: relative;
+            min-height: 470px;
+            overflow: hidden;
+            background: #e8f5f5;
+        }
+
+        .wpdealer91-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 470px;
+            object-fit: cover;
+        }
+
+        .wpdealer91-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 48px;
+            background:
+                radial-gradient(circle at 95% 10%,
+                    rgba(255, 217, 0, 0.13),
+                    transparent 28%),
+                linear-gradient(135deg, #ffffff, #f7fcfc);
+        }
+
+        .wpdealer91-content::after {
+            content: "";
+            position: absolute;
+            right: -75px;
+            bottom: -75px;
+            width: 180px;
+            height: 180px;
+            border: 24px solid rgba(16, 128, 130, 0.06);
+            border-radius: 50%;
+        }
+
+        .wpdealer91-label {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            width: fit-content;
+            margin-bottom: 13px;
+            color: #108082;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .wpdealer91-label::before {
+            content: "";
+            width: 28px;
+            height: 3px;
+            border-radius: 20px;
+            background: #ffd900;
+        }
+
+        .wpdealer91-content h2 {
+            position: relative;
+            z-index: 2;
+            margin: 0 0 17px;
+            color: #055f66;
+            font-size: 37px;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .wpdealer91-content p {
+            position: relative;
+            z-index: 2;
+            margin: 0 0 20px;
+            color: #596c6f;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .wpdealer91-list {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            gap: 11px;
+            margin: 0 0 25px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wpdealer91-list li {
+            position: relative;
+            padding-left: 29px;
+            color: #263a3d;
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .wpdealer91-list li::before {
+            content: "✓";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            display: grid;
+            place-items: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            color: #ffffff;
+            background: #108082;
+            font-size: 10px;
+            font-weight: 900;
+        }
+
+        .wpdealer91-actions {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .wpdealer91-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 13px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 800;
+            transition: 0.3s ease;
+        }
+
+        .wpdealer91-btn-primary {
+            color: #1f2d2f;
+            background: #ffd900;
+        }
+
+        .wpdealer91-btn-primary:hover {
+            color: #000000;
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.13);
+        }
+
+        .wpdealer91-btn-outline {
+            color: #055f66;
+            border: 1px solid #108082;
+            background: #ffffff;
+        }
+
+        .wpdealer91-btn-outline:hover {
+            color: #ffffff;
+            text-decoration: none;
+            background: #108082;
+        }
+
+        /* =========================
+     WHY PETRO SECTION
+  ========================= */
+
+        .wpwhy92-section {
+            padding: 80px 0;
+            overflow: hidden;
+            background: linear-gradient(180deg, #f7fbfb, #ffffff);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wpwhy92-container {
+            width: min(100% - 40px, 1240px);
+            margin: 0 auto;
+        }
+
+        .wpwhy92-heading {
+            max-width: 900px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .wpwhy92-label {
+            display: inline-block;
+            color: #108082;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .wpwhy92-heading h2 {
+            margin: 14px 0 0;
+            color: #16282a;
+            font-size: 40px;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .wpwhy92-line {
+            display: block;
+            width: 72px;
+            height: 4px;
+            margin: 17px auto 20px;
+            border-radius: 20px;
+            background: #ffd900;
+        }
+
+        .wpwhy92-heading p {
+            margin: 0;
+            color: #5d6f72;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .wpwhy92-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .wpwhy92-item {
+            position: relative;
+            overflow: hidden;
+            min-height: 220px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #dce8e8;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(5, 95, 102, 0.06);
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .wpwhy92-item::before {
+            content: "";
+            position: absolute;
+            top: -55px;
+            right: -55px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(16, 128, 130, 0.06);
+        }
+
+        .wpwhy92-item:hover {
+            transform: translateY(-7px);
+            border-color: rgba(16, 128, 130, 0.3);
+            box-shadow: 0 18px 42px rgba(5, 95, 102, 0.12);
+        }
+
+        .wpwhy92-icon {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            place-items: center;
+            width: 62px;
+            height: 62px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            color: #108082;
+            background: #e9f7f7;
+            font-size: 26px;
+            box-shadow: 0 0 0 8px #f4fbfb;
+        }
+
+        .wpwhy92-item h3 {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            color: #055f66;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 800;
+        }
+
+        .wpwhy92-bottom {
+            max-width: 980px;
+            margin: 42px auto 0;
+            padding: 28px;
+            text-align: center;
+            border-left: 5px solid #ffd900;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(5, 95, 102, 0.06);
+        }
+
+        .wpwhy92-bottom p {
+            margin: 0;
+            color: #53676a;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .wpwhy92-bottom strong {
+            color: #055f66;
+        }
+
+        /* =========================
+     RESPONSIVE
+  ========================= */
+
+        @media (max-width: 1100px) {
+            .wpwhy92-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 900px) {
+            .wpdealer91-card {
+                grid-template-columns: 1fr;
+            }
+
+            .wpdealer91-image,
+            .wpdealer91-image img {
+                min-height: 380px;
+            }
+
+            .wpdealer91-content {
+                padding: 38px 30px;
+            }
+
+            .wpdealer91-content h2 {
+                font-size: 31px;
+            }
+
+            .wpwhy92-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .wpdealer91-section,
+            .wpwhy92-section {
+                padding: 50px 0;
+            }
+
+            .wpdealer91-container,
+            .wpwhy92-container {
+                width: min(100% - 26px, 1240px);
+            }
+
+            .wpdealer91-card {
+                border-radius: 17px;
+            }
+
+            .wpdealer91-image,
+            .wpdealer91-image img {
+                min-height: 270px;
+            }
+
+            .wpdealer91-content {
+                padding: 28px 20px;
+            }
+
+            .wpdealer91-content h2 {
+                font-size: 26px;
+                line-height: 1.25;
+            }
+
+            .wpdealer91-content p,
+            .wpdealer91-list li {
+                font-size: 13.5px;
+            }
+
+            .wpdealer91-actions {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .wpdealer91-btn {
+                width: 100%;
+            }
+
+            .wpwhy92-heading h2 {
+                font-size: 29px;
+            }
+
+            .wpwhy92-heading p,
+            .wpwhy92-bottom p {
+                font-size: 14.5px;
+            }
+
+            .wpwhy92-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wpwhy92-item {
+                min-height: auto;
+                padding: 27px 20px;
+            }
+
+            .wpwhy92-bottom {
+                padding: 22px 18px;
+            }
+        }
+
         .wpfix42-section,
         .wpfix42-section * {
             box-sizing: border-box;
@@ -544,7 +1156,7 @@
                 font-size: 13.5px;
             }
         }
-        
+
         .wpdealer58-section,
         .wpdealer58-section * {
             box-sizing: border-box;
@@ -1157,7 +1769,19 @@ WALL PLUG INTRO + 3 FEATURE CARDS SECTION
 Unique Class Prefix: wp32-
 ===================================================== -->
 
+    <section class="hero-banner-section">
 
+        <!-- Desktop Banner -->
+      
+        <img src="/images/nylon/10.webp" alt="Nitesh Khurana, Managing Director of Petro Industech Pvt. Ltd., leads the company in hardware and bathroom accessories manufacturing 
+" class="img-fluid w-100 d-none d-md-block hero-banner-img">
+
+        <!-- Mobile Banner -->
+      <img src="/images/nylon/11.webp"
+                alt="Nitesh Khurana, Managing Director of Petro Industech Pvt. Ltd"
+                class="img-fluid w-100 d-block d-md-none hero-banner-img">
+
+    </section>
 
     <section class="wp32-section">
         <div class="wp32-container">
@@ -1167,8 +1791,8 @@ Unique Class Prefix: wp32-
             <div class="wp32-intro">
 
                 <div class="wp32-image-box">
-                    <img src="/images/wall-plug/wall-plug-manufacturers-india.webp"
-                        alt="Wall plug manufacturers in India" loading="lazy" width="650" height="480">
+                    <img src="/images/nylon/12.webp" alt="Wall plug manufacturers in India" loading="lazy" width="650"
+                        height="480">
                 </div>
 
                 <div class="wp32-content">
@@ -1247,7 +1871,9 @@ Unique Class Prefix: wp32-
                     </h3>
 
                     <p>
-                        As a top manufacturer of <a href="https://www.petroindustech.com/nylon-sleeve-rawal-plug-pvc-gitti.html">nylon wall plugs</a>, Petro Industech supplies high-expansion sleeves
+                        As a top manufacturer of <a
+                            href="https://www.petroindustech.com/nylon-sleeve-rawal-plug-pvc-gitti.html">nylon wall
+                            plugs</a>, Petro Industech supplies high-expansion sleeves
                         designed for medium and heavy fittings. Nylon plugs give a firm screw hold and steady fitting on
                         brick, cement, concrete, stone, and wood walls.
 
@@ -1331,8 +1957,8 @@ Unique Class Prefix: wp32-
                 <article class="wpfix42-row">
 
                     <div class="wpfix42-image">
-                        <img src="/images/wall-plug/pvc-wall-plug.webp" alt="PVC Wall Plug Suppliers" loading="lazy"
-                            width="700" height="500">
+                        <img src="/images/nylon/8.webp" alt="PVC Wall Plug Suppliers" loading="lazy" width="700"
+                            height="500">
                     </div>
 
                     <div class="wpfix42-content">
@@ -1378,8 +2004,8 @@ Unique Class Prefix: wp32-
                 <article class="wpfix42-row">
 
                     <div class="wpfix42-image">
-                        <img src="/images/wall-plug/rawl-plug.webp" alt="Rawl Plug Manufacturers" loading="lazy"
-                            width="700" height="500">
+                        <img src="/images/nylon/14.webp" alt="Rawl Plug Manufacturers" loading="lazy" width="700"
+                            height="500">
                     </div>
 
                     <div class="wpfix42-content">
@@ -1393,7 +2019,8 @@ Unique Class Prefix: wp32-
                             <span>with Expertise</span>
                         </h2>
 
-                        <p>Our <strong>Rawl plug suppliers</strong> division offers strong fixing products for long-term use. Rawl plugs
+                        <p>Our <strong>Rawl plug suppliers</strong> division offers strong fixing products for long-term
+                            use. Rawl plugs
                             give a solid screw grip and reliable support, widely applied all over India for residential,
                             commercial, and industrial wall installs. By monitoring quality and ensuring exact scale, we
                             keep our bulk hardware stock reliable and consistent in supply.
@@ -1423,15 +2050,15 @@ Unique Class Prefix: wp32-
             </div>
 
         </div>
-    </section> 
+    </section>
     <section class="wpdealer58-section">
         <div class="wpdealer58-container">
 
             <div class="wpdealer58-card">
 
                 <div class="wpdealer58-image">
-                    <img src="/images/wall-plug/wall-plug-dealers-india.webp" alt="Wall Plug Dealers in India"
-                        loading="lazy" width="760" height="560">
+                    <img src="/images/nylon/13.webp" alt="Wall Plug Dealers in India" loading="lazy" width="760"
+                        height="560">
                 </div>
 
                 <div class="wpdealer58-content">
@@ -1476,10 +2103,10 @@ Unique Class Prefix: wp32-
 
         </div>
     </section>
-    
 
 
-   
+
+
     <section class="wpindustry77-section">
 
         <div class="wpindustry77-container">
@@ -1491,7 +2118,9 @@ Unique Class Prefix: wp32-
                 <h2>Industry Uses for Wall Plugs</h2>
 
                 <p>
-                    Petro Industech <a href="https://issuu.com/petroindustech/docs/wall_plug_manufacturers_in_india_by_petro_industec">wall plugs</a> are widely used across residential, commercial and industrial sectors for
+                    Petro Industech <a
+                        href="https://issuu.com/petroindustech/docs/wall_plug_manufacturers_in_india_by_petro_industec">wall
+                        plugs</a> are widely used across residential, commercial and industrial sectors for
                     secure, long-lasting wall fixing solutions.
                 </p>
 
@@ -1604,882 +2233,256 @@ Unique Class Prefix: wp32-
         </div>
 
     </section>
+ 
 
-    <!-- =====================================================
-WALL PLUG DEALER + WHY PETRO SECTION
-Unique prefixes:
-wpdealer91-
-wpwhy92-
-===================================================== -->
+    <section class="wpdealer91-section">
+        <div class="wpdealer91-container">
 
-<style>
-  /* =========================
-     COMMON SAFETY
-  ========================= */
+            <div class="wpdealer91-card">
 
-  .wpdealer91-section,
-  .wpdealer91-section *,
-  .wpwhy92-section,
-  .wpwhy92-section * {
-    box-sizing: border-box;
-  }
+                <div class="wpdealer91-image">
+                    <img src="/images/nylon/9.webp" alt="Wall Plug Dealers in India" loading="lazy" width="760"
+                        height="580">
+                </div>
 
-  /* =========================
-     DEALER SECTION
-  ========================= */
+                <div class="wpdealer91-content">
 
-  .wpdealer91-section {
-    padding: 75px 0;
-    overflow: hidden;
-    background: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+                    <span class="wpdealer91-label">
+                        Dealer & Distributor Support
+                    </span>
 
-  .wpdealer91-container {
-    width: min(100% - 40px, 1240px);
-    margin: 0 auto;
-  }
+                    <h2>
+                        Wall Plug Dealers in India Need Trusted Suppliers
+                    </h2>
 
-  .wpdealer91-card {
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: stretch;
-    overflow: hidden;
-    border: 1px solid #dce8e8;
-    border-radius: 24px;
-    background: #ffffff;
-    box-shadow: 0 14px 40px rgba(5, 95, 102, 0.09);
-  }
+                    <p>
+                        For wall plug dealers in India, consistent quality and dependable delivery help build long-term
+                        confidence. At Petro Industech, the focus stays on durable materials, proper shaping, and secure
+                        installation, which can support dealers in keeping solid client relationships.
 
-  .wpdealer91-image {
-    position: relative;
-    min-height: 470px;
-    overflow: hidden;
-    background: #e8f5f5;
-  }
+                    </p>
 
-  .wpdealer91-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 470px;
-    object-fit: cover;
-  }
+                    <ul class="wpdealer91-list">
+                        <li>Consistent and dependable wall plug quality</li>
+                        <li>Bulk supply for dealers and distribution partners</li>
+                        <li>Multiple sizes for different installation requirements</li>
+                        <li>Fast order processing and Pan India dispatch</li>
+                        <li>Professional B2B and dealer support</li>
+                    </ul>
 
-  .wpdealer91-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 48px;
-    background:
-      radial-gradient(
-        circle at 95% 10%,
-        rgba(255, 217, 0, 0.13),
-        transparent 28%
-      ),
-      linear-gradient(135deg, #ffffff, #f7fcfc);
-  }
+                    <div class="wpdealer91-actions">
 
-  .wpdealer91-content::after {
-    content: "";
-    position: absolute;
-    right: -75px;
-    bottom: -75px;
-    width: 180px;
-    height: 180px;
-    border: 24px solid rgba(16, 128, 130, 0.06);
-    border-radius: 50%;
-  }
+                        <a href="/contact.html" class="wpdealer91-btn wpdealer91-btn-primary">
+                            Become a Dealer
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
 
-  .wpdealer91-label {
-    position: relative;
-    z-index: 2;
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    width: fit-content;
-    margin-bottom: 13px;
-    color: #108082;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-  }
+                        <a href="/catalogue.html" class="wpdealer91-btn wpdealer91-btn-outline">
+                            View Catalogue
+                        </a>
 
-  .wpdealer91-label::before {
-    content: "";
-    width: 28px;
-    height: 3px;
-    border-radius: 20px;
-    background: #ffd900;
-  }
+                    </div>
 
-  .wpdealer91-content h2 {
-    position: relative;
-    z-index: 2;
-    margin: 0 0 17px;
-    color: #055f66;
-    font-size: 37px;
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-  }
+                </div>
 
-  .wpdealer91-content p {
-    position: relative;
-    z-index: 2;
-    margin: 0 0 20px;
-    color: #596c6f;
-    font-size: 16px;
-    line-height: 1.75;
-  }
-
-  .wpdealer91-list {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    gap: 11px;
-    margin: 0 0 25px;
-    padding: 0;
-    list-style: none;
-  }
-
-  .wpdealer91-list li {
-    position: relative;
-    padding-left: 29px;
-    color: #263a3d;
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-  .wpdealer91-list li::before {
-    content: "✓";
-    position: absolute;
-    top: 2px;
-    left: 0;
-    display: grid;
-    place-items: center;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    color: #ffffff;
-    background: #108082;
-    font-size: 10px;
-    font-weight: 900;
-  }
-
-  .wpdealer91-actions {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .wpdealer91-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: 48px;
-    padding: 13px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 800;
-    transition: 0.3s ease;
-  }
-
-  .wpdealer91-btn-primary {
-    color: #1f2d2f;
-    background: #ffd900;
-  }
-
-  .wpdealer91-btn-primary:hover {
-    color: #000000;
-    text-decoration: none;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.13);
-  }
-
-  .wpdealer91-btn-outline {
-    color: #055f66;
-    border: 1px solid #108082;
-    background: #ffffff;
-  }
-
-  .wpdealer91-btn-outline:hover {
-    color: #ffffff;
-    text-decoration: none;
-    background: #108082;
-  }
-
-  /* =========================
-     WHY PETRO SECTION
-  ========================= */
-
-  .wpwhy92-section {
-    padding: 80px 0;
-    overflow: hidden;
-    background: linear-gradient(180deg, #f7fbfb, #ffffff);
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .wpwhy92-container {
-    width: min(100% - 40px, 1240px);
-    margin: 0 auto;
-  }
-
-  .wpwhy92-heading {
-    max-width: 900px;
-    margin: 0 auto 48px;
-    text-align: center;
-  }
-
-  .wpwhy92-label {
-    display: inline-block;
-    color: #108082;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-  }
-
-  .wpwhy92-heading h2 {
-    margin: 14px 0 0;
-    color: #16282a;
-    font-size: 40px;
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-  }
-
-  .wpwhy92-line {
-    display: block;
-    width: 72px;
-    height: 4px;
-    margin: 17px auto 20px;
-    border-radius: 20px;
-    background: #ffd900;
-  }
-
-  .wpwhy92-heading p {
-    margin: 0;
-    color: #5d6f72;
-    font-size: 16px;
-    line-height: 1.75;
-  }
-
-  .wpwhy92-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 20px;
-  }
-
-  .wpwhy92-item {
-    position: relative;
-    overflow: hidden;
-    min-height: 220px;
-    padding: 30px 20px;
-    text-align: center;
-    border: 1px solid #dce8e8;
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 10px 30px rgba(5, 95, 102, 0.06);
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease,
-      border-color 0.3s ease;
-  }
-
-  .wpwhy92-item::before {
-    content: "";
-    position: absolute;
-    top: -55px;
-    right: -55px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: rgba(16, 128, 130, 0.06);
-  }
-
-  .wpwhy92-item:hover {
-    transform: translateY(-7px);
-    border-color: rgba(16, 128, 130, 0.3);
-    box-shadow: 0 18px 42px rgba(5, 95, 102, 0.12);
-  }
-
-  .wpwhy92-icon {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    place-items: center;
-    width: 62px;
-    height: 62px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    color: #108082;
-    background: #e9f7f7;
-    font-size: 26px;
-    box-shadow: 0 0 0 8px #f4fbfb;
-  }
-
-  .wpwhy92-item h3 {
-    position: relative;
-    z-index: 2;
-    margin: 0;
-    color: #055f66;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 800;
-  }
-
-  .wpwhy92-bottom {
-    max-width: 980px;
-    margin: 42px auto 0;
-    padding: 28px;
-    text-align: center;
-    border-left: 5px solid #ffd900;
-    border-radius: 16px;
-    background: #ffffff;
-    box-shadow: 0 10px 30px rgba(5, 95, 102, 0.06);
-  }
-
-  .wpwhy92-bottom p {
-    margin: 0;
-    color: #53676a;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .wpwhy92-bottom strong {
-    color: #055f66;
-  }
-
-  /* =========================
-     RESPONSIVE
-  ========================= */
-
-  @media (max-width: 1100px) {
-    .wpwhy92-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 900px) {
-    .wpdealer91-card {
-      grid-template-columns: 1fr;
-    }
-
-    .wpdealer91-image,
-    .wpdealer91-image img {
-      min-height: 380px;
-    }
-
-    .wpdealer91-content {
-      padding: 38px 30px;
-    }
-
-    .wpdealer91-content h2 {
-      font-size: 31px;
-    }
-
-    .wpwhy92-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 576px) {
-    .wpdealer91-section,
-    .wpwhy92-section {
-      padding: 50px 0;
-    }
-
-    .wpdealer91-container,
-    .wpwhy92-container {
-      width: min(100% - 26px, 1240px);
-    }
-
-    .wpdealer91-card {
-      border-radius: 17px;
-    }
-
-    .wpdealer91-image,
-    .wpdealer91-image img {
-      min-height: 270px;
-    }
-
-    .wpdealer91-content {
-      padding: 28px 20px;
-    }
-
-    .wpdealer91-content h2 {
-      font-size: 26px;
-      line-height: 1.25;
-    }
-
-    .wpdealer91-content p,
-    .wpdealer91-list li {
-      font-size: 13.5px;
-    }
-
-    .wpdealer91-actions {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .wpdealer91-btn {
-      width: 100%;
-    }
-
-    .wpwhy92-heading h2 {
-      font-size: 29px;
-    }
-
-    .wpwhy92-heading p,
-    .wpwhy92-bottom p {
-      font-size: 14.5px;
-    }
-
-    .wpwhy92-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .wpwhy92-item {
-      min-height: auto;
-      padding: 27px 20px;
-    }
-
-    .wpwhy92-bottom {
-      padding: 22px 18px;
-    }
-  }
-</style>
-
-<!-- =====================================================
-SECTION 1: WALL PLUG DEALERS
-===================================================== -->
-
-<section class="wpdealer91-section">
-  <div class="wpdealer91-container">
-
-    <div class="wpdealer91-card">
-
-      <div class="wpdealer91-image">
-        <img
-          src="/images/wall-plug/wall-plug-dealers-india.webp"
-          alt="Wall Plug Dealers in India"
-          loading="lazy"
-          width="760"
-          height="580"
-        >
-      </div>
-
-      <div class="wpdealer91-content">
-
-        <span class="wpdealer91-label">
-          Dealer & Distributor Support
-        </span>
-
-        <h2>
-          Wall Plug Dealers in India Need Trusted Suppliers
-        </h2>
-
-        <p>
-         For wall plug dealers in India, consistent quality and dependable delivery help build long-term confidence. At Petro Industech, the focus stays on durable materials, proper shaping, and secure installation, which can support dealers in keeping solid client relationships.
-
-        </p>
-
-        <ul class="wpdealer91-list">
-          <li>Consistent and dependable wall plug quality</li>
-          <li>Bulk supply for dealers and distribution partners</li>
-          <li>Multiple sizes for different installation requirements</li>
-          <li>Fast order processing and Pan India dispatch</li>
-          <li>Professional B2B and dealer support</li>
-        </ul>
-
-        <div class="wpdealer91-actions">
-
-          <a
-            href="/contact.html"
-            class="wpdealer91-btn wpdealer91-btn-primary"
-          >
-            Become a Dealer
-            <i class="fas fa-arrow-right"></i>
-          </a>
-
-          <a
-            href="/catalogue.html"
-            class="wpdealer91-btn wpdealer91-btn-outline"
-          >
-            View Catalogue
-          </a>
+            </div>
 
         </div>
+    </section>
 
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =====================================================
+    <!-- =====================================================
 SECTION 2: WHY PETRO INDUSTECH
 ===================================================== -->
 
-<section class="wpwhy92-section">
-  <div class="wpwhy92-container">
+    <section class="wpwhy92-section">
+        <div class="wpwhy92-container">
 
-    <div class="wpwhy92-heading">
+            <div class="wpwhy92-heading">
 
-      <span class="wpwhy92-label">
-        Why Choose Petro Industech
-      </span>
+                <span class="wpwhy92-label">
+                    Why Choose Petro Industech
+                </span>
 
-      <h2>
-        Why Petro Industech is the Best Wall Plug Manufacturer in India
-      </h2>
+                <h2>
+                    Why Petro Industech is the Best Wall Plug Manufacturer in India
+                </h2>
 
-      <span class="wpwhy92-line"></span>
+                <span class="wpwhy92-line"></span>
 
-      <p>
-        Choosing the <a href="https://www.petroindustech.com/blogs/best-wall-plug-manufacturer-in-india-petro-industech.html">best wall plug manufacturer in India</a>  requires a sharp look at quality, dependability, and support. Petro Industech stands out for:
+                <p>
+                    Choosing the <a
+                        href="https://www.petroindustech.com/blogs/best-wall-plug-manufacturer-in-india-petro-industech.html">best
+                        wall plug manufacturer in India</a> requires a sharp look at quality, dependability, and
+                    support. Petro Industech stands out for:
 
-      </p>
+                </p>
 
-    </div>
+            </div>
 
-    <div class="wpwhy92-grid">
+            <div class="wpwhy92-grid">
 
-      <article class="wpwhy92-item">
-        <div class="wpwhy92-icon">
-          <i class="fas fa-boxes"></i>
+                <article class="wpwhy92-item">
+                    <div class="wpwhy92-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+
+                    <h3>
+                        A comprehensive collection of durable nylon wall inserts, PVC plugs, and plastic anchors
+                        available together.
+                    </h3>
+                </article>
+
+                <article class="wpwhy92-item">
+                    <div class="wpwhy92-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+
+                    <h3>
+                        Bulk delivery services available for dealers and distribution partners.
+
+                    </h3>
+                </article>
+
+                <article class="wpwhy92-item">
+                    <div class="wpwhy92-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+
+                    <h3>
+                        A range of sizes, to suit diverse installations, in a steady way
+
+                    </h3>
+                </article>
+
+                <article class="wpwhy92-item">
+                    <div class="wpwhy92-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+
+                    <h3>
+                        Strong grip, precise fitting performance, no wobble when installed
+
+                    </h3>
+                </article>
+
+                <article class="wpwhy92-item">
+                    <div class="wpwhy92-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+
+                    <h3>
+                        Trusted manufacturing experience with 33+ years in the industry.
+
+                    </h3>
+                </article>
+
+            </div>
+
+            <div class="wpwhy92-bottom">
+
+                <p>
+                    These applications demonstrate the versatility of nylon wall plugs, PVC wall plugs, and rawl plugs,
+                    ensuring secure and professional installations across sectors.
+
+                </p>
+
+            </div>
+
         </div>
-
-        <h3>
-          A comprehensive collection of durable nylon wall inserts, PVC plugs, and plastic anchors available together.
-        </h3>
-      </article>
-
-      <article class="wpwhy92-item">
-        <div class="wpwhy92-icon">
-          <i class="fas fa-truck"></i>
-        </div>
-
-        <h3>
-        Bulk delivery services available for dealers and distribution partners.
-
-        </h3>
-      </article>
-
-      <article class="wpwhy92-item">
-        <div class="wpwhy92-icon">
-          <i class="fas fa-layer-group"></i>
-        </div>
-
-        <h3>
-         A range of sizes, to suit diverse installations, in a steady way
-
-        </h3>
-      </article>
-
-      <article class="wpwhy92-item">
-        <div class="wpwhy92-icon">
-          <i class="fas fa-link"></i>
-        </div>
-
-        <h3>
-          Strong grip, precise fitting performance, no wobble when installed
-
-        </h3>
-      </article>
-
-      <article class="wpwhy92-item">
-        <div class="wpwhy92-icon">
-          <i class="fas fa-award"></i>
-        </div>
-
-        <h3>
-         Trusted manufacturing experience with 33+ years in the industry.
-
-        </h3>
-      </article>
-
-    </div>
-
-    <div class="wpwhy92-bottom">
-
-      <p>
-     These applications demonstrate the versatility of nylon wall plugs, PVC wall plugs, and rawl plugs, ensuring secure and professional installations across sectors.
-
-      </p>
-
-    </div>
-
-  </div>
-</section>
-<!-- =====================================================
+    </section>
+    <!-- =====================================================
 FAQ – WALL PLUG SOLUTIONS
 Unique class prefix: wpfaq66-
 No JavaScript required.
 Uses native HTML details/summary accordion.
 ===================================================== -->
 
-<style>
-  .wpfaq66-section,
-  .wpfaq66-section * {
-    box-sizing: border-box;
-  }
+   
 
-  .wpfaq66-section {
-    padding: 75px 0;
-    background: #f8fcfc;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+    <section class="wpfaq66-section">
+        <div class="wpfaq66-container">
 
-  .wpfaq66-container {
-    width: min(100% - 40px, 980px);
-    margin: 0 auto;
-  }
+            <div class="wpfaq66-heading">
+                <span class="wpfaq66-label">Frequently Asked Questions</span>
 
-  .wpfaq66-heading {
-    max-width: 760px;
-    margin: 0 auto 42px;
-    text-align: center;
-  }
+                <h2>FAQs – Wall Plug Solutions</h2>
 
-  .wpfaq66-label {
-    display: inline-block;
-    color: #108082;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-  }
+                <span class="wpfaq66-line"></span>
+            </div>
 
-  .wpfaq66-heading h2 {
-    margin: 13px 0 0;
-    color: #16282a;
-    font-size: 38px;
-    line-height: 1.2;
-    font-weight: 800;
-  }
+            <div class="wpfaq66-list">
 
-  .wpfaq66-line {
-    display: block;
-    width: 70px;
-    height: 4px;
-    margin: 16px auto 18px;
-    border-radius: 20px;
-    background: #ffd900;
-  }
+                <details class="wpfaq66-item" open>
+                    <summary class="wpfaq66-question">
+                        Who are the top wall plug manufacturers in India?
+                    </summary>
 
-  .wpfaq66-heading p {
-    margin: 0;
-    color: #5e7073;
-    font-size: 16px;
-    line-height: 1.7;
-  }
+                    <div class="wpfaq66-answer">
+                        <p>
+                            <strong>Petro Industech</strong>is a highly reputable company offering nylon wall anchors,
+                            PVC gitti, and rawl plugs to both distributors and retailers.
+                        </p>
+                    </div>
+                </details>
 
-  .wpfaq66-list {
-    display: grid;
-    gap: 14px;
-  }
+                <details class="wpfaq66-item">
+                    <summary class="wpfaq66-question">
+                        What does a nylon wall plug manufacturer supply?
+                    </summary>
 
-  .wpfaq66-item {
-    overflow: hidden;
-    border: 1px solid #dce8e8;
-    border-radius: 17px;
-    background: #ffffff;
-    box-shadow: 0 9px 28px rgba(5, 95, 102, 0.06);
-    transition:
-      border-color 0.3s ease,
-      box-shadow 0.3s ease;
-  }
+                    <div class="wpfaq66-answer">
+                        <p>
+                            High-expansion sleeve and plug pieces for bathroom fixtures, electrical panel boards,
+                            kitchen shelf installation, and furniture setup.
 
-  .wpfaq66-item[open] {
-    border-color: rgba(16, 128, 130, 0.35);
-    box-shadow: 0 14px 34px rgba(5, 95, 102, 0.1);
-  }
+                        </p>
+                    </div>
+                </details>
 
-  .wpfaq66-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    width: 100%;
-    min-height: 68px;
-    padding: 19px 22px;
-    color: #17282b;
-    font-size: 16px;
-    line-height: 1.45;
-    font-weight: 800;
-    cursor: pointer;
-    list-style: none;
-  }
+                <details class="wpfaq66-item">
+                    <summary class="wpfaq66-question">
+                        Do wall plug suppliers in India offer bulk orders?
+                    </summary>
 
-  .wpfaq66-question::-webkit-details-marker {
-    display: none;
-  }
+                    <div class="wpfaq66-answer">
+                        <p>
+                            Yes, established suppliers like Petro Industech support bulk supply for dealers and hardware
+                            businesses.
 
-  .wpfaq66-question::after {
-    content: "+";
-    display: grid;
-    place-items: center;
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    border-radius: 50%;
-    color: #055f66;
-    background: #e8f7f7;
-    font-size: 21px;
-    line-height: 1;
-    font-weight: 700;
-    transition:
-      transform 0.25s ease,
-      background 0.25s ease;
-  }
+                        </p>
+                    </div>
+                </details>
 
-  .wpfaq66-item[open] .wpfaq66-question::after {
-    content: "−";
-    color: #17282b;
-    background: #ffd900;
-  }
+                <details class="wpfaq66-item">
+                    <summary class="wpfaq66-question">
+                        Is Petro Industech a plastic wall plug manufacturer?
+                    </summary>
 
-  .wpfaq66-answer {
-    padding: 0 22px 22px;
-    color: #5a6c6f;
-    font-size: 15px;
-    line-height: 1.72;
-  }
+                    <div class="wpfaq66-answer">
+                        <p>
+                            Yes, we manufacture both nylon and PVC-based wall plugs for consistent B2B supply.
+                        </p>
+                    </div>
+                </details>
 
-  .wpfaq66-answer p {
-    margin: 0;
-  }
+                <details class="wpfaq66-item">
+                    <summary class="wpfaq66-question">
+                        Which industries use wall plugs?
+                    </summary>
 
-  .wpfaq66-answer strong {
-    color: #055f66;
-  }
+                    <div class="wpfaq66-answer">
+                        <p>
+                            Our products are used a lot across construction, electrical, furniture, commercial
+                            interiors, hospitality, and even bathroom or kitchen installation projects.
 
-  @media (max-width: 576px) {
-    .wpfaq66-section {
-      padding: 50px 0;
-    }
+                        </p>
+                    </div>
+                </details>
 
-    .wpfaq66-container {
-      width: min(100% - 26px, 980px);
-    }
+            </div>
 
-    .wpfaq66-heading h2 {
-      font-size: 29px;
-    }
-
-    .wpfaq66-heading p {
-      font-size: 14.5px;
-    }
-
-    .wpfaq66-question {
-      min-height: 62px;
-      padding: 17px 16px;
-      font-size: 14px;
-    }
-
-    .wpfaq66-answer {
-      padding: 0 16px 18px;
-      font-size: 13.5px;
-    }
-
-    .wpfaq66-question::after {
-      width: 29px;
-      height: 29px;
-      min-width: 29px;
-      font-size: 19px;
-    }
-  }
-</style>
-
-<section class="wpfaq66-section">
-  <div class="wpfaq66-container">
-
-    <div class="wpfaq66-heading">
-      <span class="wpfaq66-label">Frequently Asked Questions</span>
-
-      <h2>FAQs – Wall Plug Solutions</h2>
-
-      <span class="wpfaq66-line"></span> 
-    </div>
-
-    <div class="wpfaq66-list">
-
-      <details class="wpfaq66-item" open>
-        <summary class="wpfaq66-question">
-          Who are the top wall plug manufacturers in India?
-        </summary>
-
-        <div class="wpfaq66-answer">
-          <p>
-            <strong>Petro Industech</strong>is a highly reputable company offering nylon wall anchors, PVC gitti, and rawl plugs to both distributors and retailers.
-          </p>
         </div>
-      </details>
-
-      <details class="wpfaq66-item">
-        <summary class="wpfaq66-question">
-          What does a nylon wall plug manufacturer supply?
-        </summary>
-
-        <div class="wpfaq66-answer">
-          <p>
-            High-expansion sleeve and plug pieces for bathroom fixtures, electrical panel boards, kitchen shelf installation, and furniture setup.
-
-          </p>
-        </div>
-      </details>
-
-      <details class="wpfaq66-item">
-        <summary class="wpfaq66-question">
-          Do wall plug suppliers in India offer bulk orders?
-        </summary>
-
-        <div class="wpfaq66-answer">
-          <p>
-           Yes, established suppliers like Petro Industech support bulk supply for dealers and hardware businesses.
-
-          </p>
-        </div>
-      </details>
-
-      <details class="wpfaq66-item">
-        <summary class="wpfaq66-question">
-          Is Petro Industech a plastic wall plug manufacturer?
-        </summary>
-
-        <div class="wpfaq66-answer">
-          <p>
-            Yes, we manufacture both nylon and PVC-based wall plugs for consistent B2B supply.
-          </p>
-        </div>
-      </details>
-
-      <details class="wpfaq66-item">
-        <summary class="wpfaq66-question">
-          Which industries use wall plugs?
-        </summary>
-
-        <div class="wpfaq66-answer">
-          <p>
-          Our products are used a lot across construction, electrical, furniture, commercial interiors, hospitality, and even bathroom or kitchen installation projects.
-
-          </p>
-        </div>
-      </details>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!--FOOTER SECTION-->
     <footer class="footer mt-5">
