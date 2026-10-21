@@ -1,0 +1,1959 @@
+/* PETRO reusable landing design system v2 — shared across all city/category pages.
+   Change ONLY HTML content/images for additional pages. All selectors scoped to .petro-landing. */
+:root {
+  --primary: #108082;
+  --secondary: #323232;
+  --light: #fff;
+  --main-font-family: 'Fira Sans', sans-serif;
+  --sec-font-family: 'Fira Sans', sans-serif;
+  --main-petro-font: 'Roboto', sans-serif;
+  --founder-petro-font: 'Open Sans', sans-serif;
+  --line: #e6e6e6;
+  --styles-font-family: 'EB Garamond', serif
+}
+
+.petro-landing {
+  --pl-brand: var(--primary);
+  --pl-ink: #26343a;
+  --pl-muted: #56656b;
+  --pl-surface: #f2f7f6;
+  --pl-line: #d9e7e4;
+  --pl-dark: #073e42;
+  margin: 0;
+  color: var(--pl-ink);
+  font: 15px/1.65 var(--main-font-family);
+  background: #fff;
+  -webkit-font-smoothing: antialiased
+}
+
+.petro-landing * {
+  box-sizing: border-box
+}
+
+.petro-landing html {
+  scroll-behavior: smooth
+}
+
+.petro-landing .wrap {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto
+}
+
+.petro-landing .section {
+  padding: 66px 0
+}
+
+.petro-landing h1,
+.petro-landing h2,
+.petro-landing h3 {
+  font-family: var(--sec-font-family);
+  letter-spacing: -.028em;
+  line-height: 1.2;
+  color: var(--pl-ink);
+  margin: 0 0 15px
+}
+
+.petro-landing h1 {
+  font-size: clamp(35px, 4.1vw, 58px);
+  font-weight: 800;
+  max-width: 720px
+}
+
+.petro-landing h2 {
+  font-size: clamp(24px, 2.5vw, 34px);
+  font-weight: 750
+}
+
+.petro-landing h3 {
+  font-size: 17px;
+  font-weight: 700
+}
+
+.petro-landing p {
+  margin: 0 0 13px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--pl-muted)
+}
+
+.petro-landing strong {
+  color: var(--pl-ink)
+}
+
+.petro-landing .eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--pl-brand);
+  margin-bottom: 12px
+}
+
+
+/* PETRO HERO - PREMIUM BLACK GRADIENT */
+
+.petro-landing .hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 540px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(246, 250, 249, 0.98) 0%,
+      rgba(246, 250, 249, 0.95) 28%,
+      rgba(246, 250, 249, 0.78) 43%,
+      rgba(0, 0, 0, 0.12) 65%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    url("../images/location/banner.jpg") center / cover no-repeat;
+}
+
+.petro-landing .hero:after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--pl-brand), #73c3b8, transparent)
+}
+
+.petro-landing .hero-inner {
+  min-height: 540px;
+  display: flex;
+  align-items: center
+}
+
+.petro-landing .hero-copy {
+  max-width: 710px;
+  padding: 62px 0
+}
+
+.petro-landing .hero h1 em {
+  font-style: normal;
+  color: var(--pl-brand)
+}
+
+.petro-landing .hero p {
+  max-width: 570px;
+  font-size: 16px;
+  color: #35474b
+}
+
+.petro-landing .hero-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin: 25px 0
+}
+
+.petro-landing .hero-perks span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #d9e9e6;
+  border-radius: 9px;
+  padding: 10px 12px;
+  box-shadow: 0 5px 16px rgba(6, 60, 59, .06);
+  color: var(--pl-brand);
+  font-size: 22px
+}
+
+.petro-landing .hero-perks b {
+  font-size: 11px;
+  line-height: 1.2;
+  color: var(--pl-ink)
+}
+
+.petro-landing .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--pl-brand);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 23px;
+  font: 700 13px var(--main-font-family);
+  cursor: pointer;
+  box-shadow: 0 7px 18px rgba(16, 128, 130, .17);
+  transition: transform .2s, background .2s, box-shadow .2s
+}
+
+.petro-landing .btn:hover {
+  background: #0b6265;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(16, 128, 130, .2)
+}
+
+.petro-landing .split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 52px;
+  align-items: center
+}
+
+.petro-landing .feature-image {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 13px;
+  display: block;
+  box-shadow: 0 16px 38px rgba(18, 52, 52, .12)
+}
+
+.petro-landing .feature-image.wide {
+  height: 295px
+}
+
+.petro-landing .tint {
+  background: linear-gradient(115deg, #f4f9f8, #eaf5f2)
+}
+
+.petro-landing .center {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 28px
+}
+
+.petro-landing .grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 25px
+}
+
+.petro-landing .four {
+  grid-template-columns: repeat(4, minmax(0, 1fr))
+}
+
+.petro-landing .five {
+  grid-template-columns: repeat(5, minmax(0, 1fr))
+}
+
+.petro-landing .seven {
+  grid-template-columns: repeat(7, minmax(0, 1fr))
+}
+
+.petro-landing .tile {
+  min-width: 0;
+  padding: 25px 16px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--pl-line);
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(14, 61, 61, .035);
+  transition: transform .2s, border-color .2s, box-shadow .2s
+}
+
+.petro-landing .tile:hover {
+  transform: translateY(-4px);
+  border-color: #8ac8be;
+  box-shadow: 0 12px 30px rgba(14, 61, 61, .09)
+}
+
+.petro-landing .tile .symbol {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  margin: 0 auto 14px;
+  background: #e6f5f1;
+  color: var(--pl-brand);
+  font-size: 27px
+}
+
+.petro-landing .tile h3 {
+  font-size: 15px;
+  margin: 0 0 9px
+}
+
+.petro-landing .tile p {
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 0
+}
+
+.petro-landing .five .tile {
+  min-height: 192px
+}
+
+.petro-landing .seven .tile {
+  padding: 19px 9px
+}
+
+.petro-landing .seven .tile h3 {
+  font-size: 11px;
+  line-height: 1.35;
+  margin: 0
+}
+
+.petro-landing .seven .symbol {
+  width: 46px;
+  height: 46px;
+  font-size: 23px
+}
+
+.petro-landing .table-scroll {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid var(--pl-line);
+  background: #fff
+}
+
+.petro-landing table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 430px;
+  font-size: 12px;
+  line-height: 1.5
+}
+
+.petro-landing th,
+.petro-landing td {
+  padding: 12px 13px;
+  text-align: left;
+  border-bottom: 1px solid #e4ecea
+}
+
+.petro-landing th {
+  background: #dcefeb;
+  color: #17494a;
+  font-weight: 800
+}
+
+.petro-landing tr:last-child td {
+  border-bottom: 0
+}
+
+.petro-landing tbody tr:nth-child(even) {
+  background: #f7faf9
+}
+
+.petro-landing .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px
+}
+
+ 
+
+.petro-landing .checks {
+  align-items: start
+}
+
+.petro-landing .check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 18px;
+  margin-top: 21px
+}
+
+.petro-landing .check-item {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  font-size: 13px;
+  line-height: 1.45
+}
+
+.petro-landing .check-item:before {
+  content: '✓';
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--pl-brand);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800
+}
+
+.petro-landing .process {
+  padding: 29px 22px;
+  border-radius: 13px;
+  background: #e8f4f1;
+  border: 1px solid #d6eae5
+}
+
+.petro-landing .process-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: 20px
+}
+
+.petro-landing .step {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3
+}
+
+.petro-landing .step span {
+  display: grid;
+  place-items: center;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  background: #fff;
+  color: var(--pl-brand);
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(16, 128, 130, .1)
+}
+
+.petro-landing .step-arrow {
+  color: var(--pl-brand);
+  padding-top: 15px;
+  font-size: 18px
+}
+
+.petro-landing .faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px
+}
+
+.petro-landing details {
+  border: 1px solid var(--pl-line);
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 10px;
+  overflow: hidden
+}
+
+.petro-landing details[open] {
+  border-color: #9ccfc5;
+  box-shadow: 0 6px 17px rgba(14, 61, 61, .05)
+}
+
+.petro-landing summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+  padding: 17px 18px;
+  font-weight: 700;
+  font-size: 13px
+}
+
+.petro-landing summary::-webkit-details-marker {
+  display: none
+}
+
+.petro-landing summary:after {
+  content: '+';
+  color: var(--pl-brand);
+  font-size: 19px;
+  line-height: 1
+}
+
+.petro-landing details[open] summary:after {
+  content: '−'
+}
+
+.petro-landing details p {
+  padding: 0 18px 18px;
+  margin: 0;
+  font-size: 13px
+}
+
+.petro-landing .conclusion {
+  padding-top: 20px
+}
+
+.petro-landing .conclusion-inner {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 29px 32px;
+  border-radius: 13px;
+  background: linear-gradient(110deg, #073e42, #108082);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(7, 62, 66, .15)
+}
+
+.petro-landing .conclusion-title {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  min-width: 230px
+}
+
+.petro-landing .conclusion-icon {
+  display: grid;
+  place-items: center;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .14);
+  font-size: 25px
+}
+
+.petro-landing .conclusion h2 {
+  color: #fff;
+  margin: 0
+}
+
+.petro-landing .conclusion p {
+  color: #fff;
+  font-size: 13px;
+  margin: 0
+}
+
+.petro-landing .contact {
+  background: #edf6f4
+}
+
+.petro-landing .contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: start
+}
+
+.petro-landing form {
+  display: grid;
+  gap: 15px;
+  padding: 28px;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(14, 61, 61, .08)
+}
+
+.petro-landing label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700
+}
+
+.petro-landing input,
+.petro-landing textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbded9;
+  border-radius: 7px;
+  font: 14px var(--main-font-family);
+  background: #fff
+}
+
+.petro-landing input:focus,
+.petro-landing textarea:focus {
+  outline: 2px solid #86cfc4;
+  outline-offset: 1px
+}
+
+.petro-landing form small {
+  font-size: 11px;
+  color: var(--pl-muted)
+}
+
+.petro-landing a:focus-visible,
+.petro-landing button:focus-visible,
+.petro-landing summary:focus-visible {
+  outline: 3px solid var(--pl-brand);
+  outline-offset: 3px
+}
+
+@media(max-width:1000px) {
+  .petro-landing .seven {
+    grid-template-columns: repeat(4, 1fr)
+  }
+
+  .petro-landing .five {
+    grid-template-columns: repeat(3, 1fr)
+  }
+
+  .petro-landing .split {
+    gap: 30px
+  }
+
+  .petro-landing .hero {
+    background-position: 62% center
+  }
+}
+
+@media(max-width:720px) {
+  .petro-landing .wrap {
+    width: min(100% - 32px, 1200px)
+  }
+
+  .petro-landing .section {
+    padding: 43px 0
+  }
+
+  .petro-landing .hero,
+  .petro-landing .hero-inner {
+    min-height: 520px
+  }
+
+  .petro-landing .hero {
+    background: linear-gradient(90deg, rgba(246, 250, 249, .96), rgba(246, 250, 249, .83)), url('https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80') center/cover
+  }
+
+  .petro-landing .hero-copy {
+    padding: 45px 0
+  }
+
+  .petro-landing .split,
+  .petro-landing .faq-grid,
+  .petro-landing .contact-inner {
+    grid-template-columns: 1fr
+  }
+
+  .petro-landing .feature-image,
+  .petro-landing .feature-image.wide {
+    height: 260px
+  }
+
+  .petro-landing .four,
+  .petro-landing .five,
+  .petro-landing .seven {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .petro-landing .photo-grid img {
+    height: 66%;
+  }
+
+  .petro-landing .process {
+    padding: 18px 10px
+  }
+
+  .petro-landing .step span {
+    width: 38px;
+    height: 38px;
+    font-size: 19px
+  }
+
+  .petro-landing .step {
+    font-size: 9px
+  }
+
+  .petro-landing .step-arrow {
+    font-size: 12px
+  }
+
+  .petro-landing .conclusion-inner {
+    display: block;
+    padding: 25px
+  }
+
+  .petro-landing .conclusion-title {
+    margin-bottom: 15px
+  }
+
+  .petro-landing .hero-perks span {
+    min-width: 42%
+  }
+}
+
+@media(max-width:390px) {
+
+  .petro-landing .four,
+  .petro-landing .five {
+    grid-template-columns: 1fr
+  }
+
+  .petro-landing .process-steps {
+    flex-wrap: wrap;
+    row-gap: 12px
+  }
+
+  .petro-landing .step {
+    flex: 0 0 30%
+  }
+
+  .petro-landing .step-arrow {
+    display: none
+  }
+
+  .petro-landing .check-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+/* Reusable Petro teal feature section — applies to every page with .feature-band */
+.petro-landing .feature-band {
+  background: linear-gradient(115deg, #07595b 0%, #108082 55%, #168e8d 100%);
+}
+
+.petro-landing .feature-band .center .eyebrow {
+  color: #d9f6f1;
+}
+
+.petro-landing .feature-band .center h2,
+.petro-landing .feature-band .center p {
+  color: #ffffff;
+}
+
+.petro-landing .feature-band .tile {
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, .6);
+}
+
+.petro-landing .feature-band .tile h3 {
+  color: #26343a;
+}
+
+.petro-landing .feature-band .tile p {
+  color: #56656b;
+}
+
+/* PETRO B2B ENQUIRY SECTION */
+
+.petro-enquiry-section {
+  padding: 75px 20px;
+  background: linear-gradient(115deg,
+      #07595b 0%,
+      #108082 55%,
+      #27a1a0 100%);
+  font-family: "Fira Sans", sans-serif;
+}
+
+.petro-enquiry-container {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 65px;
+}
+
+/* LEFT CONTENT */
+
+.petro-enquiry-label {
+  display: inline-block;
+  color: #c6f5ec;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin-bottom: 18px;
+}
+
+.petro-enquiry-content h2 {
+  font-size: clamp(30px, 3vw, 43px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.petro-enquiry-content h2 span {
+  color: #bdf1e7;
+}
+
+.petro-enquiry-description {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #fff;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+.petro-enquiry-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.petro-enquiry-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.petro-enquiry-check {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* FORM CARD */
+
+.petro-enquiry-form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 34px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.14);
+}
+
+.petro-enquiry-form-header {
+  margin-bottom: 25px;
+}
+
+.petro-enquiry-form-header h3 {
+  color: #323232;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.petro-enquiry-form-header p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* FORM FIELDS */
+
+.petro-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.petro-enquiry-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.petro-enquiry-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.petro-enquiry-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #323232;
+}
+
+.petro-enquiry-field input,
+.petro-enquiry-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dce5e4;
+  border-radius: 7px;
+  padding: 12px 14px;
+  background: #f9fbfb;
+  font-family: inherit;
+  font-size: 13px;
+  color: #323232;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.petro-enquiry-field input:focus,
+.petro-enquiry-field textarea:focus {
+  border-color: #108082;
+  box-shadow: 0 0 0 3px rgba(16, 128, 130, 0.10);
+  background: #ffffff;
+}
+
+.petro-enquiry-field textarea {
+  resize: vertical;
+  min-height: 95px;
+}
+
+/* SUBMIT BUTTON */
+
+.petro-enquiry-submit {
+  width: 100%;
+  background: #108082;
+  color: #ffffff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.petro-enquiry-submit:hover {
+  background: #086b6d;
+  transform: translateY(-2px);
+}
+
+.petro-enquiry-submit span {
+  font-size: 20px;
+}
+
+.petro-enquiry-note {
+  text-align: center;
+  font-size: 11px;
+  color: #858585;
+  margin: -3px 0 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .petro-enquiry-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .petro-enquiry-section {
+    padding: 55px 20px;
+  }
+
+  .petro-enquiry-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .petro-enquiry-section {
+    padding: 45px 15px;
+  }
+
+  .petro-enquiry-form-card {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .petro-enquiry-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .petro-enquiry-content h2 {
+    font-size: 29px;
+  }
+
+  .petro-enquiry-form-header h3 {
+    font-size: 21px;
+  }
+}
+
+
+.petro-enquiry-field select {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #dce5e4;
+  border-radius: 7px;
+  background: #f9fbfb;
+  color: #323232;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.petro-enquiry-field select:focus {
+  border-color: #108082;
+  box-shadow: 0 0 0 3px rgba(16, 128, 130, 0.1);
+}
+
+.petro-enquiry-field select:invalid {
+  color: #888;
+}
+
+
+/* ====================================
+   PETRO PRODUCT FEATURES SECTION
+   DESKTOP + TABLET + MOBILE
+==================================== */
+
+.petro-features-section {
+  padding: 80px 20px;
+  background: linear-gradient(
+    115deg,
+    #07595b 0%,
+    #108082 55%,
+    #168e8d 100%
+  );
+  font-family: "Fira Sans", sans-serif;
+}
+
+.petro-features-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.petro-features-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.petro-features-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #d9f6f1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.petro-features-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* FOUR CARDS IN ONE ROW */
+
+.petro-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* FEATURE CARD */
+
+.petro-feature-card {
+  min-width: 0;
+  padding: 32px 22px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.petro-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+/* ICON BACKGROUND */
+
+.petro-feature-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf6f5;
+  border: 1px solid #d5eeeb;
+  border-radius: 18px;
+}
+
+/* FONT AWESOME ICON */
+
+.petro-feature-icon i {
+  font-size: 34px;
+  color: #108082;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.petro-feature-card:hover .petro-feature-icon i {
+  transform: scale(1.12);
+}
+
+/* CARD HEADING */
+
+.petro-feature-card h3 {
+  margin: 0 0 14px;
+  color: #323232;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* CARD DESCRIPTION */
+
+.petro-feature-card p {
+  margin: 0;
+  color: #59656b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .petro-features-section {
+    padding: 65px 20px;
+  }
+
+  .petro-features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .petro-features-header h2 {
+    font-size: 29px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+  .petro-features-section {
+    padding: 55px 15px;
+  }
+
+  .petro-features-header {
+    margin-bottom: 30px;
+  }
+
+  .petro-features-header h2 {
+    font-size: 25px;
+  }
+
+  .petro-features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .petro-feature-card {
+    padding: 28px 20px;
+  }
+
+  .petro-feature-icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 18px;
+  }
+
+  .petro-feature-icon i {
+    font-size: 30px;
+  }
+}
+
+/* ==========================================
+   PETRO B2B CUSTOMER SEGMENTS
+   DESKTOP + TABLET + MOBILE
+========================================== */
+
+.petro-b2b-section {
+  padding: 80px 20px;
+  background: #f5f9f8;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.petro-b2b-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.petro-b2b-header {
+  max-width: 780px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.petro-b2b-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #108082;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.petro-b2b-header h2 {
+  margin: 0 0 15px;
+  color: #323232;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.petro-b2b-header p {
+  margin: 0;
+  color: #59656b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.petro-b2b-header p strong {
+  color: #323232;
+  font-weight: 600;
+}
+
+/* 5 CARDS IN ONE ROW */
+
+.petro-b2b-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* CUSTOMER CARD */
+
+.petro-b2b-card {
+  min-width: 0;
+  height: 100%;
+  padding: 30px 18px;
+  background: #ffffff;
+  border: 1px solid #e1ecea;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.025);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.petro-b2b-card:hover {
+  transform: translateY(-6px);
+  border-color: #108082;
+  box-shadow: 0 14px 30px rgba(16, 128, 130, 0.12);
+}
+
+/* ICON BOX */
+
+.petro-b2b-icon {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf6f5;
+  border-radius: 18px;
+  transition: background 0.3s ease;
+}
+
+.petro-b2b-icon i {
+  color: #108082;
+  font-size: 31px;
+  line-height: 1;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.petro-b2b-card:hover .petro-b2b-icon {
+  background: #108082;
+}
+
+.petro-b2b-card:hover .petro-b2b-icon i {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* CARD CONTENT */
+
+.petro-b2b-card h3 {
+  margin: 0 0 13px;
+  color: #323232;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.petro-b2b-card p {
+  margin: 0;
+  color: #59656b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .petro-b2b-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .petro-b2b-section {
+    padding: 60px 18px;
+  }
+
+  .petro-b2b-header h2 {
+    font-size: 28px;
+  }
+
+  .petro-b2b-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .petro-b2b-card {
+    padding: 25px 15px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .petro-b2b-section {
+    padding: 50px 15px;
+  }
+
+  .petro-b2b-header {
+    margin-bottom: 30px;
+  }
+
+  .petro-b2b-header h2 {
+    font-size: 25px;
+  }
+
+  .petro-b2b-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .petro-b2b-card {
+    padding: 26px 20px;
+  }
+}
+
+/* ===========================================
+   PETRO B2B BUYER CHECKLIST - NEW DESIGN
+=========================================== */
+
+.petro-checklist-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.petro-checklist-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.petro-checklist-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.petro-checklist-label {
+  display: inline-block;
+  color: #108082;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.petro-checklist-header h2 {
+  margin: 0 0 14px;
+  color: #323232;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.petro-checklist-header p {
+  margin: 0;
+  color: #59656b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* 3 COLUMN CHECKLIST */
+
+.petro-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.petro-checklist-group {
+  background: #f6faf9;
+  border: 1px solid #e1ecea;
+  border-radius: 13px;
+  padding: 25px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color .3s, box-shadow .3s;
+}
+
+.petro-checklist-group:hover {
+  border-color: #108082;
+  box-shadow: 0 8px 25px rgba(16,128,130,.08);
+}
+
+.petro-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.petro-checklist-item i {
+  color: #108082;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.petro-checklist-item span {
+  color: #323232;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* PROCESS STRIP */
+
+.petro-checklist-process {
+  background: #eaf6f5;
+  border: 1px solid #d7ece9;
+  border-radius: 16px;
+  padding: 30px 25px;
+}
+
+.petro-checklist-process h3 {
+  margin: 0 0 28px;
+  color: #323232;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.petro-checklist-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.petro-checklist-process-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.petro-checklist-process-icon {
+  width: 66px;
+  height: 66px;
+  background: #ffffff;
+  border: 1px solid #d5e9e7;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s, background .3s;
+}
+
+.petro-checklist-process-icon i {
+  color: #108082;
+  font-size: 27px;
+  transition: color .3s;
+}
+
+.petro-checklist-process-item:hover
+.petro-checklist-process-icon {
+  transform: translateY(-4px);
+  background: #108082;
+}
+
+.petro-checklist-process-item:hover
+.petro-checklist-process-icon i {
+  color: #ffffff;
+}
+
+.petro-checklist-process-item span {
+  color: #323232;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* CONCLUSION */
+
+.petro-checklist-conclusion {
+  max-width: 900px;
+  margin: 28px auto 0;
+  text-align: center;
+  color: #59656b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.petro-checklist-conclusion strong {
+  color: #323232;
+  font-weight: 700;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .petro-checklist-section {
+    padding: 65px 20px;
+  }
+
+  .petro-checklist-header h2 {
+    font-size: 29px;
+  }
+
+  .petro-checklist-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .petro-checklist-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+  .petro-checklist-section {
+    padding: 55px 15px;
+  }
+
+  .petro-checklist-header h2 {
+    font-size: 25px;
+  }
+
+  .petro-checklist-group {
+    padding: 22px 18px;
+    gap: 16px;
+  }
+
+  .petro-checklist-process {
+    padding: 25px 15px;
+  }
+
+  .petro-checklist-process h3 {
+    font-size: 19px;
+  }
+
+  .petro-checklist-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 10px;
+  }
+
+  .petro-checklist-process-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .petro-checklist-process-icon i {
+    font-size: 24px;
+  }
+
+  .petro-checklist-process-item span {
+    font-size: 12px;
+  }
+
+  .petro-checklist-conclusion {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   PETRO - DEALER PRODUCT RANGE SECTION
+========================================== */
+
+.petro-dealer-section {
+  padding: 85px 20px;
+  background: #f6faf9;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.petro-dealer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+
+.petro-dealer-content {
+  min-width: 0;
+}
+
+.petro-dealer-label {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: #108082;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.petro-dealer-content h2 {
+  margin: 0 0 18px;
+  color: #323232;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.petro-dealer-intro,
+.petro-dealer-subtitle,
+.petro-dealer-conclusion {
+  color: #59656b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.petro-dealer-intro {
+  margin: 0 0 18px;
+}
+
+.petro-dealer-subtitle {
+  margin: 0 0 20px;
+}
+
+/* SIX CHECKLIST POINTS */
+
+.petro-dealer-list {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 15px;
+}
+
+.petro-dealer-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.petro-dealer-list li i {
+  color: #108082;
+  font-size: 17px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.petro-dealer-list li span {
+  color: #323232;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* CONCLUSION */
+
+.petro-dealer-conclusion {
+  margin: 0 0 25px;
+}
+
+/* CTA BUTTON */
+
+.petro-dealer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 14px 24px;
+  border-radius: 7px;
+  background: #108082;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background .3s, transform .3s;
+}
+
+.petro-dealer-btn:hover {
+  background: #07595b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* RIGHT IMAGE */
+
+.petro-dealer-image-wrap {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #eaf0ef;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+}
+
+.petro-dealer-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.petro-dealer-image-wrap:hover img {
+  transform: scale(1.035);
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .petro-dealer-section {
+    padding: 65px 20px;
+  }
+
+  .petro-dealer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .petro-dealer-content h2 {
+    font-size: 29px;
+  }
+
+  .petro-dealer-image-wrap img {
+    height: 420px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+  .petro-dealer-section {
+    padding: 55px 15px;
+  }
+
+  .petro-dealer-content h2 {
+    font-size: 25px;
+  }
+
+  .petro-dealer-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .petro-dealer-image-wrap img {
+    height: 300px;
+  }
+
+  .petro-dealer-btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   PETRO MANUFACTURER BENEFITS SECTION
+========================================== */
+
+.petro-benefits-section {
+  padding: 85px 20px;
+  background: #f6faf9;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.petro-benefits-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.petro-benefits-header {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.petro-benefits-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #108082;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.petro-benefits-header h2 {
+  margin: 0 0 15px;
+  color: #323232;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.petro-benefits-header p {
+  margin: 0;
+  color: #59656b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* 7 BENEFITS GRID */
+
+.petro-benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* BENEFIT CARD */
+
+.petro-benefit-card {
+  flex: 0 1 calc(25% - 15px);
+  min-width: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 190px;
+  padding: 28px 20px;
+
+  background: #ffffff;
+  border: 1px solid #e1ecea;
+  border-radius: 15px;
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.petro-benefit-card:hover {
+  transform: translateY(-6px);
+  border-color: #108082;
+  box-shadow: 0 14px 30px rgba(16,128,130,0.12);
+}
+
+/* ICON BOX */
+
+.petro-benefit-icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf6f5;
+  border-radius: 18px;
+
+  transition: background 0.3s ease;
+}
+
+.petro-benefit-icon i {
+  color: #108082;
+  font-size: 30px;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.petro-benefit-card:hover .petro-benefit-icon {
+  background: #108082;
+}
+
+.petro-benefit-card:hover .petro-benefit-icon i {
+  color: #ffffff;
+}
+
+/* BENEFIT TITLE */
+
+.petro-benefit-card h3 {
+  margin: 0;
+  color: #323232;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .petro-benefits-section {
+    padding: 65px 20px;
+  }
+
+  .petro-benefits-header h2 {
+    font-size: 29px;
+  }
+
+  .petro-benefit-card {
+    flex-basis: calc(33.333% - 14px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+  .petro-benefits-section {
+    padding: 55px 15px;
+  }
+
+  .petro-benefits-header {
+    margin-bottom: 30px;
+  }
+
+  .petro-benefits-header h2 {
+    font-size: 25px;
+  }
+
+  .petro-benefits-grid {
+    gap: 12px;
+  }
+
+  .petro-benefit-card {
+    flex-basis: calc(50% - 6px);
+    min-height: 155px;
+    padding: 20px 12px;
+  }
+
+  .petro-benefit-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 15px;
+  }
+
+  .petro-benefit-icon i {
+    font-size: 25px;
+  }
+
+  .petro-benefit-card h3 {
+    font-size: 13px;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+
+@media (max-width: 360px) {
+  .petro-benefit-card {
+    flex-basis: 100%;
+  }
+}

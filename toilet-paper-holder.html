@@ -1500,6 +1500,9 @@ href="https://www.petroindustech.com/toilet-paper-holder.html">
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
                     <ul class="footer_ul_amrc">
+            <li>
+              <a href="market-area.html"><i class="fas fa-long-arrow-alt-right"></i>Market Area</a>
+            </li>
                         <li>
                             <a href="about.html"><i class="fas fa-long-arrow-alt-right"></i>About Us</a>
                         </li>
@@ -1618,42 +1621,7 @@ href="https://www.petroindustech.com/toilet-paper-holder.html">
 
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        const scriptURL =
-            "https://script.google.com/macros/s/AKfycbxK9P-VF5E3Hb3TyKTKwuzYsC4lUhm9qy7GrN4MsbfQRMmX_Ll_7qEveNtNLYj938MP/exec";
-        const form = document.forms["submit-to-google-sheet"];
-        const submitBtn = document.getElementById("submitBtn");
-
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                alert("Please complete the reCAPTCHA.");
-                return;
-            }
-
-            submitBtn.innerHTML = "Submitting...";
-            submitBtn.disabled = true;
-
-            const formData = new FormData(form);
-            formData.append("g-recaptcha-response", recaptchaResponse);
-
-            // ✅ Send request in background (no need to wait to open popup)
-            fetch(scriptURL, { method: "POST", body: formData })
-                .then(() => console.log("Form sent to Google Sheet"))
-                .catch((err) => console.error("Error sending form:", err));
-
-            // ✅ Show popup after 1.5 sec
-            setTimeout(() => {
-                form.reset();
-                grecaptcha.reset();
-                openPopup();
-                submitBtn.innerHTML = "Submit";
-                submitBtn.disabled = false;
-            }, 1500); // 1.5 second delay
-        });
-    </script>
+    <!-- Shared lead submission is handled by /js/form.js -->
 
     <script>
         let petroConvFired = false; // ek hi baar fire karega per submit
@@ -1701,6 +1669,7 @@ href="https://www.petroindustech.com/toilet-paper-holder.html">
     <script src="js/jquery.appear.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
+<script src="/js/form.js" defer></script>
 </body>
 
 </html>
