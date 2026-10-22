@@ -198,7 +198,7 @@
 
 .petro-landing .feature-image {
   width: 100%;
-  height: 330px;
+  height: 390px;
   object-fit: cover;
   border-radius: 13px;
   display: block;
@@ -206,7 +206,7 @@
 }
 
 .petro-landing .feature-image.wide {
-  height: 295px
+  height: 395px;
 }
 
 .petro-landing .tint {

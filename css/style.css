@@ -63,9 +63,9 @@ ul {
   list-style: none;
 }
 
-p {
+/* p {
   text-align: justify;
-}
+} */
 
 a.btn-primary {
   background-color: var(--primary);
