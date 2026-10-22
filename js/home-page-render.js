@@ -6,8 +6,7 @@ const container = document.getElementById("product-sections");
 // SELECTED PRODUCT IDs
 // ===============================
 
-const selectedProductIds = [48, 47, 45, 8, 10, 39, 36, 21];
-// Example: [67, 66, 65, 64]
+const selectedProductIds = [61,69,70,39,72,37,74,75 ]; 
 
 // ===============================
 // SLUG GENERATOR

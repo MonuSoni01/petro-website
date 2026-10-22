@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="./images/website/cropped-favicon.png" />
-  <link rel="canonical" href=" https://www.petroindustech.com/our-products.html" />
+  <link rel="canonical" href="https://www.petroindustech.com/our-products.html" />
   <meta name="description"
     content="Buy premium bathroom accessories and hardware products from Petro Industech. Reliable manufacturer providing quality products and bulk orders for dealers in India" />
   <title>Our Products for Bulk Supply | Petro Industech</title>
@@ -30,6 +30,7 @@
   <link href="css/owl.carousel.min.css" rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
+  <link href="css/catalogue.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -279,36 +280,19 @@
     });
   </script>
 
-  <!-- Breadcrumbs Section -->
-  <div class="full-title">
-    <div class="container">
-      <h1 class="mt-0 mb-5">Our Products</h1>
-      <div class="breadcrumb-main">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="https://www.petroindustech.com">Home</a>
-          </li>
-          <li class="breadcrumb-item active fw-bold">Our Products</li>
-        </ol>
-      </div>
+  <main class="catalogue" id="catalogue">
+    <div class="catalogue-shell">
+      <nav class="catalogue-crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › <strong>Our Products</strong></nav>
+      <header class="catalogue-heading"><h1>Explore <span>Our Products</span></h1><p>Premium bathroom accessories, stainless steel fittings and hardware solutions for homes, hotels and commercial spaces.</p></header>
+      <form id="catalogueSearch" class="catalogue-search" role="search"><label class="sr-only" for="catalogueQuery">Search products</label><span class="search-icon">⌕</span><input id="catalogueQuery" type="search" placeholder="Search products by name, item code, category or keyword..." autocomplete="off"><button type="submit">⌕ &nbsp; Search</button></form>
+      <div class="popular" id="popularSearches"><b>Popular searches:</b></div>
+      <div class="category-scroll"><div id="catalogueCategories" class="category-tabs" aria-label="Product categories"></div></div>
+      <div class="catalogue-toolbar"><p id="catalogueCount" aria-live="polite">Loading products...</p><div class="catalogue-actions"><label for="catalogueSort">Sort by:</label><select id="catalogueSort"><option value="featured">Featured</option><option value="name">Name: A to Z</option><option value="priceLow">Price: Low to High</option><option value="priceHigh">Price: High to Low</option><option value="rating">Top Rated</option></select><button id="gridView" class="view-toggle active" type="button" aria-label="Grid view" aria-pressed="true">▦</button><button id="listView" class="view-toggle" type="button" aria-label="List view" aria-pressed="false">☷</button></div></div>
+      <div id="catalogueGrid" class="catalogue-grid" aria-live="polite"></div>
+      <div id="catalogueEmpty" class="catalogue-empty" hidden><h2>No products found</h2><p>Try a different product name, category or item code.</p><button id="catalogueReset" type="button">Clear Filters</button></div>
+      <div class="catalogue-bottom"><button id="catalogueLoadMore" type="button">⟳ &nbsp; Load More Products</button></div>
     </div>
-  </div>
-
-  <!-- ALL PRODUCT SHOW THROUGH API BATH ACESSSORIES -->
-  <div class="container">
-    <div class="row col-lg-12 py-2">
-      <div id="product-sections"></div>
-    </div>
-    <div class="col-lg-12">
-      <div class="d-flex justify-content-center align-items-center">
-        <button id="loadMoreBtn" class="btn btn-primary">
-          Load More Products
-        </button>
-      </div>
-    </div>
-  </div>
-
-
+  </main>
   <!--FOOTER SECTION-->
   <footer class="footer mt-5">
     <div class="container bottom_border mt-3">
@@ -460,15 +444,14 @@
     </div>
   </footer>
   <!-- Bootstrap core JavaScript -->
-  <script type="module" src="js/all-products.js"></script>
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
   <script src="js/jquery.appear.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
-  <script type="module" src="js/product-api-list.js"></script>
+  <script type="module" src="js/catalogue.js"></script>
 </body>
 
 </html>

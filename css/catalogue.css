@@ -1,0 +1,747 @@
+/* PETRO product catalogue – scoped styles, compatible with existing website */
+.catalogue {
+    background: #f4f8fa;
+    color: #152039;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 14px 0 56px;
+    min-height: 70vh
+}
+
+.catalogue * {
+    box-sizing: border-box
+}
+
+.catalogue-shell {
+    max-width: 1320px;
+    padding: 0 24px;
+    margin: auto
+}
+
+.catalogue-crumb {
+    font-size: 13px;
+    color: #69778b;
+    margin-bottom: 0
+}
+
+.catalogue-crumb a {
+    color: #69778b
+}
+
+.catalogue-heading {
+    text-align: center;
+    margin: -5px 0 26px
+}
+
+.catalogue-heading h1 {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin: 0 0 10px;
+    color: #14203b
+}
+
+.catalogue-heading h1 span {
+    color: #007a79
+}
+
+.catalogue-heading p {
+    font-size: 15px;
+    color: #64748b;
+    margin: 0
+}
+
+.catalogue-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #dfe8ed;
+    border-radius: 12px;
+    box-shadow: 0 5px 22px #10374712
+}
+
+.catalogue-search .search-icon {
+    font-size: 30px;
+    color: #69788d;
+    margin: 0 10px
+}
+
+.catalogue-search input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 15px;
+    color: #142039;
+    height: 43px
+}
+
+.catalogue-search button,
+.details-btn {
+    background: #007c7c;
+    color: #fff;
+    border: 0;
+    border-radius: 7px;
+    font-weight: 700
+}
+
+.catalogue-search button {
+    padding: 13px 28px;
+    cursor: pointer
+}
+
+.catalogue-search button:hover,
+.details-btn:hover {
+    background: #006667;
+    color: #fff;
+    text-decoration: none
+}
+
+.popular {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 14px 0 20px;
+    font-size: 13px
+}
+
+.popular b {
+    margin-right: 4px
+}
+
+.popular button {
+    border: 1px solid #dbe5ea;
+    background: transparent;
+    border-radius: 30px;
+    padding: 7px 13px;
+    color: #566579;
+    cursor: pointer
+}
+
+.popular button:hover {
+    background: #dff3f1;
+    color: #007a79
+}
+
+.category-scroll {
+    overflow-x: auto;
+    padding-bottom: 5px
+}
+
+.category-tabs {
+    display: flex;
+    gap: 12px;
+    min-width: max-content
+}
+
+.category-tab {
+    width: 145px;
+    min-height: 88px;
+    background: #fff;
+    border: 1px solid #e9eef2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    padding: 12px;
+    cursor: pointer;
+    color: #17223b;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 0 4px 15px #112e3e08
+}
+
+.category-tab small {
+    display: block;
+    color: #68788c;
+    font-weight: 400;
+    margin-top: 5px
+}
+
+.cat-symbol {
+    font-size: 28px;
+    color: #007c7c
+}
+
+.category-tab.selected {
+    background: #007c7c;
+    color: #fff
+}
+
+.category-tab.selected small,
+.category-tab.selected .cat-symbol {
+    color: #fff
+}
+
+.catalogue-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0
+}
+
+.catalogue-toolbar p {
+    margin: 0;
+    color: #48576b;
+    font-size: 14px
+}
+
+.catalogue-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #64748b
+}
+
+.catalogue-actions select {
+    border: 1px solid #dce4eb;
+    background: #fff;
+    padding: 10px 30px 10px 12px;
+    border-radius: 7px;
+    color: #4a586c
+}
+
+.view-toggle {
+    border: 1px solid #e2eaf0;
+    border-radius: 7px;
+    background: #fff;
+    padding: 8px 12px;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: #516078
+}
+
+.view-toggle.active {
+    background: #007c7c;
+    color: #fff
+}
+
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px
+}
+
+.catalogue-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #e9eef2;
+    border-radius: 11px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 16px #102b3d0a;
+    transition: transform .2s, box-shadow .2s
+}
+
+.catalogue-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px #102b3d1a
+}
+
+.catalogue-image {
+    position: relative;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 14px 5px
+}
+
+.catalogue-image>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%
+}
+
+.catalogue-image img {
+    max-width: 100%;
+    /* max-height: 100%; */
+    object-fit: contain
+}
+
+.category-pill {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e1f6f4;
+    color: #006b70;
+    border-radius: 25px;
+    font-size: 11px;
+    padding: 6px 10px;
+    font-weight: 700;
+    z-index: 1
+}
+
+.favorite {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    border: 0;
+    background: transparent;
+    color: #66788f;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1
+}
+
+.favorite.saved {
+    color: #d95062
+}
+
+.catalogue-card-body {
+    padding: 10px 16px 14px;
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.item-code {
+    color: #718096;
+    font-size: 13px;
+    margin-bottom: 4px
+}
+
+.catalogue-card h2 {
+    font-size: 16px;
+    line-height: 1.35;
+    font-weight: 750;
+    margin: 0 0 6px
+}
+
+.catalogue-card h2 a {
+    color: #142039;
+    text-decoration: none
+}
+
+.rating-line {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 7px
+}
+
+.stars {
+    color: #f5a400;
+    font-size: 19px;
+    letter-spacing: -2px
+}
+
+.review-count {
+    color: #68788c;
+    font-size: 12px
+}
+
+.card-price {
+    font-size: 21px;
+    font-weight: 800;
+    color: #142039;
+    margin-top: auto;
+    margin-bottom: 10px
+}
+
+.details-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 11px;
+    text-align: center;
+    font-size: 13px
+}
+
+.details-btn span {
+    font-size: 18px
+}
+
+.catalogue-bottom {
+    text-align: center;
+    margin-top: 16px
+}
+
+.catalogue-bottom button,
+.catalogue-empty button {
+    background: #fff;
+    border: 1px solid #00827f;
+    border-radius: 7px;
+    color: #007b78;
+    padding: 12px 35px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.catalogue-bottom button:hover,
+.catalogue-empty button:hover {
+    background: #e3f5f3
+}
+
+.catalogue-empty {
+    text-align: center;
+    background: #fff;
+    padding: 45px 10px;
+    border-radius: 10px
+}
+
+.catalogue [hidden] {
+    display: none !important
+}
+
+.catalogue-grid.list-view {
+    grid-template-columns: 1fr
+}
+
+.list-view .catalogue-card {
+    flex-direction: row
+}
+
+.list-view .catalogue-image {
+    width: 240px;
+    flex: none;
+    height: 190px
+}
+
+.list-view .catalogue-card-body {
+    justify-content: center
+}
+
+.list-view .details-btn {
+    max-width: 220px
+}
+
+.catalogue .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0)
+}
+
+@media(max-width:1050px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+}
+
+@media(max-width:760px) {
+    .catalogue-shell {
+        padding: 0 14px
+    }
+
+    .catalogue-heading {
+        margin: 16px 0 20px
+    }
+
+    .catalogue-heading h1 {
+        font-size: 34px
+    }
+
+    .catalogue-heading p {
+        font-size: 13px
+    }
+
+    .catalogue-search button {
+        padding: 12px
+    }
+
+    .catalogue-search input {
+        font-size: 13px
+    }
+
+    .catalogue-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px
+    }
+
+    .catalogue-image {
+        height: 175px
+    }
+
+    .catalogue-card-body {
+        padding: 10px
+    }
+
+    .catalogue-toolbar {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .list-view .catalogue-image {
+        width: 38%;
+        height: 170px
+    }
+
+    .category-tab {
+        width: 135px
+    }
+}
+
+@media(max-width:440px) {
+    .catalogue-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .catalogue-image {
+        height: 145px
+    }
+
+    .catalogue-card h2 {
+        font-size: 13px
+    }
+
+    .card-price {
+        font-size: 17px
+    }
+
+    .rating-line .stars {
+        font-size: 15px
+    }
+
+    .review-count {
+        font-size: 10px
+    }
+
+    .details-btn {
+        font-size: 11px;
+        padding: 10px 5px
+    }
+
+    .category-pill {
+        font-size: 9px;
+        padding: 5px
+    }
+
+    .catalogue-actions {
+        flex-wrap: wrap
+    }
+
+    .catalogue-search .search-icon {
+        margin: 0 3px;
+        font-size: 21px
+    }
+
+    .catalogue-search button {
+        font-size: 12px;
+        padding: 11px 9px
+    }
+
+    .list-view .catalogue-image {
+        height: 155px
+    }
+}
+
+/* PETRO PRODUCT IMAGE SIZE FIX */
+
+.catalogue-grid .product-card img,
+.catalogue-grid .catalogue-card img,
+.catalogue-grid .product-image img {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: contain !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image container */
+.catalogue-grid .product-image,
+.catalogue-grid .catalogue-image,
+.catalogue-grid .card-image {
+  width: 100%;
+  min-height: 250px;
+  overflow: hidden;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .catalogue-grid .product-card img,
+  .catalogue-grid .catalogue-card img,
+  .catalogue-grid .product-image img {
+    height: 210px !important;
+  }
+}
+
+
+/* ==========================================
+   PETRO PREMIUM CATEGORY FILTER DESIGN
+========================================== */
+
+.catalogue .category-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 8px 2px 14px;
+    scrollbar-width: thin;
+    scrollbar-color: #cbdcdd transparent;
+}
+
+.catalogue .category-tabs {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: max-content;
+    min-width: 100%;
+}
+
+/* Category Button */
+.catalogue .category-tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    width: auto;
+    min-width: 0;
+    min-height: 54px;
+    padding: 11px 19px;
+
+    background: #ffffff;
+    border: 1px solid #e0e9eb;
+    border-radius: 12px;
+
+    color: #18313e;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    box-shadow: 0 2px 8px rgba(15, 46, 54, 0.025);
+
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Icon */
+.catalogue .category-tab .cat-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+
+    background: #e8f7f6;
+    border-radius: 9px;
+
+    color: #008080;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Category Name + Count */
+.catalogue .category-tab > span:last-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.catalogue .category-tab small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 27px;
+    height: 23px;
+    padding: 0 6px;
+
+    border-radius: 7px;
+    background: #f1f5f6;
+
+    color: #6a7f88;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Hover */
+.catalogue .category-tab:hover {
+    border-color: #108082;
+    background: #f5fcfb;
+    box-shadow: 0 5px 16px rgba(16, 128, 130, 0.09);
+    transform: translateY(-2px);
+}
+
+/* Selected */
+.catalogue .category-tab.selected {
+    background: #108082;
+    border-color: #108082;
+    color: #ffffff;
+    box-shadow: 0 5px 14px rgba(16, 128, 130, 0.15);
+}
+
+.catalogue .category-tab.selected .cat-symbol {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+}
+
+.catalogue .category-tab.selected > span:last-child {
+    color: #ffffff;
+}
+
+.catalogue .category-tab.selected small {
+    background: rgba(255, 255, 255, 0.17);
+    color: #ffffff;
+}
+
+.catalogue .category-tab.selected:hover {
+    background: #086f71;
+    border-color: #086f71;
+}
+
+/* Keyboard Accessibility */
+.catalogue .category-tab:focus-visible {
+    outline: 3px solid rgba(16, 128, 130, 0.35);
+    outline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .catalogue .category-tabs {
+        gap: 9px;
+    }
+
+    .catalogue .category-tab {
+        min-height: 46px;
+        padding: 8px 13px;
+        border-radius: 10px;
+    }
+
+    .catalogue .category-tab .cat-symbol {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .catalogue .category-tab > span:last-child {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .catalogue .category-tab small {
+        min-width: 23px;
+        height: 21px;
+        font-size: 10px;
+    }
+}
