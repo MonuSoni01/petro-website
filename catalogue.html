@@ -7,7 +7,7 @@
   <!-- Favicon Icon -->
 
   <link rel="icon" href="./images/website/cropped-favicon.png">
-  <link rel="canonical" href=" https://www.petroindustech.com/catalogue.html " />
+  <link rel="canonical" href="https://www.petroindustech.com/catalogue.html" />
   <title>Petro Industech Catalogue – Download Bath & Hardware Products </title>
   <meta name="description"
     content="Get Petro Industech catalogue for bathroom accessories and hardware products. View premium designs, specifications, and bulk order details. Download now. ">
@@ -32,66 +32,586 @@
     })(window, document, 'script', 'dataLayer', 'GTM-N35NFZZM');</script>
   <!-- End Google Tag Manager -->
   <style>
-    :root {
-      /* Transition & Box Shadow */
-      --transition: 0.4s ease-in-out;
-      --shadow: 0px 60px 56px -12px rgba(9, 40, 163, 0.05);
-
+    .petro-catalogue {
+      --petro: #0F8081;
+      --petro-dark: #064b4d;
+      --petro-light: #e9f6f6;
+      font-family: inherit;
+      color: #18383b;
+      background: #fff;
     }
 
-    .faq_section .haeed {
-      font-weight: 600;
-      margin-bottom: 20px;
+    /* HERO */
+    .petro-catalogue .pc-hero {
+      position: relative;
+      min-height: 310px;
+      padding: 55px 20px 75px;
       text-align: center;
+      color: #fff;
+      background:
+        linear-gradient(90deg,
+          rgba(0, 52, 53, .88),
+          rgba(4, 94, 95, .87)),
+        url("images/catalogue-banner.webp") center/cover no-repeat;
     }
 
-
-    .accordion__wrapper {
-      background-color: #eff2f5ce;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .accordion {
-      border-bottom: 0.1rem solid grey;
-      padding: 10px;
-    }
-
-    .accordion__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      cursor: pointer;
-    }
-
-    .accordion__icon {
-      background-color: #108082;
-      width: 1.3rem;
-      height: 1.3rem;
+    .pc-hero .pc-eyebrow {
       font-size: 12px;
+      letter-spacing: 5px;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .pc-hero h1 {
+      color: #fff;
+      font-size: clamp(28px, 3.5vw, 46px);
+      font-weight: 750;
+      line-height: 1.2;
+      margin: 0 0 18px;
+    }
+
+    .pc-hero h1 span {
+      color: #6af1e8;
+    }
+
+    .pc-hero p {
+      max-width: 740px;
+      margin: auto;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #f0ffff;
+    }
+
+    .pc-hero-features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .pc-hero-features span {
+      font-size: 16px;
+      padding-right: 18px;
+      border-right: 1px solid #ffffff66;
+    }
+
+    .pc-hero-features span:last-child {
+      border: 0;
+    }
+
+    /* BREADCRUMB */
+    .pc-breadcrumb-wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      margin-top: -27px;
+    }
+
+    .pc-breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-width: 280px;
+      margin: 0;
+      padding: 17px 35px;
+      border-radius: 28px 28px 0 0;
+      background: white;
+      box-shadow: 0 -4px 20px #0000000b;
+      font-size: 14px;
+    }
+
+    .pc-breadcrumb a {
+      color: #34464a;
+      text-decoration: none;
+    }
+
+    .pc-breadcrumb strong {
+      color: var(--petro);
+    }
+
+    /* CATALOGUE CARDS */
+    .pc-catalogue-section {
+      padding: 35px 0 55px;
+      background:
+        radial-gradient(circle at 0 80%, #e5f2f3, transparent 30%),
+        #fff;
+    }
+
+    .pc-catalogue-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .pc-card {
+      display: flex;
+      flex-direction: column;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid #edf1f2;
+      border-radius: 18px;
+      box-shadow: 0 12px 32px #163f4510;
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .pc-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px #163f4520;
+    }
+
+    .pc-card-image {
+      height: 275px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 50%;
-      color: #fff;
-      flex-shrink: 0;
-    }
-
-    .accordion__question {
-      font-size: 17px;
-      font-weight: 500;
-      color: grey;
-    }
-
-    .accordion__answer {
-      padding: 7px 4px;
-    }
-
-    .accordion__content {
+      background: linear-gradient(145deg, #f0f8f8, #f9fbfc);
+      border-radius: 13px;
       overflow: hidden;
-      height: 0;
-      transition: var(--transition);
+    }
+
+    .pc-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+      transition: transform .35s;
+    }
+
+    .pc-card:hover .pc-card-image img {
+      transform: scale(1.035);
+    }
+
+    .pc-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 17px 4px 3px;
+    }
+
+    .pc-card h2 {
+      color: var(--petro-dark);
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 9px;
+    }
+
+    .pc-card-description {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #68767b;
+      margin-bottom: 18px;
+    }
+
+    .pc-last-update {
+      margin-top: auto;
+      padding: 12px 0;
+      font-size: 12px;
+      color: #40575b;
+      border-top: 1px solid #edf1f2;
+    }
+
+    .pc-last-update i {
+      color: var(--petro);
+      margin-right: 5px;
+    }
+
+    .pc-card-buttons {
+      display: flex;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .pc-download-btn,
+    .pc-view-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      border-radius: 25px;
+      padding: 12px 13px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .25s;
+      text-decoration: none !important;
+      white-space: nowrap;
+    }
+
+    .pc-download-btn {
+      flex: 1.5;
+      background: var(--petro);
+      color: white;
+      border: 1px solid var(--petro);
+    }
+
+    .pc-download-btn:hover {
+      background: var(--petro-dark);
+      color: #fff;
+    }
+
+    .pc-view-btn {
+      flex: 1;
+      background: white;
+      color: var(--petro);
+      border: 1px solid var(--petro);
+    }
+
+    .pc-view-btn:hover {
+      background: var(--petro-light);
+      color: var(--petro-dark);
+    }
+
+    /* BENEFITS */
+    .pc-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      background: #edf3f4;
+      border-radius: 60px;
+      padding: 22px;
+      margin-top: 32px;
+    }
+
+    .pc-benefit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .pc-benefit i {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #c9eeee;
+      color: var(--petro-dark);
+      font-size: 19px;
+    }
+
+    /* DOWNLOAD MODAL */
+    .pc-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      padding: 16px;
+      background: rgba(0, 0, 0, .65);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pc-modal.pc-open {
+      display: flex;
+    }
+
+    .pc-modal-box {
+      position: relative;
+      width: 100%;
+      max-width: 455px;
+      max-height: 94vh;
+      overflow-y: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 25px 80px #0004;
+    }
+
+    .pc-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      border: none;
+      background: transparent;
+      font-size: 27px;
+      color: #64748b;
+      cursor: pointer;
+    }
+
+    .pc-modal-box h2 {
+      font-size: 24px;
+      color: var(--petro-dark);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .pc-modal-subtitle {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .pc-field {
+      margin-bottom: 15px;
+    }
+
+    .pc-field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .pc-field label span {
+      color: #e33434;
+    }
+
+    .pc-field input,
+    .pc-field select {
+      display: block;
+      width: 100%;
+      height: 44px;
+      padding: 10px 12px;
+      border: 1px solid #d5dfe2;
+      border-radius: 7px;
+      background: #fff;
+      color: #24363a;
+      font-size: 13px;
+    }
+
+    .pc-field input:focus,
+    .pc-field select:focus {
+      outline: none;
+      border-color: var(--petro);
+      box-shadow: 0 0 0 3px #0f80811c;
+    }
+
+    .pc-form-submit {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      border: none;
+      background: #108082;
+      border-radius: 9px; 
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .pc-form-submit:disabled {
+      opacity: .6;
+      cursor: wait;
+    }
+
+    .pc-form-message {
+      font-size: 12px;
+      margin-top: 12px;
+      color: #b42318;
+    }
+
+    .pc-privacy {
+      font-size: 11px;
+      color: #64748b;
+      line-height: 1.5;
+      margin-top: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+      .pc-catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pc-benefits {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 22px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .pc-hero {
+        padding: 55px 16px 65px;
+      }
+
+      .pc-hero-features {
+        gap: 12px;
+      }
+
+      .pc-hero-features span {
+        border: 0;
+        padding: 0;
+      }
+
+      .pc-catalogue-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pc-card-image {
+        height: 280px;
+      }
+
+      .pc-benefits {
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+      }
+
+      .pc-benefit {
+        font-size: 11px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .pc-modal-box {
+        padding: 25px 20px;
+      }
+    }
+
+    /* FINAL PETRO CATALOGUE OVERRIDES - scoped to catalogue only */
+    .petro-catalogue {
+      --petro: #0F8081;
+      --petro-dark: #064b4d;
+      isolation: isolate;
+    }
+
+    .petro-catalogue .pc-hero {
+      background: linear-gradient(115deg, #053e40 0%, #0F8081 68%, #07585a 100%) !important;
+      min-height: 310px;
+      padding: 64px 18px 82px;
+    }
+
+    .petro-catalogue .pc-hero h1 {
+      color: #fff !important;
+      font-size: clamp(30px, 3.5vw, 48px) !important;
+      line-height: 1.2;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .petro-catalogue .pc-hero p {
+      color: #efffff !important;
+    }
+
+    .petro-catalogue .pc-breadcrumb-wrap {
+      display: flex !important;
+      justify-content: center;
+      margin-top: -27px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .petro-catalogue .pc-breadcrumb {
+      display: flex !important;
+      align-items: center;
+      gap: 14px;
+      margin: 0;
+      padding: 17px 45px;
+      background: #fff !important;
+      border-radius: 28px 28px 0 0;
+      box-shadow: 0 -5px 24px #00000013;
+    }
+
+    .petro-catalogue .pc-catalogue-section {
+      padding: 38px 0 60px;
+    }
+
+    .petro-catalogue .pc-catalogue-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .petro-catalogue .pc-card {
+      display: flex !important;
+      flex-direction: column;
+      min-width: 0;
+      padding: 18px !important;
+      border: 1px solid #e4eeee !important;
+      border-radius: 20px !important;
+      background: #fff !important;
+      box-shadow: 0 12px 34px #103d4415 !important;
+    }
+
+    .petro-catalogue .pc-card-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 290px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #eef8f8, #f8fbfc);
+    }
+
+    .petro-catalogue .pc-card-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 12px;
+    }
+
+    .petro-catalogue .pc-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .petro-catalogue .pc-card h2 {
+      color: #064b4d !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+    }
+
+    .petro-catalogue .pc-card-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .petro-catalogue .pc-download-btn {
+      background: #0F8081 !important;
+      color: #fff !important;
+      border: 1px solid #0F8081 !important;
+    }
+
+    .petro-catalogue .pc-view-btn {
+      background: #fff !important;
+      color: #0F8081 !important;
+      border: 1px solid #0F8081 !important;
+    }
+
+    .petro-catalogue .pc-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .pc-modal.pc-open {
+      display: flex !important;
+    }
+
+    @media(max-width:991px) {
+      .petro-catalogue .pc-catalogue-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .petro-catalogue .pc-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media(max-width:650px) {
+      .petro-catalogue .pc-catalogue-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .petro-catalogue .pc-hero {
+        padding: 55px 16px 74px;
+      }
+
+      .petro-catalogue .pc-card {
+        padding: 15px !important;
+      }
+
+      .petro-catalogue .pc-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
@@ -100,7 +620,6 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N35NFZZM" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Mobile Bottom Bar -->
   <div class="mobile-bottom-bar">
@@ -238,7 +757,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <a class="dropdown-item" href="stainless-steel.html">
-                Stainless Steel 
+                Stainless Steel
               </a>
               <a class="dropdown-item" href="bath-accessories.html">
                 Bath Accessories
@@ -345,54 +864,446 @@
     });
   </script>
 
-  <!-- Breadcrumbs Section -->
-  <div class="full-title">
-    <div class="container">
-      <h1 class="mt-4 mb-5">Download Petro Industech Catalogue</h1>
-      <div class="breadcrumb-main">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="https://www.petroindustech.com/">Home</a>
-          </li>
-          <li class="breadcrumb-item active fw-bold">Catalogue</li>
-        </ol>
+
+  <main class="petro-catalogue">
+
+    <!-- HERO -->
+    <section class="pc-hero">
+      <div class="container">
+
+        <div class="pc-eyebrow">
+          EXPLORE OUR COMPLETE RANGE
+        </div>
+
+        <h1>
+          Download PETRO
+          <span>Industech</span> Catalogue
+        </h1>
+
+        <p>
+          Discover our premium range of bathroom accessories,
+          hardware products and stainless steel collections
+          with detailed specifications.
+        </p>
+
+        <div class="pc-hero-features">
+          <span>◆ Premium Designs</span>
+          <span>▤ Detailed Specifications</span>
+          <span>◈ Latest Collections</span>
+          <span>↓ Easy Downloads</span>
+        </div>
+
       </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="pc-breadcrumb-wrap">
+      <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+        <a href="https://www.petroindustech.com/">
+          Home
+        </a>
+        <span>›</span>
+        <strong>Catalogue</strong>
+      </nav>
     </div>
-  </div>
 
-  <!-- CATALOGUE SECTION -->
-  <div class="container">
-    <div class="row p-2 cat-btn">
-      <div class="col-lg-4 p-5">
-        <img src="images/bathaccessories-catalogue.webp" class="img-fluid"
-          alt="Petro Industech bathroom accessories catalogue showing shelves, health faucet and bathroom fittings products ">
-        <div class="main-btn" style="margin-top: 35px;">
+    <!-- CATALOGUE CARDS -->
+    <section class="pc-catalogue-section">
+      <div class="container">
 
-          <a href="wp-content/uploads/2025/05/Bath-Accessories-Catalogue.pdf" target="_blank"
-            data-track-event="pdf_download" data-track-label="Bath_Accessories_Catalogue">
-            Download Brochure <i class="fa-solid fa-download"></i>
-          </a>
+        <div class="pc-catalogue-grid">
+
+          <!-- BATH ACCESSORIES -->
+          <article class="pc-card">
+            <div class="pc-card-image">
+              <img src="images/bathaccessories-catalogue.webp" alt="PETRO Bath Accessories Catalogue" loading="lazy">
+            </div>
+
+            <div class="pc-card-body">
+              <h2>Bath Accessories Catalogue</h2>
+
+              <p class="pc-card-description">
+                Explore our premium range of bathroom
+                accessories with modern designs and
+                superior quality.
+              </p>
+
+              <div class="pc-last-update">
+                <i class="fa-regular fa-calendar"></i>
+                Last Updated on Web:
+                <strong>21-08-2026</strong>
+              </div>
+
+              <div class="pc-card-buttons">
+                <button type="button" class="pc-download-btn" onclick="pcOpenDownload('bath')">
+                  <i class="fa-solid fa-download"></i>
+                  Download Catalogue
+                </button>
+
+                <a class="pc-view-btn" href="wp-content/uploads/2025/05/Bath-Accessories-Catalogue.pdf" target="_blank"
+                  rel="noopener noreferrer">
+                  View Online
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- HARDWARE -->
+          <article class="pc-card">
+            <div class="pc-card-image">
+              <img src="images/hadware-catalogue.png" alt="PETRO Hardware Products Catalogue" loading="lazy">
+            </div>
+
+            <div class="pc-card-body">
+              <h2>Hardware Products Catalogue</h2>
+
+              <p class="pc-card-description">
+                Discover our complete hardware solutions
+                for residential and commercial spaces.
+              </p>
+
+              <div class="pc-last-update">
+                <i class="fa-regular fa-calendar"></i>
+                Last Updated on Web:
+                <strong>10-06-2026</strong>
+              </div>
+
+              <div class="pc-card-buttons">
+                <button type="button" class="pc-download-btn" onclick="pcOpenDownload('hardware')">
+                  <i class="fa-solid fa-download"></i>
+                  Download Catalogue
+                </button>
+
+                <a class="pc-view-btn" href="wp-content/uploads/2025/05/Hardware-Catalogue.pdf" target="_blank"
+                  rel="noopener noreferrer">
+                  View Online
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- STAINLESS STEEL -->
+          <article class="pc-card">
+            <div class="pc-card-image">
+              <img src="images/ss-catalogue.webp" alt="PETRO Stainless Steel Catalogue" loading="lazy">
+            </div>
+
+            <div class="pc-card-body">
+              <h2>Stainless Steel Catalogue</h2>
+
+              <p class="pc-card-description">
+                Explore our stainless steel collection
+                featuring durable and elegant designs.
+              </p>
+
+              <div class="pc-last-update">
+                <i class="fa-regular fa-calendar"></i>
+                Last Updated on Web:
+                <strong>29-09-2026</strong>
+              </div>
+
+              <div class="pc-card-buttons">
+                <button type="button" class="pc-download-btn" onclick="pcOpenDownload('ss')">
+                  <i class="fa-solid fa-download"></i>
+                  Download Catalogue
+                </button>
+
+                <a class="pc-view-btn" href="wp-content/uploads/2026/ss-catalogue.pdf" target="_blank"
+                  rel="noopener noreferrer">
+                  View Online
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
 
         </div>
+
+        <!-- BENEFITS -->
+        <div class="pc-benefits">
+          <div class="pc-benefit">
+            <i class="fa-regular fa-gem"></i>
+            <span>Premium Quality<br>Products</span>
+          </div>
+
+          <div class="pc-benefit">
+            <i class="fa-regular fa-file-lines"></i>
+            <span>Detailed Technical<br>Specifications</span>
+          </div>
+
+          <div class="pc-benefit">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Wide Range of<br>Collections</span>
+          </div>
+
+          <div class="pc-benefit">
+            <i class="fa-solid fa-download"></i>
+            <span>Easy & Instant<br>Download</span>
+          </div>
+        </div>
+
       </div>
-      <div class="col-lg-4 p-5">
-        <img src="images/hadware-catalogue.png" class="img-fluid"
-          alt="Petro Industech hardware products catalogue showing nylon wall plugs, caster wheels and industrial hardware fittings">
-        <div class="main-btn" style="margin-top: 35px;"><a href="wp-content/uploads/2025/05/Hardware-Catalogue.pdf"
-            target="_blank" data-track-event="pdf_download" data-track-label="Hardware_Catalogue">
-            Download Brochure <i class="fa-solid fa-download"></i>
-          </a></div>
-      </div>
-      <div class="col-lg-4 p-5">
-        <img src="images/ss-catalogue.webp" class="img-fluid"
-          alt="Petro Industech hardware products catalogue showing nylon wall plugs, caster wheels and industrial hardware fittings">
-        <div class="main-btn" style="margin-top: 35px;"><a href="wp-content/uploads/2026/ss-catalogue.pdf"
-            target="_blank" data-track-event="pdf_download" data-track-label="Hardware_Catalogue">
-            Download Brochure <i class="fa-solid fa-download"></i>
-          </a></div>
-      </div>
+    </section>
+  </main>
+
+  <!-- DOWNLOAD POPUP -->
+  <div class="pc-modal" id="pcDownloadModal" role="dialog" aria-modal="true" aria-labelledby="pcModalTitle">
+
+    <div class="pc-modal-box">
+
+      <button type="button" class="pc-modal-close" onclick="pcCloseDownload()" aria-label="Close popup">
+        &times;
+      </button>
+
+      <h2 id="pcModalTitle">Download Catalogue</h2>
+
+      <p class="pc-modal-subtitle">
+        Please fill in your details to download
+        the PETRO product catalogue.
+      </p>
+
+      <form id="pcLeadForm">
+
+        <div class="pc-field">
+          <label>Full Name <span>*</span></label>
+          <input name="name" type="text" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="pc-field">
+          <label>Mobile Number <span>*</span></label>
+          <input name="mobile" type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10"
+            placeholder="Enter 10-digit mobile number" required>
+        </div>
+
+        <div class="pc-field">
+          <label>Business / Company Name <span>*</span></label>
+          <input name="business" type="text" placeholder="Enter your business name" required>
+        </div>
+
+        <div class="pc-field">
+          <label>State <span>*</span></label>
+          <select name="state" id="pcState" required>
+            <option value="">Select your state</option>
+          </select>
+        </div>
+
+        <div class="pc-field">
+          <label>Business Type <span>*</span></label>
+          <select name="businessType" required>
+            <option value="">Select business type</option>
+            <option>Dealer</option>
+            <option>Distributor</option>
+            <option>Retailer</option>
+            <option>Wholesaler</option>
+            <option>Architect / Interior Designer</option>
+            <option>Builder / Contractor</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <button type="submit" id="pcSubmitBtn" class="pc-form-submit">
+          <i class="fa-solid fa-download"></i>
+          Download Catalogue
+        </button>
+
+        <div class="pc-form-message" id="pcFormMessage" role="status"></div>
+
+        <p class="pc-privacy">
+          Your information will be used to process
+          your catalogue request.
+        </p>
+
+      </form>
     </div>
   </div>
+
+ 
+ 
+<script>
+(function () {
+  "use strict";
+
+  const ENDPOINT =
+    "https://script.google.com/macros/s/AKfycbxK9P-VF5E3Hb3TyKTKwuzYsC4lUhm9qy7GrN4MsbfQRMmX_Ll_7qEveNtNLYj938MP/exec";
+
+  const catalogues = {
+    bath: {
+      name: "Bath Accessories Catalogue",
+      pdf: "wp-content/uploads/2025/05/Bath-Accessories-Catalogue.pdf",
+      label: "Bath_Accessories_Catalogue"
+    },
+    hardware: {
+      name: "Hardware Products Catalogue",
+      pdf: "wp-content/uploads/2025/05/Hardware-Catalogue.pdf",
+      label: "Hardware_Catalogue"
+    },
+    ss: {
+      name: "Stainless Steel Catalogue",
+      pdf: "wp-content/uploads/2026/ss-catalogue.pdf",
+      label: "SS_Catalogue"
+    }
+  };
+
+  const states = [
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam",
+    "Bihar", "Chhattisgarh", "Goa", "Gujarat",
+    "Haryana", "Himachal Pradesh", "Jharkhand",
+    "Karnataka", "Kerala", "Madhya Pradesh",
+    "Maharashtra", "Manipur", "Meghalaya",
+    "Mizoram", "Nagaland", "Odisha", "Punjab",
+    "Rajasthan", "Sikkim", "Tamil Nadu",
+    "Telangana", "Tripura", "Uttar Pradesh",
+    "Uttarakhand", "West Bengal", "Delhi",
+    "Chandigarh", "Jammu and Kashmir", "Ladakh",
+    "Puducherry", "Lakshadweep",
+    "Andaman and Nicobar Islands",
+    "Dadra and Nagar Haveli and Daman and Diu"
+  ];
+
+  const modal = document.getElementById("pcDownloadModal");
+  const form = document.getElementById("pcLeadForm");
+  const stateSelect = document.getElementById("pcState");
+  const message = document.getElementById("pcFormMessage");
+  const button = document.getElementById("pcSubmitBtn");
+
+  let selected = null;
+  let submitting = false;
+
+  states.forEach(state => {
+    const option = document.createElement("option");
+    option.value = state;
+    option.textContent = state;
+    stateSelect.appendChild(option);
+  });
+
+  window.pcOpenDownload = function (id) {
+    if (!catalogues[id] || submitting) return;
+
+    selected = catalogues[id];
+    message.textContent = "";
+
+    document.getElementById("pcModalTitle").textContent =
+      "Download " + selected.name;
+
+    modal.classList.add("pc-open");
+    document.body.style.overflow = "hidden";
+  };
+
+  window.pcCloseDownload = function () {
+    if (submitting) return;
+    modal.classList.remove("pc-open");
+    document.body.style.overflow = "";
+  };
+
+  modal.addEventListener("click", e => {
+    if (e.target === modal) pcCloseDownload();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") pcCloseDownload();
+  });
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (!selected || submitting || !form.reportValidity()) return;
+
+    const source = new FormData(form);
+
+    // Match your existing Google Apps Script field names.
+    const payload = new FormData();
+
+    payload.set("Full-Name", source.get("name") || "");
+    payload.set("Contact-Number", source.get("mobile") || "");
+    payload.set("Email-Address", "");
+    payload.set("City", "");
+    payload.set("State", source.get("state") || "");
+    payload.set("Enquiry-Type", "Catalogue Download");
+
+    payload.set("Message",
+      "Catalogue: " + selected.name + "\n" +
+      "Business / Company: " + source.get("business") + "\n" +
+      "Business Type: " + source.get("businessType")
+    );
+
+    payload.set("Source-Page", window.location.pathname);
+
+    submitting = true;
+    button.disabled = true;
+    button.textContent = "Submitting...";
+    message.textContent = "Submitting your details...";
+
+    try {
+      const response = await fetch(ENDPOINT, {
+        method: "POST",
+        body: payload,
+        redirect: "follow"
+      });
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const raw = await response.text();
+      let result;
+
+      try {
+        result = JSON.parse(raw);
+      } catch (_) {
+        throw new Error("Unrecognized server response");
+      }
+
+      if (result.status !== "success" && result.success !== true) {
+        throw new Error(result.message || "Submission not confirmed");
+      }
+
+      const pdfUrl = new URL(
+        selected.pdf,
+        window.location.href
+      ).href;
+
+      // Existing website tracking
+      if (typeof window.petroTrackEvent === "function") {
+        window.petroTrackEvent("pdf_download", selected.label);
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "pdf_download",
+        pdf_label: selected.label,
+        catalogue_name: selected.name
+      });
+
+      form.reset();
+      modal.classList.remove("pc-open");
+      document.body.style.overflow = "";
+
+      // Open selected PDF after confirmed submission.
+      // Browser may display the PDF rather than download it.
+      const link = document.createElement("a");
+      link.href = pdfUrl;
+      link.download = "";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+    } catch (error) {
+      console.error("Catalogue submission:", error);
+      message.textContent =
+        "Submission could not be confirmed. Please check the Sheet before retrying. " +
+        error.message;
+    } finally {
+      submitting = false;
+      button.disabled = false;
+      button.innerHTML =
+        '<i class="fa-solid fa-download"></i> Download Catalogue';
+    }
+  });
+})();
+</script>
+
 
 
   <footer class="footer mt-5">
