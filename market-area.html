@@ -225,6 +225,186 @@
         grid-template-columns: 1fr;
       }
     }
+    
+/* =====================================
+   PETRO - OUR MARKET AREA HERO
+===================================== */
+
+.uni-market-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    padding: 85px 20px;
+    text-align: center;
+    background: linear-gradient(
+        125deg,
+        #063f43 0%,
+        #086b70 48%,
+        #108e90 100%
+    );
+}
+
+/* SUBTLE GRID BACKGROUND */
+
+.uni-market-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .28;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.09) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.09) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+    pointer-events: none;
+}
+
+/* DECORATIVE GLOW */
+
+.uni-market-hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 450px;
+    height: 450px;
+    right: -150px;
+    top: -220px;
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,.17),
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+/* CONTENT CONTAINER */
+
+.uni-market-hero .uni-market-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* TOP LABEL */
+
+.uni-market-hero .uni-market-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 19px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.10);
+    color: #e4fffa;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+/* MAIN HEADING */
+
+.uni-market-hero h1 {
+    margin: 24px 0 18px;
+    color: #ffffff;
+
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+/* DESCRIPTION */
+
+.uni-market-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: rgba(255,255,255,.88);
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* BOTTOM ACCENT LINE */
+
+.uni-market-hero .uni-market-container::after {
+    content: "";
+    display: block;
+
+    width: 75px;
+    height: 4px;
+    margin: 30px auto 0;
+
+    border-radius: 10px;
+    background: #9be4d7;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .uni-market-hero {
+        min-height: 300px;
+        padding: 70px 20px;
+    }
+
+    .uni-market-hero p {
+        font-size: 16px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+    .uni-market-hero {
+        min-height: 270px;
+        padding: 60px 18px;
+    }
+
+    .uni-market-hero .uni-market-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        padding: 8px 14px;
+    }
+
+    .uni-market-hero h1 {
+        margin: 20px 0 15px;
+        font-size: 36px;
+        letter-spacing: -0.8px;
+    }
+
+    .uni-market-hero p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .uni-market-hero .uni-market-container::after {
+        margin-top: 25px;
+        width: 55px;
+    }
+}
+
   </style>
 </head>
 
@@ -485,22 +665,24 @@
   <main class="uni-market-page">
 
     <!-- HERO SECTION -->
-    <section class="uni-market-hero">
-      <div class="uni-market-container">
+  
+<section class="uni-market-hero">
+    <div class="uni-market-container">
 
         <span class="uni-market-label">
-          OUR BUSINESS NETWORK
+            OUR BUSINESS NETWORK
         </span>
 
-        <h1>Our Market Area</h1>
+        <h1 style="text-align: center;">Our Market Area</h1>
 
         <p>
-          Delivering Premium Stainless Steel Products
-          Across Key Regions in India &amp; Beyond
+            Delivering Premium Stainless Steel Products
+            Across Key Regions in India &amp; Beyond
         </p>
 
-      </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- LOCATION SECTION -->
     <section class="uni-market-section">
@@ -524,10 +706,13 @@
             <h3>Rajasthan</h3>
             <i class="fa-solid fa-arrow-right uni-market-arrow"></i>
           </a>
+<a href="./location/stainless-steel-bathroom-accessories-in-uttarakhand.html" class="uni-market-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Uttarakhand</h3>
+            <i class="fa-solid fa-arrow-right uni-market-arrow"></i>
+          </a>
 
-
-        </div>
-
+        </div> 
       </div>
     </section>
 

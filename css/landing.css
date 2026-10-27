@@ -1957,3 +1957,231 @@
     flex-basis: 100%;
   }
 }
+
+
+/* PETRO CONCLUSION SECTION */
+
+.petro-landing .petro-conclusion-section {
+    padding: 55px 0;
+}
+
+.petro-landing .petro-conclusion-card {
+    display: grid;
+    grid-template-columns: 38% 62%;
+    background: #f3faf9;
+    border: 1px solid #d9eae7;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.07);
+}
+
+/* LEFT IMAGE */
+
+.petro-landing .petro-conclusion-image {
+    position: relative;
+    min-height: 480px;
+    overflow: hidden;
+}
+
+.petro-landing .petro-conclusion-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+.petro-landing .petro-conclusion-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    background: #108082;
+}
+
+/* RIGHT CONTENT */
+
+.petro-landing .petro-conclusion-content {
+    padding: 38px 38px 35px;
+    min-width: 0;
+}
+
+.petro-landing .petro-conclusion-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.petro-landing .petro-conclusion-heading-icon {
+    width: 55px;
+    height: 55px;
+    background: #108082;
+    color: #fff;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.petro-landing .petro-conclusion-heading h2 {
+    margin: 0 0 9px;
+    font-size: 32px;
+    color: #073e42;
+}
+
+.petro-landing .petro-conclusion-line {
+    display: block;
+    width: 75px;
+    height: 4px;
+    border-radius: 5px;
+    background: #108082;
+}
+
+/* CONTENT POINTS */
+
+.petro-landing .petro-conclusion-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin-bottom: 23px;
+}
+
+.petro-landing .petro-conclusion-icon {
+    width: 48px;
+    height: 48px;
+    background: #e1f3f0;
+    color: #108082;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.petro-landing .petro-conclusion-point p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #26343a;
+}
+
+.petro-landing .petro-conclusion-point a {
+    color: #108082;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+/* BOTTOM BUTTONS */
+
+.petro-landing .petro-conclusion-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.petro-landing .petro-conclusion-btn-primary,
+.petro-landing .petro-conclusion-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 13px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.petro-landing .petro-conclusion-btn-primary {
+    background: #108082;
+    color: #fff;
+}
+
+.petro-landing .petro-conclusion-btn-primary:hover {
+    background: #07595b;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.petro-landing .petro-conclusion-btn-outline {
+    background: #fff;
+    color: #108082;
+    border: 1.5px solid #108082;
+}
+
+.petro-landing .petro-conclusion-btn-outline:hover {
+    background: #e5f5f2;
+    color: #07595b;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .petro-landing .petro-conclusion-card {
+        grid-template-columns: 1fr;
+    }
+
+    .petro-landing .petro-conclusion-image {
+        min-height: 300px;
+    }
+
+    .petro-landing .petro-conclusion-image::after {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+    .petro-landing .petro-conclusion-section {
+        padding: 35px 0;
+    }
+
+    .petro-landing .petro-conclusion-image {
+        min-height: 220px;
+    }
+
+    .petro-landing .petro-conclusion-content {
+        padding: 25px 20px;
+    }
+
+    .petro-landing .petro-conclusion-heading h2 {
+        font-size: 26px;
+    }
+
+    .petro-landing .petro-conclusion-point {
+        gap: 12px;
+    }
+
+    .petro-landing .petro-conclusion-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .petro-landing .petro-conclusion-point p {
+        font-size: 13px;
+    }
+
+    .petro-landing .petro-conclusion-actions {
+        flex-direction: column;
+    }
+
+    .petro-landing .petro-conclusion-btn-primary,
+    .petro-landing .petro-conclusion-btn-outline {
+        width: 100%;
+    }
+}
