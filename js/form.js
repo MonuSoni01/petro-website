@@ -2,36 +2,146 @@
 (() => {
   'use strict';
   const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxK9P-VF5E3Hb3TyKTKwuzYsC4lUhm9qy7GrN4MsbfQRMmX_Ll_7qEveNtNLYj938MP/exec';
-  const LEAD_SELECTOR = 'form[name="submit-to-google-sheet"], form#enquiryForm';
+  
+
+const LEAD_SELECTOR = [
+  'form[name="submit-to-google-sheet"]',
+  'form#enquiryForm',
+  'form#petroVisitForm',
+  'form#petroExpoMeetingForm'
+].join(', ');
+
+
   const clean = value => String(value == null ? '' : value).trim();
   const pick = (data, ...keys) => { for (const key of keys) { const value = clean(data.get(key)); if (value) return value; } return ''; };
-  function payloadFor(form) {
-    const source = new FormData(form);
-    const result = new FormData();
-    const isLanding = form.id === 'enquiryForm';
-    const city = pick(source, 'City', 'city');
-    const state = pick(source, 'State', 'state') || (isLanding ? 'Rajasthan' : '');
-    const notes = [];
-    if (isLanding) {
-      notes.push('Landing page: ' + document.title);
-      for (const [key, label] of [['company','Company'],['businessType','Business Type'],['product','Product Requirement'],['requirement','Additional Requirements']]) {
-        const value = pick(source,key); if (value) notes.push(label + ': ' + value);
+
+function payloadFor(form) {
+
+  const source = new FormData(form);
+  const result = new FormData();
+
+  const isLanding = form.id === 'enquiryForm';
+  const isExpoVisit = form.id === 'petroVisitForm';
+  const isExpoMeeting = form.id === 'petroExpoMeetingForm';
+
+  const city = pick(source, 'City', 'city');
+
+  const state = pick(source, 'State', 'state') ||
+    (isLanding ? 'Rajasthan' : '');
+
+  const notes = [];
+
+  let enquiryType = pick(
+    source,
+    'Enquiry-Type',
+    'enquiryType'
+  ) || 'Request Product Price / Quotation';
+
+  // LANDING PAGE
+  if (isLanding) {
+
+    notes.push('Landing page: ' + document.title);
+
+    for (const [key, label] of [
+      ['company', 'Company'],
+      ['businessType', 'Business Type'],
+      ['product', 'Product Requirement'],
+      ['requirement', 'Additional Requirements']
+    ]) {
+
+      const value = pick(source, key);
+
+      if (value) {
+        notes.push(label + ': ' + value);
       }
     }
-    const message = pick(source, 'Message', 'message');
-    if (message) notes.push(message);
-    result.set('Full-Name', pick(source, 'Full-Name', 'name'));
-    result.set('Contact-Number', pick(source, 'Contact-Number', 'phone'));
-    result.set('Email-Address', pick(source, 'Email-Address', 'email'));
-    result.set('City', city);
-    result.set('State', state);
-    result.set('Enquiry-Type', pick(source, 'Enquiry-Type', 'enquiryType') || 'Request Product Price / Quotation');
-    result.set('Message', notes.join('\n'));
-    result.set('Source-Page', window.location.pathname);
-    const captcha = pick(source, 'g-recaptcha-response');
-    if (captcha) result.set('g-recaptcha-response', captcha);
-    return result;
   }
+
+  // INTEXT EXPO - PLAN YOUR VISIT
+  if (isExpoVisit) {
+
+    enquiryType = 'INTEXT Expo 2026 - Plan Your Visit';
+
+    notes.push('Event: INTEXT Expo 2026');
+    notes.push('Form: Plan Your Visit');
+    notes.push('Hall: 1');
+    notes.push('Stall: A30');
+
+    const businessType = pick(source, 'businessType');
+    const visitDate = pick(source, 'visitDate');
+
+    if (businessType) {
+      notes.push('Business Type: ' + businessType);
+    }
+
+    if (visitDate) {
+      notes.push('Preferred Visit Date: ' + visitDate);
+    }
+  }
+
+  // INTEXT EXPO - BOOK A MEETING
+  if (isExpoMeeting) {
+
+    enquiryType = 'INTEXT Expo 2026 - Book a Meeting';
+
+    notes.push('Event: INTEXT Expo 2026');
+    notes.push('Form: Book a Meeting');
+    notes.push('Hall: 1');
+    notes.push('Stall: A30');
+
+    const businessType = pick(source, 'businessType');
+
+    if (businessType) {
+      notes.push('Business Type: ' + businessType);
+    }
+  }
+
+  // COMMON MESSAGE
+  const message = pick(source, 'Message', 'message');
+
+  if (message) {
+    notes.push(message);
+  }
+
+  // EXISTING GOOGLE SHEET FIELD STRUCTURE
+  result.set(
+    'Full-Name',
+    pick(source, 'Full-Name', 'fullName', 'name')
+  );
+
+  result.set(
+    'Contact-Number',
+    pick(source, 'Contact-Number', 'phone')
+  );
+
+  result.set(
+    'Email-Address',
+    pick(source, 'Email-Address', 'email')
+  );
+
+  result.set('City', city);
+  result.set('State', state);
+  result.set('Enquiry-Type', enquiryType);
+  result.set('Message', notes.join('\n'));
+
+  result.set(
+    'Source-Page',
+    window.location.pathname
+  );
+
+  // EXISTING RECAPTCHA
+  const captcha = pick(
+    source,
+    'g-recaptcha-response'
+  );
+
+  if (captcha) {
+    result.set('g-recaptcha-response', captcha);
+  }
+
+  return result;
+}
+
   function inspectResponse(raw) {
     let data;
     try { data = JSON.parse(raw); } catch (_) { return {ok:false, message:'Unrecognized server response. Check Google Sheet before resubmitting.'}; }

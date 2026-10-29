@@ -5474,7 +5474,7 @@ OUTER .cpp-wrap {
   .slider-main .carousel,
   .slider-main .carousel-inner,
   .slider-main .carousel-item {
-    height: 48vh;
+    height: 56vh;
     min-height: 220px;
   }
 }
