@@ -220,38 +220,26 @@ function payloadFor(form) {
         status.textContent = '';
         form.reset();
         if (window.grecaptcha && typeof window.grecaptcha.reset === 'function') window.grecaptcha.reset();
-        // Show one consistent, centered popup on every enquiry form.
-        // Avoid calling legacy openPopup() to prevent duplicate popups.
+        // INTEXT Ludhiana: show a dedicated thank-you page after server success.
+        // Other website enquiry forms keep the existing popup.
+        const isLudhianaExpoPage =
+          window.location.pathname.replace(/\/+$/, '').toLowerCase() ===
+          '/expo/intext-expo-2026-ludhiana.html';
+
+        if (isLudhianaExpoPage ||
+            form.id === 'petroVisitForm' ||
+            form.id === 'petroExpoMeetingForm') {
+          const formType = form.id === 'petroVisitForm' ? 'visit' : 'meeting';
+          if (result.warnings.length) {
+            console.warn('PETRO follow-up integration warnings:', result.warnings);
+          }
+          window.location.assign(
+            '/expo/intext-expo-thank-you.html?type=' + encodeURIComponent(formType)
+          );
+          return;
+        }
+
         showThankYouPopup(result.warnings);
-
-        
-/* ==========================================
-   INTEXT EXPO - THANK YOU PAGE REDIRECT
-========================================== */
-
-if (
-  form.id === "petroVisitForm" ||
-  form.id === "petroExpoMeetingForm"
-) {
-
-  const formType =
-    form.id === "petroVisitForm"
-      ? "visit"
-      : "meeting";
-
-  const thankYouURL =
-    "/expo/intext-expo-thank-you.html" +
-    "?type=" + encodeURIComponent(formType);
-
-  // Server has confirmed the enquiry.
-  window.location.assign(thankYouURL);
-
-  return;
-}
-
-// OTHER WEBSITE FORMS KEEP EXISTING POPUP
-showThankYouPopup(result.warnings);
-
       } catch(error) {
         console.error('Petro form submission:',error);
         status.textContent='Could not confirm submission. Check the Sheet before trying again. ' + error.message;
