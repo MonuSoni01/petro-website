@@ -2917,6 +2917,70 @@
         #petroVisitModal[hidden] {
             display: none !important;
         }
+
+        /* =========================================
+   DESKTOP BOOKING BAR ONLY
+   Mobile design remains unchanged
+========================================= */
+
+        @media screen and (min-width: 769px) {
+
+            .booking-bar {
+                display: flex;
+                align-items: stretch;
+                flex-wrap: nowrap;
+                width: 100%;
+                max-width: 1280px;
+                margin: 0 auto;
+                background: #ffffff;
+                border: 1px solid #e5e7eb;
+                border-radius: 12px;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+                overflow: hidden;
+            }
+
+            .booking-bar .booking-field {
+                flex: 1 1 0;
+                min-width: 0;
+                padding: 16px 20px;
+                border-right: 1px solid #e5e7eb;
+            }
+
+            .booking-bar .booking-field label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 12px;
+                font-weight: 600;
+                color: #6b7280;
+            }
+
+            .booking-bar .booking-field input,
+            .booking-bar .booking-field select {
+                width: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-size: 15px;
+                font-weight: 600;
+                color: #111827;
+            }
+
+            .booking-bar .booking-btn {
+                flex: 0 0 190px;
+                border: none;
+                border-radius: 0;
+                background: #108082;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background 0.25s ease;
+            }
+
+            .booking-bar .booking-btn:hover {
+                background: #0b6567;
+            }
+        }
     </style>
 </head>
 
@@ -3208,8 +3272,8 @@
 
                     <!-- CLICKABLE LOCATION -->
                     <a class="petro-expo__detail petro-expo__detail--location"
-                        href="https://maps.app.goo.gl/XpHX541KxmR4gq4F8"
-                        target="_blank" rel="noopener noreferrer" aria-label="Open exhibition location on Google Maps">
+                        href="https://maps.app.goo.gl/XpHX541KxmR4gq4F8" target="_blank" rel="noopener noreferrer"
+                        aria-label="Open exhibition location on Google Maps">
                         <i class="fa-solid fa-location-dot"></i>
 
                         <span>
@@ -3374,6 +3438,393 @@
 
         </div>
     </div>
+
+
+    <!-- ==============================
+     PETRO EXPO - BOOK A MEETING
+     ============================== -->
+
+
+
+    <!-- ==========================================
+     PETRO BOOK A MEETING - FINAL STRIP
+========================================== -->
+
+    <section class="petro-book-strip" id="petroExpoMeeting">
+
+        <div class="petro-book-strip__container">
+
+            <!-- DESKTOP ONLY HEADING -->
+            <div class="petro-book-strip__heading">
+                <span>BOOK A MEETING</span>
+
+                <h2>
+                    Book Your <em>Meeting</em>
+                </h2>
+            </div>
+
+            <!-- SINGLE ROW FORM -->
+            <form id="petroExpoMeetingForm" class="petro-book-strip__form" method="post">
+
+                <div class="petro-book-strip__fields">
+
+                    <!-- FULL NAME -->
+                    <label class="petro-book-strip__field">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="fullName" placeholder="Full Name *" autocomplete="name" maxlength="100"
+                            aria-label="Full Name" required>
+                    </label>
+
+                    <!-- BUSINESS TYPE -->
+                    <label class="petro-book-strip__field">
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <select name="businessType" aria-label="Business Type" required>
+                            <option value="">Business Type *</option>
+                            <option value="Dealer">Dealer</option>
+                            <option value="Distributor">Distributor</option>
+                            <option value="Retailer">Retailer</option>
+                            <option value="Wholesaler">Wholesaler</option>
+                            <option value="Manufacturer">Manufacturer</option>
+                            <option value="Architect / Interior Designer">
+                                Architect / Interior Designer
+                            </option>
+                            <option value="Contractor / Institution">
+                                Contractor / Institution
+                            </option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+
+                    <!-- CITY -->
+                    <label class="petro-book-strip__field">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" name="city" placeholder="City *" maxlength="80" aria-label="City" required>
+                    </label>
+
+                    <!-- PHONE -->
+                    <label class="petro-book-strip__field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" name="phone" placeholder="Phone *" inputmode="numeric" pattern="[0-9]{10}"
+                            maxlength="10" title="Enter a valid 10-digit mobile number" aria-label="Phone Number"
+                            required>
+                    </label>
+
+                    <!-- OPTIONAL MESSAGE -->
+                    <label class="petro-book-strip__field">
+                        <i class="fa-regular fa-message"></i>
+                        <input type="text" name="message" placeholder="Message (Optional)" maxlength="500"
+                            aria-label="Message">
+                    </label>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" id="petroExpoMeetingSubmit" class="petro-book-strip__submit">
+                        <span>Book a Meeting</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+                <p class="petro-book-strip__status" id="petroExpoMeetingStatus" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <p class="petro-book-strip__privacy">
+                By submitting, you acknowledge that PETRO may use your details
+                to respond to your enquiry.
+                <a href="/privacypolicy.html">Privacy Policy</a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- END BOOK A MEETING -->
+
+
+
+    <style>
+        /* ==========================================
+   PETRO BOOK A MEETING
+   FINAL SINGLE LINE DESIGN
+========================================== */
+
+        .petro-book-strip {
+            width: 100%;
+            padding: 52px 20px 45px;
+            background:
+                radial-gradient(ellipse at 50% 80%,
+                    rgba(16, 128, 130, 0.08),
+                    transparent 65%),
+                #f4fafb;
+            font-family: "Roboto", Arial, sans-serif;
+        }
+
+        .petro-book-strip *,
+        .petro-book-strip *::before,
+        .petro-book-strip *::after {
+            box-sizing: border-box;
+        }
+
+        .petro-book-strip__container {
+            width: 100%;
+            max-width: 1460px;
+            margin: 0 auto;
+        }
+
+        /* HEADING */
+
+        .petro-book-strip__heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .petro-book-strip__heading>span {
+            color: #108082;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .petro-book-strip__heading h2 {
+            font-family: "Roboto", Arial, sans-serif !important;
+            font-size: clamp(30px, 3.5vw, 48px) !important;
+            font-weight: 800 !important;
+            line-height: 1.2 !important;
+            color: #102b31 !important;
+            text-align: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            text-transform: none !important;
+        }
+
+        .petro-book-strip__heading em {
+            font-style: normal;
+            color: #108082;
+        }
+
+        /* SINGLE WHITE STRIP */
+
+        .petro-book-strip__form {
+            width: 100%;
+            margin: 0;
+            background: #fff;
+            padding: 8px;
+            border-radius: 14px;
+            box-shadow: 0 12px 35px rgba(0, 58, 65, 0.10);
+            border: 1px solid #e5eff0;
+        }
+
+        /* ALL FIELDS IN ONE ROW */
+
+        .petro-book-strip__fields {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, .85fr) minmax(0, 1fr) minmax(0, 1.15fr) 190px;
+            gap: 7px;
+            align-items: center;
+        }
+
+        /* INPUT CONTAINERS */
+
+        .petro-book-strip__field {
+            min-width: 0;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 !important;
+            padding: 0 12px;
+            border: 1px solid #e0e9eb;
+            border-radius: 8px;
+            background: #fff;
+            transition: border-color .2s, box-shadow .2s;
+        }
+
+        .petro-book-strip__field:focus-within {
+            border-color: #108082;
+            box-shadow: 0 0 0 3px rgba(16, 128, 130, .10);
+        }
+
+        /* ICONS */
+
+        .petro-book-strip__field>i {
+            color: #108082;
+            font-size: 17px;
+            flex-shrink: 0;
+        }
+
+        /* INPUT AND SELECT */
+
+        .petro-book-strip__field input,
+        .petro-book-strip__field select {
+            display: block;
+            width: 100%;
+            min-width: 0;
+            height: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            outline: none !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            color: #183137 !important;
+            font-family: "Roboto", Arial, sans-serif !important;
+            font-size: 13px !important;
+            font-weight: 500 !important;
+            line-height: normal !important;
+            text-transform: none !important;
+            appearance: auto;
+        }
+
+        .petro-book-strip__field input::placeholder {
+            color: #7e9299;
+            opacity: 1;
+        }
+
+        .petro-book-strip__field select:invalid {
+            color: #7e9299 !important;
+        }
+
+        /* SUBMIT BUTTON */
+
+        .petro-book-strip__submit {
+            height: 56px;
+            min-width: 0;
+            padding: 0 14px;
+            border: 0;
+            border-radius: 8px;
+            background: linear-gradient(135deg,
+                    #119b9e,
+                    #08787b);
+            color: #fff !important;
+            font-family: "Roboto", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 750;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: background .2s, transform .2s;
+        }
+
+        .petro-book-strip__submit:hover {
+            background: #066a6e;
+            transform: translateY(-1px);
+        }
+
+        .petro-book-strip__submit:disabled {
+            opacity: .65;
+            cursor: wait;
+        }
+
+        /* STATUS */
+
+        .petro-book-strip__status {
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 12px !important;
+            line-height: 1.5 !important;
+            color: #108082;
+            text-transform: none !important;
+        }
+
+        .petro-book-strip__status:empty {
+            display: none;
+        }
+
+        .petro-book-strip__status:not(:empty) {
+            padding: 10px 8px 2px !important;
+        }
+
+        /* PRIVACY NOTICE */
+
+        .petro-book-strip__privacy {
+            font-size: 11px !important;
+            color: #6a7d81 !important;
+            text-align: center;
+            margin: 13px 0 0 !important;
+            line-height: 1.5 !important;
+            text-transform: none !important;
+        }
+
+        .petro-book-strip__privacy a {
+            color: #108082 !important;
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+   TABLET
+========================================== */
+
+        @media (max-width: 1100px) {
+
+            .petro-book-strip__fields {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .petro-book-strip__submit {
+                width: 100%;
+            }
+        }
+
+        /* ==========================================
+   MOBILE
+========================================== */
+
+        @media (max-width: 767px) {
+
+            .petro-book-strip {
+                padding: 29px 14px 36px;
+            }
+
+            /* HIDE HEADING ON MOBILE */
+            .petro-book-strip__heading {
+                display: none;
+            }
+
+            .petro-book-strip__form {
+                padding: 10px;
+                border-radius: 12px;
+            }
+
+            .petro-book-strip__fields {
+                grid-template-columns: 1fr;
+                gap: 9px;
+            }
+
+            .petro-book-strip__field {
+                height: 49px;
+                padding: 0 12px;
+            }
+
+            .petro-book-strip__field input,
+            .petro-book-strip__field select {
+                font-size: 14px !important;
+            }
+
+            .petro-book-strip__submit {
+                height: 51px;
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .petro-book-strip__privacy {
+                font-size: 10px !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .petro-book-strip__field,
+            .petro-book-strip__submit {
+                transition: none;
+            }
+        }
+    </style>
     <section class="petro-trust-stats" aria-label="PETRO company statistics">
 
         <div class="petro-trust-container">
@@ -3908,138 +4359,7 @@
     </section>
 
 
-    <section class="petro-expo-meeting" id="petroExpoMeeting">
 
-        <div class="petro-expo-page-container petro-expo-meeting-layout">
-
-            <!-- LEFT TEXT -->
-            <div class="petro-expo-meeting-intro">
-
-                <p class="petro-expo-section-label">
-                    BOOK A MEETING
-                </p>
-
-                <h2>
-                    Let's Connect<br>
-                    At INTEXT Expo 2026
-                </h2>
-
-                <p>
-                    Fill in your details and our team will
-                    get in touch with you to schedule a
-                    meeting at the event.
-                </p>
-
-            </div>
-
-            <!-- CENTER FORM -->
-            <div class="petro-expo-meeting-card">
-
-                <form id="petroExpoMeetingForm">
-
-                    <div class="petro-expo-form-grid">
-
-                        <label>
-                            Full Name <span>*</span>
-                            <input type="text" name="fullName" placeholder="Enter your name" autocomplete="name"
-                                maxlength="100" required>
-                        </label>
-
-                        <label>
-                            Business Type <span>*</span>
-                            <select name="businessType" required>
-                                <option value="">Select business type</option>
-                                <option>Dealer</option>
-                                <option>Distributor</option>
-                                <option>Retailer</option>
-                                <option>Builder / Contractor</option>
-                                <option>Architect / Interior Designer</option>
-                                <option>Other</option>
-                            </select>
-                        </label>
-
-                        <label>
-                            City <span>*</span>
-                            <input type="text" name="city" placeholder="Enter your city" maxlength="80" required>
-                        </label>
-
-                        <label>
-                            Phone <span>*</span>
-                            <input type="tel" name="phone" placeholder="Enter your phone number" inputmode="numeric"
-                                pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number" required>
-                        </label>
-
-                        <label class="petro-expo-form-full">
-                            Message
-                            <textarea name="message" rows="3" maxlength="500"
-                                placeholder="Tell us about your requirements..."></textarea>
-                        </label>
-
-                    </div>
-
-                    <label class="petro-expo-form-consent">
-                        <input type="checkbox" required>
-                        <span>
-                            I agree to be contacted by PETRO about my enquiry.
-                        </span>
-                    </label>
-
-                    <button type="submit" id="petroExpoMeetingSubmit">
-                        Book a Meeting
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-
-                    <p class="petro-expo-form-status" id="petroExpoMeetingStatus" role="status" aria-live="polite"></p>
-
-                </form>
-
-            </div>
-
-            <!-- RIGHT CONTACT CARDS -->
-            <div class="petro-expo-contact">
-
-                <h3>Or Reach Us Directly</h3>
-
-                <a href="tel:+918000007336" class="petro-expo-contact-card">
-                    <span class="petro-expo-contact-icon">
-                        <i class="fa-solid fa-phone-volume"></i>
-                    </span>
-                    <span class="petro-expo-contact-details">
-                        <strong>+91 8000007336</strong>
-                        <small>Call us for enquiries</small>
-                    </span>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-                <a href="mailto:contact@petroindustech.com?subject=INTEXT%20Expo%202026%20Meeting%20Enquiry"
-                    class="petro-expo-contact-card">
-                    <span class="petro-expo-contact-icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </span>
-                    <span class="petro-expo-contact-details">
-                        <strong>contact@petroindustech.com</strong>
-                        <small>Drop us an email</small>
-                    </span>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-                <a href="https://wa.me/918000007336?text=Hello%20PETRO%20Team%2C%20I%20want%20to%20book%20a%20meeting%20at%20INTEXT%20Expo%202026."
-                    target="_blank" rel="noopener noreferrer" class="petro-expo-contact-card">
-                    <span class="petro-expo-contact-icon">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </span>
-                    <span class="petro-expo-contact-details">
-                        <strong>+91 8000007336</strong>
-                        <small>Chat on WhatsApp</small>
-                    </span>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
 
     <!-- END ALL THREE SECTIONS -->
 

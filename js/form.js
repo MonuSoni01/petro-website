@@ -223,6 +223,35 @@ function payloadFor(form) {
         // Show one consistent, centered popup on every enquiry form.
         // Avoid calling legacy openPopup() to prevent duplicate popups.
         showThankYouPopup(result.warnings);
+
+        
+/* ==========================================
+   INTEXT EXPO - THANK YOU PAGE REDIRECT
+========================================== */
+
+if (
+  form.id === "petroVisitForm" ||
+  form.id === "petroExpoMeetingForm"
+) {
+
+  const formType =
+    form.id === "petroVisitForm"
+      ? "visit"
+      : "meeting";
+
+  const thankYouURL =
+    "/expo/intext-expo-thank-you.html" +
+    "?type=" + encodeURIComponent(formType);
+
+  // Server has confirmed the enquiry.
+  window.location.assign(thankYouURL);
+
+  return;
+}
+
+// OTHER WEBSITE FORMS KEEP EXISTING POPUP
+showThankYouPopup(result.warnings);
+
       } catch(error) {
         console.error('Petro form submission:',error);
         status.textContent='Could not confirm submission. Check the Sheet before trying again. ' + error.message;
