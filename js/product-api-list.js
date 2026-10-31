@@ -6417,7 +6417,782 @@ var products = [
       { label: "Qty Per Box", value: "1 Pcs" },
       { label: "Finish", value: "CP" },
     ],
+  }, 
+  {
+    "id": 70,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-toilet-paper-holder",
+    "title": "SS Toilet Paper Holder",
+    "mtitle": "Stainless Steel Toilet Paper Holder Manufacturer | Petro",
+    "mdescription": "Petro is a leading stainless steel toilet paper holder manufacturer in India, offering wall mounted SS toilet roll holders with cover in mirror chrome finish.",
+    "keyword": [
+      "Stainless Steel Toilet Paper Holder Manufacturer",
+      "SS Toilet Paper Holder Manufacturer in India",
+      "Toilet Paper Holder with Cover",
+      "Toilet Roll Holder Wall Mounted",
+      "Tissue Paper Holder for Bathroom",
+      "Chrome Toilet Paper Holder",
+      "Toilet Paper Holder Supplier",
+      "Toilet Paper Holder Wholesaler in Delhi",
+      "Bathroom Accessories Manufacturer"
+    ],
+    "ratingStars": 4.8,
+    "ratingReviews": "286",
+    "newPrice": "₹1,180.00",
+    "description": "Petro Industech SS Toilet Paper Holder from the Deluxe Series keeps tissue rolls neat, dry and within easy reach. Made from durable stainless steel with a round wall flange and a covered top flap, it suits residential, hotel, office and commercial washrooms. It is a fast-moving choice for toilet paper holder dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Premium stainless steel build for long-lasting durability",
+      "Mirror chrome finish that complements modern bathroom interiors",
+      "Covered top flap protects the tissue roll from water splashes",
+      "Round wall flange gives a clean, elegant look",
+      "Open-side arm makes roll replacement quick and easy",
+      "Rust-proof and corrosion-resistant for humid bathrooms",
+      "Strong wall-mounted installation with concealed fixing",
+      "Smooth, polished surface for easy cleaning",
+      "Fits standard toilet paper rolls",
+      "Suitable for residential and commercial washrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1315.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1315.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Toilet Paper Holder (Chrome)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1315"
+      },
+      {
+        "label": "Series",
+        "value": "Deluxe Series"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Mirror Chrome"
+      },
+      {
+        "label": "Color",
+        "value": "Chrome"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "2 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "68 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "68 Pcs"
+      }
+    ]
   },
+  {
+    "id": 71,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-square-soap-dish",
+    "title": "SS Square Soap Dish Single",
+    "mtitle": "Stainless Steel Square Soap Dish Manufacturer | Petro",
+    "mdescription": "Petro is a trusted stainless steel square soap dish manufacturer in India, offering wall mounted SS soap holders with drainage slots and mirror chrome finish.",
+    "keyword": [
+      "Stainless Steel Square Soap Dish Manufacturer",
+      "Stainless Steel Soap Dish Manufacturers",
+      "SS Soap Dish Manufacturer in India",
+      "Square Soap Dish Wall Mounted",
+      "Single Soap Dish Stainless Steel",
+      "Chrome Soap Holder for Bathroom",
+      "Soap Dish Supplier",
+      "Soap Dish Wholesaler in Delhi",
+      "Bathroom Accessories Manufacturer"
+    ],
+    "ratingStars": 4.7,
+    "ratingReviews": "194",
+    "newPrice": "₹630.00",
+    "description": "Petro Industech SS Square Soap Dish Single from the Deluxe Series offers neat and practical soap storage with durable stainless steel construction. Its square tray and round wall flange suit residential, hotel, office and commercial bathrooms. It is ideal for soap dish dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Premium stainless steel build for reliable durability",
+      "Elegant mirror chrome finish enhances modern bathroom interiors",
+      "Square tray design with a clean, contemporary look",
+      "Slotted drainage keeps soap dry and prevents water collection",
+      "Spacious tray holds standard soap bars securely",
+      "Rust-proof and corrosion-resistant for long-lasting performance",
+      "Strong wall-mounted installation saves countertop space",
+      "Smooth, polished surface for easy cleaning and maintenance",
+      "Hygienic design for daily bathroom use",
+      "Suitable for residential and commercial bathrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1318.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1318.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Square Soap Dish Single (Chrome)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1318"
+      },
+      {
+        "label": "Series",
+        "value": "Deluxe Series"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Mirror Chrome"
+      },
+      {
+        "label": "Color",
+        "value": "Chrome"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "2 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "68 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "68 Pcs"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-rectangle-soap-dish",
+    "title": "SS Rectangle Soap Dish Single",
+    "mtitle": "Stainless Steel Rectangle Soap Dish Manufacturer | Petro",
+    "mdescription": "Petro is a leading stainless steel rectangle soap dish manufacturer in India, supplying wall mounted SS soap holders with drainage slots for homes and hotels.",
+    "keyword": [
+      "Stainless Steel Rectangle Soap Dish Manufacturer",
+      "Stainless Steel Soap Dish Manufacturers",
+      "Rectangle Soap Dish Wall Mounted",
+      "SS Soap Dish Manufacturer in India",
+      "Single Soap Dish Chrome",
+      "Bathroom Soap Holder",
+      "Soap Dish Supplier",
+      "Soap Dish Wholesaler in Delhi",
+      "Bath Accessories Manufacturer"
+    ],
+    "ratingStars": 4.9,
+    "ratingReviews": "327",
+    "newPrice": "₹630.00",
+    "description": "Petro Industech SS Rectangle Soap Dish Single from the Deluxe Series combines a soft-edged rectangular tray with durable stainless steel construction for everyday soap storage. Designed for residential, hotel, office and commercial bathrooms, it is a dependable product for soap dish dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Premium stainless steel build for smoother, more reliable durability",
+      "Mirror chrome finish adds a premium look to any bathroom",
+      "Rectangular tray with rounded edges for a modern style",
+      "Multiple drainage slots keep soap dry and fresh",
+      "Deep tray holds soap bars securely in place",
+      "Rust-proof and corrosion-resistant for wet areas",
+      "Wall-mounted design keeps the countertop free",
+      "Polished surface is quick to wipe and clean",
+      "Scratch-resistant finish maintains its shine",
+      "Suitable for homes, hotels and commercial washrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1320.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1320.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Rectangle Soap Dish Single (Chrome)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1320"
+      },
+      {
+        "label": "Series",
+        "value": "Deluxe Series"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Mirror Chrome"
+      },
+      {
+        "label": "Color",
+        "value": "Chrome"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "2 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "68 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "68 Pcs"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-round-soap-dish",
+    "title": "SS Round Soap Dish Single",
+    "mtitle": "Stainless Steel Round Soap Dish Manufacturer | Petro",
+    "mdescription": "Petro is a reliable stainless steel round soap dish manufacturer in India, offering wall mounted SS round soap holders with drainage holes and chrome finish.",
+    "keyword": [
+      "Stainless Steel Round Soap Dish Manufacturer",
+      "Stainless Steel Soap Dish Manufacturers",
+      "Round Soap Dish Wall Mounted",
+      "SS Round Soap Holder",
+      "Chrome Soap Dish for Bathroom",
+      "Soap Dish Manufacturer in India",
+      "Soap Dish Supplier",
+      "Soap Dish Wholesaler in Delhi",
+      "Bathroom Fittings Manufacturer"
+    ],
+    "ratingStars": 4.8,
+    "ratingReviews": "218",
+    "newPrice": "₹630.00",
+    "description": "Petro Industech SS Round Soap Dish Single from the Deluxe Series brings a classic round design to modern bathrooms with durable stainless steel construction. Built for residential, hotel, office and commercial bathrooms, it is well suited for soap dish dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Premium stainless steel build for long-lasting use",
+      "Mirror chrome finish with a bright, premium shine",
+      "Round tray with raised rim keeps soap in place",
+      "Drainage holes prevent water accumulation and keep soap dry",
+      "Fits round and standard soap bars comfortably",
+      "Rust-proof and corrosion-resistant construction",
+      "Space-saving wall-mounted installation",
+      "Smooth, polished surface for easy maintenance",
+      "Hygienic design for daily bathroom use",
+      "Suitable for residential and commercial bathrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1323.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1323.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Round Soap Dish Single (Chrome)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1323"
+      },
+      {
+        "label": "Series",
+        "value": "Deluxe Series"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Mirror Chrome"
+      },
+      {
+        "label": "Color",
+        "value": "Chrome"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "2 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "68 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "68 Pcs"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-round-double-soap-dish",
+    "title": "SS Round Soap Dish Double",
+    "mtitle": "Stainless Steel Round Double Soap Dish Manufacturer | Petro",
+    "mdescription": "Petro is a top stainless steel round double soap dish manufacturer in India, offering wall mounted SS double soap holders with two trays and chrome finish.",
+    "keyword": [
+      "Stainless Steel Round Double Soap Dish Manufacturer",
+      "Stainless Steel Double Soap Dish Manufacturers",
+      "Round Double Soap Dish",
+      "SS Double Soap Holder",
+      "Two Tray Soap Dish Wall Mounted",
+      "Soap Dish Manufacturer in India",
+      "Double Soap Dish Supplier",
+      "Soap Dish Wholesaler in Delhi",
+      "Bathroom Accessories Manufacturer"
+    ],
+    "ratingStars": 4.9,
+    "ratingReviews": "354",
+    "newPrice": "₹1,220.00",
+    "description": "Petro Industech SS Round Soap Dish Double from the Deluxe Series provides two round soap trays on a single wall bracket, made from durable stainless steel. It is ideal for shared bathrooms in homes, hotels, offices and commercial spaces, and a strong product for double soap dish dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Two round trays on one bracket for separate soaps",
+      "Premium stainless steel build for lasting strength",
+      "Mirror chrome finish enhances modern bathroom interiors",
+      "Drainage holes in each tray keep soap dry",
+      "Raised rims hold soap bars securely",
+      "Rust-proof and corrosion-resistant for humid spaces",
+      "Single wall-mount point for neat installation",
+      "Polished surface for easy cleaning",
+      "Ideal for family and shared bathrooms",
+      "Suitable for residential and commercial bathrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1330.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1330.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Round Soap Dish Double (Chrome)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1330"
+      },
+      {
+        "label": "Series",
+        "value": "Deluxe Series"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Mirror Chrome"
+      },
+      {
+        "label": "Color",
+        "value": "Chrome"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "2 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "68 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "68 Pcs"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-square-double-soap-dish",
+    "title": "SS SQ Bracket Double Soap Dish",
+    "mtitle": "Stainless Steel Square Double Soap Dish Manufacturer | Petro",
+    "mdescription": "Petro is a leading stainless steel square double soap dish manufacturer in India, offering wall mounted SS bracket soap holders with two trays and drainage.",
+    "keyword": [
+      "Stainless Steel Square Double Soap Dish Manufacturer",
+      "Stainless Steel Double Soap Dish Manufacturers",
+      "Square Double Soap Dish",
+      "SS Bracket Soap Dish",
+      "Double Soap Holder Wall Mounted",
+      "SS Soap Dish Manufacturer in India",
+      "Double Soap Dish Supplier",
+      "Soap Dish Wholesaler in Delhi",
+      "Bathroom Accessories Manufacturer"
+    ],
+    "ratingStars": 4.7,
+    "ratingReviews": "163",
+    "newPrice": "₹1,140.00",
+    "description": "Petro Industech SS SQ Bracket Double Soap Dish from the Deluxe Series features two square trays on a sturdy bracket, made from durable stainless steel. Designed for residential, hotel, office and commercial bathrooms, it is a practical choice for double soap dish dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Two square trays on a single sturdy bracket",
+      "Premium stainless steel build for reliable durability",
+      "Mirror chrome finish with a sleek, modern look",
+      "Slotted drainage keeps both soaps dry",
+      "Spacious trays hold standard soap bars",
+      "Rust-proof and corrosion-resistant construction",
+      "Wall-mounted design saves countertop space",
+      "Smooth, polished surface for easy maintenance",
+      "Scratch-resistant finish maintains its shine",
+      "Suitable for residential and commercial bathrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1348.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1348.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "SQ Bracket Double Soap Dish (Chrome)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1348"
+      },
+      {
+        "label": "Series",
+        "value": "Deluxe Series"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Mirror Chrome"
+      },
+      {
+        "label": "Color",
+        "value": "Chrome"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "2 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "68 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "68 Pcs"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-chrome-liquid-soap-dispenser",
+    "title": "SS Liquid Soap Dispenser (Chrome)",
+    "mtitle": "Stainless Steel Chrome Soap Dispenser Manufacturer | Petro",
+    "mdescription": "Petro is a trusted stainless steel liquid soap dispenser manufacturer in India, offering wall mounted chrome SS soap dispensers with push pump and level window.",
+    "keyword": [
+      "Stainless Steel Liquid Soap Dispenser Manufacturer",
+      "Stainless Steel Soap Dispenser Manufacturers",
+      "Chrome Soap Dispenser",
+      "Wall Mounted Liquid Soap Dispenser",
+      "Hand Wash Dispenser for Bathroom",
+      "Soap Dispenser Manufacturer in India",
+      "Commercial Soap Dispenser Supplier",
+      "Soap Dispenser Wholesaler in Delhi",
+      "Bathroom Accessories Manufacturer"
+    ],
+    "ratingStars": 4.9,
+    "ratingReviews": "389",
+    "newPrice": "₹1,000.00",
+    "description": "Petro Industech SS Liquid Soap Dispenser in Chrome is a wall-mounted dispenser with a cylindrical stainless steel body, a smooth push pump and a level window to check the soap. It suits residential, hotel, office, hospital and commercial washrooms, and is a fast-moving item for soap dispenser dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Premium stainless steel cylindrical body",
+      "Mirror chrome finish for a bright, modern look",
+      "Smooth push pump for easy, controlled dispensing",
+      "Level window shows the remaining soap",
+      "Works with liquid soap, hand wash and shampoo",
+      "Rust-proof and corrosion-resistant construction",
+      "Wall-mounted design frees up basin space",
+      "Easy to refill and clean",
+      "Hygienic, contact-friendly dispensing",
+      "Suitable for homes, hotels, offices and commercial washrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1601.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1601.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Liquid Soap Dispenser (Chrome)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1601"
+      },
+      {
+        "label": "Series",
+        "value": "Liquid Soap Dispenser"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Mirror Chrome"
+      },
+      {
+        "label": "Color",
+        "value": "Chrome"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "1 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "16 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "96 Pcs"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "category": "stainless-steel",
+    "slug": "stainless-steel-gold-liquid-soap-dispenser",
+    "title": "SS Liquid Soap Dispenser (Gold)",
+    "mtitle": "Stainless Steel Gold Soap Dispenser Manufacturer | Petro",
+    "mdescription": "Petro is a premium stainless steel gold soap dispenser manufacturer in India, offering wall mounted gold finish liquid soap dispensers for luxury bathrooms.",
+    "keyword": [
+      "Stainless Steel Gold Soap Dispenser Manufacturer",
+      "Gold Liquid Soap Dispenser",
+      "Gold Soap Dispenser Wall Mounted",
+      "Luxury Soap Dispenser for Bathroom",
+      "Gold Bathroom Accessories Manufacturer",
+      "Stainless Steel Soap Dispenser Manufacturers",
+      "Hotel Soap Dispenser Supplier",
+      "Soap Dispenser Wholesaler in Delhi",
+      "Soap Dispenser Manufacturer in India"
+    ],
+    "ratingStars": 4.8,
+    "ratingReviews": "247",
+    "newPrice": "₹1,350.00",
+    "description": "Petro Industech SS Liquid Soap Dispenser in Gold adds a luxurious touch to any washroom with its gold-finish stainless steel body, smooth push pump and soap level window. It is ideal for premium homes, hotels, restaurants, offices and commercial washrooms, and a high-value product for soap dispenser dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Premium stainless steel body with a rich gold finish",
+      "Luxury look for premium bathrooms and hotel washrooms",
+      "Smooth push pump for easy, controlled dispensing",
+      "Level window shows the remaining soap",
+      "Works with liquid soap, hand wash and shampoo",
+      "Rust-proof and corrosion-resistant construction",
+      "Wall-mounted design frees up basin space",
+      "Easy to refill and clean",
+      "Matches gold-finish taps and bathroom fittings",
+      "Suitable for residential and commercial washrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1602.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1602.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Liquid Soap Dispenser (Gold)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1602"
+      },
+      {
+        "label": "Series",
+        "value": "Liquid Soap Dispenser"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold"
+      },
+      {
+        "label": "Color",
+        "value": "Gold"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "1 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "16 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "96 Pcs"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "category": "stainless-steel",
+    "slug": "steel-rose-gold-liquid-soap-dispenser",
+    "title": "SS Liquid Soap Dispenser (Rose Gold)",
+    "mtitle": "Steel Rose Gold Soap Dispenser Manufacturer | Petro",
+    "mdescription": "Petro is a leading steel rose gold soap dispenser manufacturer in India, offering wall mounted rose gold liquid soap dispensers for modern luxury bathrooms.",
+    "keyword": [
+      "Steel Rose Gold Soap Dispenser Manufacturer",
+      "Rose Gold Liquid Soap Dispenser",
+      "Rose Gold Soap Dispenser Wall Mounted",
+      "Designer Soap Dispenser for Bathroom",
+      "Rose Gold Bathroom Accessories Manufacturer",
+      "Stainless Steel Soap Dispenser Manufacturers",
+      "Hotel Soap Dispenser Supplier",
+      "Soap Dispenser Wholesaler in Delhi",
+      "Soap Dispenser Manufacturer in India"
+    ],
+    "ratingStars": 4.9,
+    "ratingReviews": "312",
+    "newPrice": "₹1,350.00",
+    "description": "Petro Industech SS Liquid Soap Dispenser in Rose Gold brings a warm, designer finish to modern washrooms with its stainless steel body, smooth push pump and soap level window. It suits premium homes, hotels, salons, offices and commercial washrooms, and is a stylish product for soap dispenser dealers, distributors, wholesalers, contractors and bulk bathroom fitting supply.",
+    "features": [
+      "Premium stainless steel body with an elegant rose gold finish",
+      "Designer look for modern and luxury bathrooms",
+      "Smooth push pump for easy, controlled dispensing",
+      "Level window shows the remaining soap",
+      "Works with liquid soap, hand wash and shampoo",
+      "Rust-proof and corrosion-resistant construction",
+      "Wall-mounted design frees up basin space",
+      "Easy to refill and clean",
+      "Matches rose gold taps and bathroom fittings",
+      "Suitable for residential and commercial washrooms"
+    ],
+    "main_image": "/images/stainless-steel-products/1603.webp",
+    "colors": [
+      ""
+    ],
+    "images": {
+      "": [
+        "/images/stainless-steel-products/1603.webp"
+      ]
+    },
+    "table": [
+      {
+        "label": "Product Name",
+        "value": "Liquid Soap Dispenser (Rose Gold)"
+      },
+      {
+        "label": "Item Code",
+        "value": "SS-1603"
+      },
+      {
+        "label": "Series",
+        "value": "Liquid Soap Dispenser"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Rose Gold"
+      },
+      {
+        "label": "Color",
+        "value": "Rose Gold"
+      },
+      {
+        "label": "Usage Type",
+        "value": "Wall Mount"
+      },
+      {
+        "label": "Per Box",
+        "value": "1 Pcs"
+      },
+      {
+        "label": "Qty Per Carton",
+        "value": "16 Pcs"
+      },
+      {
+        "label": "Qty Per Parcel",
+        "value": "96 Pcs"
+      }
+    ]
+  }
+
 ];
 
 export default products;
