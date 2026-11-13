@@ -248,13 +248,7 @@
                 Nylon Sleeves & PVC Gitti
               </a>
             </div>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="https://onlinepetro.com/" target="_blank">
-              BUY ONLINE
-            </a>
-          </li>
+          </li> 
 
           <li class="nav-item">
             <a class="nav-link" href="catalogue.html">Catalogue</a>
@@ -952,12 +946,8 @@
           <h3>Website Links</h3>
 
           <a href="https://www.petroindustech.com" target="_blank">
-            petroindustech.com
-          </a>
-
-          <a href="https://www.onlinepetro.com" target="_blank">
-            onlinepetro.com
-          </a>
+            www.petroindustech.com
+          </a> 
         </div>
 
       </div>
@@ -1049,6 +1039,370 @@
       </div>
     </div>
   </div>
+
+ 
+<!-- =========================================
+ PETRO LEADERSHIP VIDEOS SECTION
+ Complete HTML + CSS
+========================================= -->
+
+<style>
+/* SECTION */
+.petro-leadership {
+  position: relative;
+  overflow: hidden;
+  padding: 65px 20px 85px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f4fcfc 75%,
+    #e8f8f8 100%
+  );
+  font-family: "Roboto", Arial, sans-serif;
+  isolation: isolate;
+}
+
+/* DECORATIVE BACKGROUND */
+.petro-leadership::before {
+  content: "";
+  position: absolute;
+  top: -155px;
+  left: -140px;
+  width: 360px;
+  height: 230px;
+  background: #108082;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  opacity: .85;
+  z-index: -1;
+}
+
+.petro-leadership::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -120px;
+  width: 550px;
+  height: 230px;
+  background: #108082;
+  border-radius: 50%;
+  transform: rotate(-12deg);
+  z-index: -1;
+}
+
+.petro-leadership * {
+  box-sizing: border-box;
+}
+
+.petro-leadership-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADING */
+.petro-leadership-heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.petro-leadership-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+  color: #087e80;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.petro-leadership-label::before,
+.petro-leadership-label::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: #108082;
+}
+
+.petro-leadership-label span {
+  background: #d4f5f3;
+  padding: 12px 28px;
+  border-radius: 50px;
+}
+
+.petro-leadership-heading h2 {
+  margin: 0 0 20px;
+  font-size: clamp(26px, 3.5vw, 46px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #092a32;
+  text-transform: none;
+}
+
+.petro-leadership-heading h2 .highlight {
+  color: #108082;
+  position: relative;
+  display: inline-block;
+}
+
+.petro-leadership-heading h2 .highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: 2%;
+  width: 40%;
+  height: 6px;
+  background: #ffd600;
+  border-radius: 100%;
+  transform: rotate(-3deg);
+}
+
+.petro-leadership-heading p {
+  max-width: 850px;
+  margin: 22px auto 0;
+  color: #53636d;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  text-transform: none;
+}
+
+/* VIDEO GRID */
+.petro-leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* VIDEO CARDS */
+.petro-leadership-card {
+  min-width: 0;
+  padding: 9px;
+  background: #fff;
+  border: 1px solid #e4eeee;
+  border-radius: 24px;
+  box-shadow:
+    0 6px 18px rgba(0, 70, 75, .06),
+    0 12px 32px rgba(0, 70, 75, .08);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.petro-leadership-card:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 12px 25px rgba(0, 80, 85, .10),
+    0 20px 45px rgba(0, 80, 85, .14);
+}
+
+/* VIDEO PLAYER */
+.petro-leadership-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #111;
+}
+
+.petro-leadership-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+  .petro-leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .petro-leadership {
+    padding: 55px 20px 75px;
+  }
+}
+
+/* MOBILE - ONE VIDEO PER ROW */
+@media (max-width: 767px) {
+  .petro-leadership {
+    padding: 45px 15px 65px;
+  }
+
+  .petro-leadership-heading {
+    margin-bottom: 35px;
+  }
+
+  .petro-leadership-label {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .petro-leadership-label span {
+    padding: 10px 15px;
+  }
+
+  .petro-leadership-label::before,
+  .petro-leadership-label::after {
+    width: 20px;
+  }
+
+  .petro-leadership-heading h2 {
+    font-size: 27px;
+    line-height: 1.35;
+  }
+
+  .petro-leadership-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 18px;
+  }
+
+  .petro-leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .petro-leadership-card {
+    width: 100%;
+    padding: 7px;
+    border-radius: 20px;
+  }
+
+  .petro-leadership-player {
+    border-radius: 15px;
+  }
+
+  .petro-leadership::before {
+    width: 200px;
+    height: 140px;
+    top: -110px;
+    left: -100px;
+  }
+
+  .petro-leadership::after {
+    width: 280px;
+    height: 140px;
+    bottom: -100px;
+    right: -100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petro-leadership-card {
+    transition: none;
+  }
+
+  .petro-leadership-card:hover {
+    transform: none;
+  }
+}
+</style>
+
+<!-- SECTION START -->
+<section class="petro-leadership">
+
+  <div class="petro-leadership-container">
+
+    <!-- HEADING -->
+    <div class="petro-leadership-heading">
+
+      <div class="petro-leadership-label">
+        <span>Leadership Insights</span>
+      </div>
+
+      <h2>
+        Insights From Our
+        <span class="highlight">Managing Director</span>
+      </h2>
+
+      <p>
+        Explore Valuable Insights, Industry Knowledge
+        And Business Perspectives Shared By The
+        Leadership Of Petro Industech.
+      </p>
+
+    </div>
+
+    <!-- VIDEOS -->
+    <div class="petro-leadership-grid">
+
+  
+<!-- VIDEO 1 -->
+<div class="petro-leadership-card">
+  <div class="petro-leadership-player">
+    <iframe
+      src="https://www.youtube.com/embed/Xwe60QE2nuk?autoplay=1&mute=1&loop=1&playlist=Xwe60QE2nuk&playsinline=1&controls=0&rel=0"
+      title="Petro Business Growth Insights"
+      loading="eager"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="petro-leadership-card">
+  <div class="petro-leadership-player">
+    <iframe
+      src="https://www.youtube.com/embed/3q0i1SZmBVg?autoplay=1&mute=1&loop=1&playlist=3q0i1SZmBVg&playsinline=1&controls=0&rel=0"
+      title="Meet Petro Industech"
+      loading="eager"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="petro-leadership-card">
+  <div class="petro-leadership-player">
+    <iframe
+      src="https://www.youtube.com/embed/vWUVHK3YSqI?autoplay=1&mute=1&loop=1&playlist=vWUVHK3YSqI&playsinline=1&controls=0&rel=0"
+      title="Petro Distributor Insights"
+      loading="eager"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<!-- VIDEO 4 -->
+<div class="petro-leadership-card">
+  <div class="petro-leadership-player">
+    <iframe
+      src="https://www.youtube.com/embed/VSAzXrLVP7s?autoplay=1&mute=1&loop=1&playlist=VSAzXrLVP7s&playsinline=1&controls=0&rel=0"
+      title="Petro Business Leadership"
+      loading="eager"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+    </div>
+
+  </div>
+
+</section>
+<!-- SECTION END -->
+
+
   <!--FOOTER SECTION-->
   <footer class="footer mt-5">
     <div class="container bottom_border mt-3">

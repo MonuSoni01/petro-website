@@ -1735,3 +1735,53 @@
       border-radius: 16px;
     }
   }
+
+/* MD Videos Heading */
+.md-video-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.md-video-heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #202a35;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.md-video-heading h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background: #108082;
+    margin: 14px auto 0;
+    border-radius: 10px;
+}
+
+.md-video-heading p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .md-video-heading {
+        margin-bottom: 25px;
+        padding: 0 5px;
+    }
+
+    .md-video-heading h2 {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    .md-video-heading p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
